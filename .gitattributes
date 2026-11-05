@@ -1,0 +1,14 @@
+# Keep model and runtime binaries byte-exact and outside ordinary Git blobs.
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
+*.usdz filter=lfs diff=lfs merge=lfs -text
+*.usdc filter=lfs diff=lfs merge=lfs -text
+assets/mobile-live/**/*.bin filter=lfs diff=lfs merge=lfs -text
+assets/mobile-live/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/character-sources/mhr/source-lod2.zip filter=lfs diff=lfs merge=lfs -text
+
+# Revision ships compact clips directly and keeps the larger meshes and reel in LFS.
+Revision/Sources/ExerciseDummy/Resources/**/vertices.bin filter=lfs diff=lfs merge=lfs -text
+Revision/Sources/ExerciseDummy/Resources/**/indices.bin filter=lfs diff=lfs merge=lfs -text
+Revision/Sources/ExerciseDummy/Resources/tracks/*.bin binary
+Revision/Review/showcase.mp4 filter=lfs diff=lfs merge=lfs -text

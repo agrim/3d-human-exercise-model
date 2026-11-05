@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "status": "unmodified_reference_not_character_integration",
+  "repository": "https://github.com/opensim-org/opensim-models",
+  "commit": "d9b05d470b1a481c222372c85b75772faf8f7792",
+  "retrievedDate": "2026-11-01",
+  "files": [
+    {
+      "file": "arm26.osim",
+      "upstreamPath": "Models/Arm26/arm26.osim",
+      "gitBlobSHA1": "2ff458149668bb2f0de24572f80658f8dd9db1d9",
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Models/Arm26/arm26.osim",
+      "sha256": "e2224d0044eb393b05d64926c3fa1682c451a9adc7f510e5517ef9958d3d41b9",
+      "bytes": 90192
+    },
+    {
+      "file": "arm_r_humerus.vtp",
+      "upstreamPath": "Geometry/arm_r_humerus.vtp",
+      "gitBlobSHA1": "7770d382c217a7445d2c24c3341d49b9d19fabca",
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/arm_r_humerus.vtp",
+      "sha256": "46496ac6e4c1f8e0c1973ace8f9d4c6e60af34c65e147b13bacca1dbf3d8fe32",
+      "bytes": 24242
+    },
+    {
+      "file": "arm_r_ulna.vtp",
+      "upstreamPath": "Geometry/arm_r_ulna.vtp",
+      "gitBlobSHA1": "abaa68d7797f41953fe754127b6cad9d5aafe917",
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/arm_r_ulna.vtp",
+      "sha256": "f277b9404b127c1a14f300275a98a95d5282f5394431c9e819426f33e455bffa",
+      "bytes": 15896
+    },
+    {
+      "file": "arm_r_radius.vtp",
+      "upstreamPath": "Geometry/arm_r_radius.vtp",
+      "gitBlobSHA1": "70c7ed9f2fbf90ad2b47c21627017a63bb83c3e1",
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/arm_r_radius.vtp",
+      "sha256": "04bddb2abaa5ac4de266828137627ece9c72783cc534eb664285ddddbd5468b5",
+      "bytes": 16110
+    }
+  ],
+  "scope": "Reference bone geometry and model coordinates only. No rig, skin weights or runtime assets changed.",
+  "licenseStatementLocation": "arm26.osim / Model / credits",
+  "limitations": [
+    "Arm26 groups ulna, radius and hand as one rigid body; it does not supply an independent pronation/supination mechanism.",
+    "Body registration, bone clearance and anatomical landmark review are required before any character integration.",
+    "MoBL-ARMS model was not imported; its published non-commercial restriction is unsuitable as an assumed Simple Trainer asset license."
+  ],
+  "credits": "The OpenSim Development Team (Reinbolt, J; Seth, A; Habib, A; Hamner, S) adapted from a model originally created by Kate Holzbaur (11/22/04) License: Creative Commons (CCBY 3.0). You are free to distribute, remix, tweak, and build upon this work, even commercially, as long as you credit us for the original creation. http://creativecommons.org/licenses/by/3.0/",
+  "publications": "Holzbaur, K.R.S., Murray, W.M., Delp, S.L. A Model of the Upper Extremity for Simulating Musculoskeletal Surgery and Analyzing Neuromuscular Control. Annals of Biomedical Engineering, vol 33, pp 829\u2013840, 2005"
+}

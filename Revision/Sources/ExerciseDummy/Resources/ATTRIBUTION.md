@@ -1,0 +1,9 @@
+# Exercise dummy geometry
+
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
+
+BodyParts3D 4.0 supplies the body skeleton, exercise muscles, and the head, hand and foot skin surfaces. Kousaku Okubo is credited for the original model. The archive's February 2025 license notice specifies CC BY 4.0. [Dataset and download](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html) · [Publisher license](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Z-Anatomy - The libre 3D atlas of anatomy - CC-BY-SA 4.0. Gauthier Kervyn is credited for design, 3D and anatomy, with Kousaku Okubo for the original BodyParts3D model. The atlas also requests the historical source credit “BodyParts3D - The Database Center for Life Science - CC-BY-SA 2.1 Japan”. Z-Anatomy supplies bilateral latissimus dorsi, rectus abdominis, internal abdominal oblique, transversus abdominis and quadratus lumborum. [Original atlas and contributors](https://github.com/Z-Anatomy/Models-of-human-anatomy/tree/7b9197672eea2ed44ae238d3cfbf38e39b7586a9) · [Publisher license](https://github.com/Z-Anatomy/Models-of-human-anatomy/blob/7b9197672eea2ed44ae238d3cfbf38e39b7586a9/License.txt)
+
+The combined exercise dummy geometry is distributed under Creative Commons Attribution-ShareAlike 4.0 International. Adaptations comprise structure selection, coordinate registration, partial skin surfaces, a fitted torso inset, fascia cutaways, a clavicular surface projection, polygon reduction, normals, local ambient shading, skeletal binding, and muscle group assignment. Each adapted part retains its source identifier in the model metadata. Include this notice with copies and adaptations of the asset. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

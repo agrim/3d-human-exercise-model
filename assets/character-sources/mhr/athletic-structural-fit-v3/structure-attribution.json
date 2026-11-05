@@ -1,0 +1,161 @@
+{
+  "accepted": false,
+  "sourceCapture": "assets/character-sources/mhr/structural-hand-retarget-loaded-v2/retargeted",
+  "arraysSHA256": "544fea8d946ca188f9f41ee3ab59e957fb4819f22ef79508f3ab7b949ced93d6",
+  "sample": "standing__0",
+  "segmentDistances": [
+    {
+      "side": "l",
+      "mhrJoints": [
+        "l_uparm",
+        "l_lowarm"
+      ],
+      "sourceJoints": [
+        "ORG-upper_arm.L",
+        "ORG-forearm.L"
+      ],
+      "mhrCM": 25.92933150633171,
+      "sourceCM": 25.946014404296875,
+      "differenceCM": -0.016682897965164756
+    },
+    {
+      "side": "l",
+      "mhrJoints": [
+        "l_lowarm",
+        "l_wrist"
+      ],
+      "sourceJoints": [
+        "ORG-forearm.L",
+        "ORG-hand.L"
+      ],
+      "mhrCM": 24.180236060268985,
+      "sourceCM": 24.179468154907227,
+      "differenceCM": 0.0007679053617586362
+    },
+    {
+      "side": "l",
+      "mhrJoints": [
+        "l_upleg",
+        "l_lowleg"
+      ],
+      "sourceJoints": [
+        "ORG-thigh.L",
+        "ORG-shin.L"
+      ],
+      "mhrCM": 42.25140310387837,
+      "sourceCM": 43.992801666259766,
+      "differenceCM": -1.7413985623813986
+    },
+    {
+      "side": "l",
+      "mhrJoints": [
+        "l_lowleg",
+        "l_foot"
+      ],
+      "sourceJoints": [
+        "ORG-shin.L",
+        "ORG-foot.L"
+      ],
+      "mhrCM": 37.87437267919907,
+      "sourceCM": 43.73954772949219,
+      "differenceCM": -5.865175050293118
+    },
+    {
+      "side": "l",
+      "mhrJoints": [
+        "l_foot",
+        "l_ball"
+      ],
+      "sourceJoints": [
+        "ORG-foot.L",
+        "ORG-toe.L"
+      ],
+      "mhrCM": 14.78296120629247,
+      "sourceCM": 12.977227210998535,
+      "differenceCM": 1.8057339952939344
+    },
+    {
+      "side": "r",
+      "mhrJoints": [
+        "r_uparm",
+        "r_lowarm"
+      ],
+      "sourceJoints": [
+        "ORG-upper_arm.R",
+        "ORG-forearm.R"
+      ],
+      "mhrCM": 25.929333721558613,
+      "sourceCM": 25.912649154663086,
+      "differenceCM": 0.016684566895527553
+    },
+    {
+      "side": "r",
+      "mhrJoints": [
+        "r_lowarm",
+        "r_wrist"
+      ],
+      "sourceJoints": [
+        "ORG-forearm.R",
+        "ORG-hand.R"
+      ],
+      "mhrCM": 24.180226632363738,
+      "sourceCM": 24.181001663208008,
+      "differenceCM": -0.0007750308442702192
+    },
+    {
+      "side": "r",
+      "mhrJoints": [
+        "r_upleg",
+        "r_lowleg"
+      ],
+      "sourceJoints": [
+        "ORG-thigh.R",
+        "ORG-shin.R"
+      ],
+      "mhrCM": 42.2514015840746,
+      "sourceCM": 43.99388885498047,
+      "differenceCM": -1.742487270905869
+    },
+    {
+      "side": "r",
+      "mhrJoints": [
+        "r_lowleg",
+        "r_foot"
+      ],
+      "sourceJoints": [
+        "ORG-shin.R",
+        "ORG-foot.R"
+      ],
+      "mhrCM": 37.87437207942624,
+      "sourceCM": 43.738922119140625,
+      "differenceCM": -5.864550039714388
+    },
+    {
+      "side": "r",
+      "mhrJoints": [
+        "r_foot",
+        "r_ball"
+      ],
+      "sourceJoints": [
+        "ORG-foot.R",
+        "ORG-toe.R"
+      ],
+      "mhrCM": 14.784892624066739,
+      "sourceCM": 12.976848602294922,
+      "differenceCM": 1.808044021771817
+    }
+  ],
+  "hipPositionDifferencesCM": [
+    [
+      0.16330593510065217,
+      0.19116722047328935,
+      -9.22067973017693
+    ],
+    [
+      -0.20192048267927004,
+      0.195528030395508,
+      -9.220557898283
+    ]
+  ],
+  "limitation": "Named-joint measurements establish retargeting differences, not universal anatomical correspondence. Direct torso/neck equality produced a visibly rejected body."
+}

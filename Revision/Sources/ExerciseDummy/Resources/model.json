@@ -1,0 +1,2998 @@
+{
+  "joints": [
+    {
+      "name": "pelvis",
+      "parent": -1,
+      "position": [
+        0.0,
+        0.87113,
+        -0.003
+      ]
+    },
+    {
+      "name": "spine",
+      "parent": 0,
+      "position": [
+        0.0,
+        0.96713,
+        -0.008
+      ]
+    },
+    {
+      "name": "chest",
+      "parent": 1,
+      "position": [
+        0.0,
+        1.14413,
+        -0.022
+      ]
+    },
+    {
+      "name": "neck",
+      "parent": 2,
+      "position": [
+        0.0,
+        1.45413,
+        -0.018
+      ]
+    },
+    {
+      "name": "head",
+      "parent": 3,
+      "position": [
+        0.0,
+        1.54913,
+        -0.011
+      ]
+    },
+    {
+      "name": "leftClavicle",
+      "parent": 2,
+      "position": [
+        0.015,
+        1.39913,
+        0.055
+      ]
+    },
+    {
+      "name": "leftUpperArm",
+      "parent": 5,
+      "position": [
+        0.16,
+        1.39313,
+        0.0
+      ]
+    },
+    {
+      "name": "leftForearm",
+      "parent": 6,
+      "position": [
+        0.213,
+        1.12513,
+        -0.007
+      ]
+    },
+    {
+      "name": "leftHand",
+      "parent": 7,
+      "position": [
+        0.251,
+        0.88513,
+        0.037
+      ]
+    },
+    {
+      "name": "leftThigh",
+      "parent": 0,
+      "position": [
+        0.08,
+        0.89013,
+        -0.003
+      ]
+    },
+    {
+      "name": "leftShin",
+      "parent": 9,
+      "position": [
+        0.075,
+        0.45213,
+        0.001
+      ]
+    },
+    {
+      "name": "leftFoot",
+      "parent": 10,
+      "position": [
+        0.073,
+        0.08113,
+        -0.002
+      ]
+    },
+    {
+      "name": "leftToe",
+      "parent": 11,
+      "position": [
+        0.118,
+        0.01813,
+        0.1
+      ]
+    },
+    {
+      "name": "rightClavicle",
+      "parent": 2,
+      "position": [
+        -0.015,
+        1.39913,
+        0.055
+      ]
+    },
+    {
+      "name": "rightUpperArm",
+      "parent": 13,
+      "position": [
+        -0.16,
+        1.39313,
+        0.0
+      ]
+    },
+    {
+      "name": "rightForearm",
+      "parent": 14,
+      "position": [
+        -0.213,
+        1.12513,
+        -0.007
+      ]
+    },
+    {
+      "name": "rightHand",
+      "parent": 15,
+      "position": [
+        -0.251,
+        0.88513,
+        0.037
+      ]
+    },
+    {
+      "name": "rightThigh",
+      "parent": 0,
+      "position": [
+        -0.08,
+        0.89013,
+        -0.003
+      ]
+    },
+    {
+      "name": "rightShin",
+      "parent": 17,
+      "position": [
+        -0.075,
+        0.45213,
+        0.001
+      ]
+    },
+    {
+      "name": "rightFoot",
+      "parent": 18,
+      "position": [
+        -0.073,
+        0.08113,
+        -0.002
+      ]
+    },
+    {
+      "name": "rightToe",
+      "parent": 19,
+      "position": [
+        -0.118,
+        0.01813,
+        0.1
+      ]
+    },
+    {
+      "name": "leftThumbBase",
+      "parent": 8,
+      "position": [
+        0.2805056,
+        0.873499,
+        0.0510095
+      ]
+    },
+    {
+      "name": "leftThumb1",
+      "parent": 21,
+      "position": [
+        0.3041564,
+        0.8419972,
+        0.0676207
+      ]
+    },
+    {
+      "name": "leftThumb2",
+      "parent": 22,
+      "position": [
+        0.3131518,
+        0.8171315,
+        0.0807311
+      ]
+    },
+    {
+      "name": "leftIndex1",
+      "parent": 8,
+      "position": [
+        0.2906153,
+        0.7995905,
+        0.060582
+      ]
+    },
+    {
+      "name": "leftIndex2",
+      "parent": 24,
+      "position": [
+        0.2993688,
+        0.7667405,
+        0.0755296
+      ]
+    },
+    {
+      "name": "leftIndex3",
+      "parent": 25,
+      "position": [
+        0.3052219,
+        0.751522,
+        0.0916661
+      ]
+    },
+    {
+      "name": "leftMiddle1",
+      "parent": 8,
+      "position": [
+        0.2668921,
+        0.8012063,
+        0.0623315
+      ]
+    },
+    {
+      "name": "leftMiddle2",
+      "parent": 27,
+      "position": [
+        0.2723861,
+        0.7639413,
+        0.0820827
+      ]
+    },
+    {
+      "name": "leftMiddle3",
+      "parent": 28,
+      "position": [
+        0.2758152,
+        0.7422382,
+        0.1006912
+      ]
+    },
+    {
+      "name": "leftRing1",
+      "parent": 8,
+      "position": [
+        0.2474083,
+        0.8052119,
+        0.0622775
+      ]
+    },
+    {
+      "name": "leftRing2",
+      "parent": 30,
+      "position": [
+        0.2490223,
+        0.7698299,
+        0.0805363
+      ]
+    },
+    {
+      "name": "leftRing3",
+      "parent": 31,
+      "position": [
+        0.2493437,
+        0.7500592,
+        0.1003753
+      ]
+    },
+    {
+      "name": "leftLittle1",
+      "parent": 8,
+      "position": [
+        0.229595,
+        0.8120967,
+        0.0639573
+      ]
+    },
+    {
+      "name": "leftLittle2",
+      "parent": 33,
+      "position": [
+        0.225521,
+        0.783244,
+        0.0783744
+      ]
+    },
+    {
+      "name": "leftLittle3",
+      "parent": 34,
+      "position": [
+        0.2234392,
+        0.7663472,
+        0.0904572
+      ]
+    },
+    {
+      "name": "rightThumbBase",
+      "parent": 16,
+      "position": [
+        -0.2816232,
+        0.8733402,
+        0.0522864
+      ]
+    },
+    {
+      "name": "rightThumb1",
+      "parent": 36,
+      "position": [
+        -0.3041691,
+        0.8419971,
+        0.0673432
+      ]
+    },
+    {
+      "name": "rightThumb2",
+      "parent": 37,
+      "position": [
+        -0.3138154,
+        0.8169203,
+        0.0807432
+      ]
+    },
+    {
+      "name": "rightIndex1",
+      "parent": 16,
+      "position": [
+        -0.2906007,
+        0.7995817,
+        0.0598017
+      ]
+    },
+    {
+      "name": "rightIndex2",
+      "parent": 39,
+      "position": [
+        -0.2994341,
+        0.7665255,
+        0.0752433
+      ]
+    },
+    {
+      "name": "rightIndex3",
+      "parent": 40,
+      "position": [
+        -0.3051476,
+        0.7516953,
+        0.0916351
+      ]
+    },
+    {
+      "name": "rightMiddle1",
+      "parent": 16,
+      "position": [
+        -0.2669097,
+        0.801011,
+        0.0616974
+      ]
+    },
+    {
+      "name": "rightMiddle2",
+      "parent": 42,
+      "position": [
+        -0.2725027,
+        0.7639007,
+        0.0822846
+      ]
+    },
+    {
+      "name": "rightMiddle3",
+      "parent": 43,
+      "position": [
+        -0.275705,
+        0.7423872,
+        0.1008361
+      ]
+    },
+    {
+      "name": "rightRing1",
+      "parent": 16,
+      "position": [
+        -0.2473328,
+        0.8053344,
+        0.0623873
+      ]
+    },
+    {
+      "name": "rightRing2",
+      "parent": 45,
+      "position": [
+        -0.2486038,
+        0.7699635,
+        0.0804571
+      ]
+    },
+    {
+      "name": "rightRing3",
+      "parent": 46,
+      "position": [
+        -0.2498795,
+        0.7499893,
+        0.1002748
+      ]
+    },
+    {
+      "name": "rightLittle1",
+      "parent": 16,
+      "position": [
+        -0.2290011,
+        0.8122536,
+        0.0641838
+      ]
+    },
+    {
+      "name": "rightLittle2",
+      "parent": 48,
+      "position": [
+        -0.2255769,
+        0.7831785,
+        0.0779969
+      ]
+    },
+    {
+      "name": "rightLittle3",
+      "parent": 49,
+      "position": [
+        -0.2228769,
+        0.7665975,
+        0.0906104
+      ]
+    }
+  ],
+  "landmarks": {
+    "leftHeel": [
+      0.064,
+      0.00413,
+      -0.037
+    ],
+    "leftBall": [
+      0.115,
+      0.00313,
+      0.103
+    ],
+    "leftPalm": [
+      0.261,
+      0.83113,
+      0.074
+    ],
+    "leftGrip": [
+      0.261,
+      0.81313,
+      0.087
+    ],
+    "rightHeel": [
+      -0.064,
+      0.00413,
+      -0.037
+    ],
+    "rightBall": [
+      -0.115,
+      0.00313,
+      0.103
+    ],
+    "rightPalm": [
+      -0.261,
+      0.83113,
+      0.074
+    ],
+    "rightGrip": [
+      -0.261,
+      0.81313,
+      0.087
+    ]
+  },
+  "handBindings": {
+    "left": {
+      "leftThumbBase": [
+        -0.0583823,
+        -0.0940993,
+        -0.1447294,
+        0.9832549
+      ],
+      "leftThumb1": [
+        -0.104329,
+        -0.1174815,
+        -0.2465659,
+        0.9563048
+      ],
+      "leftThumb2": [
+        -0.0882308,
+        -0.1655218,
+        -0.2242745,
+        0.9563048
+      ],
+      "leftIndex1": [
+        -0.4078846,
+        -0.0733841,
+        0.0146768,
+        0.9099613
+      ],
+      "leftIndex2": [
+        -0.5140068,
+        -0.1263827,
+        0.0252765,
+        0.8480481
+      ],
+      "leftIndex3": [
+        -0.252846,
+        -0.0542092,
+        0.0108418,
+        0.9659258
+      ],
+      "leftMiddle1": [
+        -0.4113953,
+        -0.0511822,
+        0.0102364,
+        0.9099613
+      ],
+      "leftMiddle2": [
+        -0.5268658,
+        -0.0557019,
+        0.0111404,
+        0.8480481
+      ],
+      "leftMiddle3": [
+        -0.2577094,
+        -0.0234756,
+        0.0046951,
+        0.9659258
+      ],
+      "leftRing1": [
+        -0.4141805,
+        -0.0202145,
+        0.0040429,
+        0.9099613
+      ],
+      "leftRing2": [
+        -0.5296581,
+        -0.0163126,
+        0.0032625,
+        0.8480481
+      ],
+      "leftRing3": [
+        -0.2578799,
+        -0.0216008,
+        0.0043202,
+        0.9659258
+      ],
+      "leftLittle1": [
+        -0.4125961,
+        0.0408433,
+        -0.0081687,
+        0.9099613
+      ],
+      "leftLittle2": [
+        -0.5268445,
+        0.0558954,
+        -0.0111791,
+        0.8480481
+      ],
+      "leftLittle3": [
+        -0.2566411,
+        0.032855,
+        -0.006571,
+        0.9659258
+      ]
+    },
+    "right": {
+      "rightThumbBase": [
+        -0.0611128,
+        0.0860833,
+        0.1485418,
+        0.9832549
+      ],
+      "rightThumb1": [
+        -0.102417,
+        0.1240699,
+        0.2441284,
+        0.9563048
+      ],
+      "rightThumb2": [
+        -0.0892703,
+        0.1628474,
+        0.2258158,
+        0.9563048
+      ],
+      "rightIndex1": [
+        -0.4068335,
+        0.0787952,
+        -0.015759,
+        0.9099613
+      ],
+      "rightIndex2": [
+        -0.5127642,
+        0.1311462,
+        -0.0262292,
+        0.8480481
+      ],
+      "rightIndex3": [
+        -0.2529184,
+        0.0538835,
+        -0.0107767,
+        0.9659258
+      ],
+      "rightMiddle1": [
+        -0.4109386,
+        0.0545958,
+        -0.0109192,
+        0.9099613
+      ],
+      "rightMiddle2": [
+        -0.528011,
+        0.0440582,
+        -0.0088116,
+        0.8480481
+      ],
+      "rightMiddle3": [
+        -0.2554274,
+        0.0409522,
+        -0.0081904,
+        0.9659258
+      ],
+      "rightRing1": [
+        -0.4142043,
+        0.0197397,
+        -0.0039479,
+        0.9099613
+      ],
+      "rightRing2": [
+        -0.5290718,
+        0.0293764,
+        -0.0058753,
+        0.8480481
+      ],
+      "rightRing3": [
+        -0.2586995,
+        0.0077131,
+        -0.0015426,
+        0.9659258
+      ],
+      "rightLittle1": [
+        -0.4132886,
+        -0.0334406,
+        0.0066881,
+        0.9099613
+      ],
+      "rightLittle2": [
+        -0.5197531,
+        -0.1012951,
+        0.020259,
+        0.8480481
+      ],
+      "rightLittle3": [
+        -0.2585132,
+        -0.0123353,
+        0.0024671,
+        0.9659258
+      ]
+    }
+  },
+  "version": 1,
+  "groups": [
+    "neutral",
+    "bone",
+    "tendon",
+    "shell",
+    "upperPectorals",
+    "pectorals",
+    "anteriorDeltoids",
+    "lateralDeltoids",
+    "posteriorDeltoids",
+    "biceps",
+    "triceps",
+    "brachialis",
+    "forearms",
+    "quadriceps",
+    "glutes",
+    "hipAbductors",
+    "hamstrings",
+    "adductors",
+    "footStabilizers",
+    "gastrocnemius",
+    "soleus",
+    "tibialisAnterior",
+    "abdominals",
+    "obliques",
+    "spinalErectors",
+    "lats",
+    "upperTrapezius",
+    "trapezius",
+    "rhomboids",
+    "serratusAnterior",
+    "rotatorCuff",
+    "hipFlexors"
+  ],
+  "parts": [
+    {
+      "name": "lateral head of right gastrocnemius",
+      "source": "BodyParts3D/FJ1394",
+      "group": "gastrocnemius",
+      "firstIndex": 0,
+      "indexCount": 2040
+    },
+    {
+      "name": "lateral head of left gastrocnemius",
+      "source": "BodyParts3D/FJ1394M",
+      "group": "gastrocnemius",
+      "firstIndex": 2040,
+      "indexCount": 2040
+    },
+    {
+      "name": "long head of right biceps femoris",
+      "source": "BodyParts3D/FJ1395",
+      "group": "hamstrings",
+      "firstIndex": 4080,
+      "indexCount": 3114
+    },
+    {
+      "name": "long head of left biceps femoris",
+      "source": "BodyParts3D/FJ1395M",
+      "group": "hamstrings",
+      "firstIndex": 7194,
+      "indexCount": 3114
+    },
+    {
+      "name": "medial head of right gastrocnemius",
+      "source": "BodyParts3D/FJ1397",
+      "group": "gastrocnemius",
+      "firstIndex": 10308,
+      "indexCount": 2424
+    },
+    {
+      "name": "medial head of left gastrocnemius",
+      "source": "BodyParts3D/FJ1397M",
+      "group": "gastrocnemius",
+      "firstIndex": 12732,
+      "indexCount": 2424
+    },
+    {
+      "name": "right adductor brevis",
+      "source": "BodyParts3D/FJ1401",
+      "group": "adductors",
+      "firstIndex": 15156,
+      "indexCount": 828
+    },
+    {
+      "name": "left adductor brevis",
+      "source": "BodyParts3D/FJ1401M",
+      "group": "adductors",
+      "firstIndex": 15984,
+      "indexCount": 828
+    },
+    {
+      "name": "right adductor longus",
+      "source": "BodyParts3D/FJ1402",
+      "group": "adductors",
+      "firstIndex": 16812,
+      "indexCount": 1548
+    },
+    {
+      "name": "left adductor longus",
+      "source": "BodyParts3D/FJ1402M",
+      "group": "adductors",
+      "firstIndex": 18360,
+      "indexCount": 1548
+    },
+    {
+      "name": "right adductor magnus",
+      "source": "BodyParts3D/FJ1403",
+      "group": "adductors",
+      "firstIndex": 19908,
+      "indexCount": 3570
+    },
+    {
+      "name": "left adductor magnus",
+      "source": "BodyParts3D/FJ1403M",
+      "group": "adductors",
+      "firstIndex": 23478,
+      "indexCount": 3570
+    },
+    {
+      "name": "right adductor minimus",
+      "source": "BodyParts3D/FJ1404",
+      "group": "adductors",
+      "firstIndex": 27048,
+      "indexCount": 582
+    },
+    {
+      "name": "left adductor minimus",
+      "source": "BodyParts3D/FJ1404M",
+      "group": "adductors",
+      "firstIndex": 27630,
+      "indexCount": 582
+    },
+    {
+      "name": "right extensor digitorum longus",
+      "source": "BodyParts3D/FJ1406",
+      "group": "neutral",
+      "firstIndex": 28212,
+      "indexCount": 951
+    },
+    {
+      "name": "left extensor digitorum longus",
+      "source": "BodyParts3D/FJ1406M",
+      "group": "neutral",
+      "firstIndex": 29163,
+      "indexCount": 963
+    },
+    {
+      "name": "right extensor hallucis longus",
+      "source": "BodyParts3D/FJ1408",
+      "group": "neutral",
+      "firstIndex": 30126,
+      "indexCount": 447
+    },
+    {
+      "name": "left extensor hallucis longus",
+      "source": "BodyParts3D/FJ1408M",
+      "group": "neutral",
+      "firstIndex": 30573,
+      "indexCount": 447
+    },
+    {
+      "name": "right fibularis brevis",
+      "source": "BodyParts3D/FJ1409",
+      "group": "footStabilizers",
+      "firstIndex": 31020,
+      "indexCount": 507
+    },
+    {
+      "name": "left fibularis brevis",
+      "source": "BodyParts3D/FJ1409M",
+      "group": "footStabilizers",
+      "firstIndex": 31527,
+      "indexCount": 513
+    },
+    {
+      "name": "right fibularis longus",
+      "source": "BodyParts3D/FJ1410",
+      "group": "footStabilizers",
+      "firstIndex": 32040,
+      "indexCount": 1053
+    },
+    {
+      "name": "left fibularis longus",
+      "source": "BodyParts3D/FJ1410M",
+      "group": "footStabilizers",
+      "firstIndex": 33093,
+      "indexCount": 1053
+    },
+    {
+      "name": "right fibularis tertius",
+      "source": "BodyParts3D/FJ1411",
+      "group": "footStabilizers",
+      "firstIndex": 34146,
+      "indexCount": 183
+    },
+    {
+      "name": "left fibularis tertius",
+      "source": "BodyParts3D/FJ1411M",
+      "group": "footStabilizers",
+      "firstIndex": 34329,
+      "indexCount": 180
+    },
+    {
+      "name": "right flexor digitorum longus",
+      "source": "BodyParts3D/FJ1414",
+      "group": "neutral",
+      "firstIndex": 34509,
+      "indexCount": 588
+    },
+    {
+      "name": "left flexor digitorum longus",
+      "source": "BodyParts3D/FJ1414M",
+      "group": "neutral",
+      "firstIndex": 35097,
+      "indexCount": 588
+    },
+    {
+      "name": "right flexor hallucis longus",
+      "source": "BodyParts3D/FJ1415",
+      "group": "neutral",
+      "firstIndex": 35685,
+      "indexCount": 717
+    },
+    {
+      "name": "left flexor hallucis longus",
+      "source": "BodyParts3D/FJ1415M",
+      "group": "neutral",
+      "firstIndex": 36402,
+      "indexCount": 693
+    },
+    {
+      "name": "right gluteus maximus",
+      "source": "BodyParts3D/FJ1418",
+      "group": "glutes",
+      "firstIndex": 37095,
+      "indexCount": 3318
+    },
+    {
+      "name": "left gluteus maximus",
+      "source": "BodyParts3D/FJ1418M",
+      "group": "glutes",
+      "firstIndex": 40413,
+      "indexCount": 3318
+    },
+    {
+      "name": "right gluteus medius",
+      "source": "BodyParts3D/FJ1419",
+      "group": "hipAbductors",
+      "firstIndex": 43731,
+      "indexCount": 1776
+    },
+    {
+      "name": "left gluteus medius",
+      "source": "BodyParts3D/FJ1419M",
+      "group": "hipAbductors",
+      "firstIndex": 45507,
+      "indexCount": 1776
+    },
+    {
+      "name": "right gluteus minimus",
+      "source": "BodyParts3D/FJ1420",
+      "group": "hipAbductors",
+      "firstIndex": 47283,
+      "indexCount": 1164
+    },
+    {
+      "name": "left gluteus minimus",
+      "source": "BodyParts3D/FJ1420M",
+      "group": "hipAbductors",
+      "firstIndex": 48447,
+      "indexCount": 1164
+    },
+    {
+      "name": "right gracilis",
+      "source": "BodyParts3D/FJ1421",
+      "group": "adductors",
+      "firstIndex": 49611,
+      "indexCount": 1914
+    },
+    {
+      "name": "left gracilis",
+      "source": "BodyParts3D/FJ1421M",
+      "group": "adductors",
+      "firstIndex": 51525,
+      "indexCount": 1914
+    },
+    {
+      "name": "right iliacus",
+      "source": "BodyParts3D/FJ1422",
+      "group": "hipFlexors",
+      "firstIndex": 53439,
+      "indexCount": 1506
+    },
+    {
+      "name": "left iliacus",
+      "source": "BodyParts3D/FJ1422M",
+      "group": "hipFlexors",
+      "firstIndex": 54945,
+      "indexCount": 1506
+    },
+    {
+      "name": "right pectineus",
+      "source": "BodyParts3D/FJ1427",
+      "group": "adductors",
+      "firstIndex": 56451,
+      "indexCount": 768
+    },
+    {
+      "name": "left pectineus",
+      "source": "BodyParts3D/FJ1427M",
+      "group": "adductors",
+      "firstIndex": 57219,
+      "indexCount": 768
+    },
+    {
+      "name": "right piriformis",
+      "source": "BodyParts3D/FJ1428",
+      "group": "neutral",
+      "firstIndex": 57987,
+      "indexCount": 504
+    },
+    {
+      "name": "left piriformis",
+      "source": "BodyParts3D/FJ1428M",
+      "group": "neutral",
+      "firstIndex": 58491,
+      "indexCount": 498
+    },
+    {
+      "name": "right psoas major",
+      "source": "BodyParts3D/FJ1431",
+      "group": "hipFlexors",
+      "firstIndex": 58989,
+      "indexCount": 2286
+    },
+    {
+      "name": "left psoas major",
+      "source": "BodyParts3D/FJ1431M",
+      "group": "hipFlexors",
+      "firstIndex": 61275,
+      "indexCount": 2256
+    },
+    {
+      "name": "right rectus femoris",
+      "source": "BodyParts3D/FJ1433",
+      "group": "quadriceps",
+      "firstIndex": 63531,
+      "indexCount": 3276
+    },
+    {
+      "name": "left rectus femoris",
+      "source": "BodyParts3D/FJ1433M",
+      "group": "quadriceps",
+      "firstIndex": 66807,
+      "indexCount": 3276
+    },
+    {
+      "name": "right sartorius",
+      "source": "BodyParts3D/FJ1434",
+      "group": "hipFlexors",
+      "firstIndex": 70083,
+      "indexCount": 2040
+    },
+    {
+      "name": "left sartorius",
+      "source": "BodyParts3D/FJ1434M",
+      "group": "hipFlexors",
+      "firstIndex": 72123,
+      "indexCount": 2040
+    },
+    {
+      "name": "right semimembranosus",
+      "source": "BodyParts3D/FJ1435",
+      "group": "hamstrings",
+      "firstIndex": 74163,
+      "indexCount": 2826
+    },
+    {
+      "name": "left semimembranosus",
+      "source": "BodyParts3D/FJ1435M",
+      "group": "hamstrings",
+      "firstIndex": 76989,
+      "indexCount": 2826
+    },
+    {
+      "name": "right semitendinosus",
+      "source": "BodyParts3D/FJ1436",
+      "group": "hamstrings",
+      "firstIndex": 79815,
+      "indexCount": 1710
+    },
+    {
+      "name": "left semitendinosus",
+      "source": "BodyParts3D/FJ1436M",
+      "group": "hamstrings",
+      "firstIndex": 81525,
+      "indexCount": 1710
+    },
+    {
+      "name": "right soleus",
+      "source": "BodyParts3D/FJ1437",
+      "group": "soleus",
+      "firstIndex": 83235,
+      "indexCount": 2850
+    },
+    {
+      "name": "left soleus",
+      "source": "BodyParts3D/FJ1437M",
+      "group": "soleus",
+      "firstIndex": 86085,
+      "indexCount": 2850
+    },
+    {
+      "name": "right tensor fasciae latae",
+      "source": "BodyParts3D/FJ1438",
+      "group": "hipAbductors",
+      "firstIndex": 88935,
+      "indexCount": 690
+    },
+    {
+      "name": "left tensor fasciae latae",
+      "source": "BodyParts3D/FJ1438M",
+      "group": "hipAbductors",
+      "firstIndex": 89625,
+      "indexCount": 690
+    },
+    {
+      "name": "right tibialis anterior",
+      "source": "BodyParts3D/FJ1439",
+      "group": "tibialisAnterior",
+      "firstIndex": 90315,
+      "indexCount": 1401
+    },
+    {
+      "name": "left tibialis anterior",
+      "source": "BodyParts3D/FJ1439M",
+      "group": "tibialisAnterior",
+      "firstIndex": 91716,
+      "indexCount": 1401
+    },
+    {
+      "name": "right tibialis posterior",
+      "source": "BodyParts3D/FJ1440",
+      "group": "footStabilizers",
+      "firstIndex": 93117,
+      "indexCount": 882
+    },
+    {
+      "name": "left tibialis posterior",
+      "source": "BodyParts3D/FJ1440M",
+      "group": "footStabilizers",
+      "firstIndex": 93999,
+      "indexCount": 882
+    },
+    {
+      "name": "right vastus intermedius",
+      "source": "BodyParts3D/FJ1441",
+      "group": "quadriceps",
+      "firstIndex": 94881,
+      "indexCount": 2478
+    },
+    {
+      "name": "left vastus intermedius",
+      "source": "BodyParts3D/FJ1441M",
+      "group": "quadriceps",
+      "firstIndex": 97359,
+      "indexCount": 2478
+    },
+    {
+      "name": "right vastus lateralis",
+      "source": "BodyParts3D/FJ1442",
+      "group": "quadriceps",
+      "firstIndex": 99837,
+      "indexCount": 3786
+    },
+    {
+      "name": "left vastus lateralis",
+      "source": "BodyParts3D/FJ1442M",
+      "group": "quadriceps",
+      "firstIndex": 103623,
+      "indexCount": 3786
+    },
+    {
+      "name": "right vastus medialis",
+      "source": "BodyParts3D/FJ1443",
+      "group": "quadriceps",
+      "firstIndex": 107409,
+      "indexCount": 2376
+    },
+    {
+      "name": "left vastus medialis",
+      "source": "BodyParts3D/FJ1443M",
+      "group": "quadriceps",
+      "firstIndex": 109785,
+      "indexCount": 2376
+    },
+    {
+      "name": "short head of right biceps femoris",
+      "source": "BodyParts3D/FJ1444",
+      "group": "hamstrings",
+      "firstIndex": 112161,
+      "indexCount": 1044
+    },
+    {
+      "name": "short head of left biceps femoris",
+      "source": "BodyParts3D/FJ1444M",
+      "group": "hamstrings",
+      "firstIndex": 113205,
+      "indexCount": 1044
+    },
+    {
+      "name": "abdominal part of right pectoralis major",
+      "source": "BodyParts3D/FJ1446",
+      "group": "pectorals",
+      "firstIndex": 114249,
+      "indexCount": 744
+    },
+    {
+      "name": "abdominal part of left pectoralis major",
+      "source": "BodyParts3D/FJ1446M",
+      "group": "pectorals",
+      "firstIndex": 114993,
+      "indexCount": 738
+    },
+    {
+      "name": "clavicular part of right pectoralis major",
+      "source": "BodyParts3D/FJ1447",
+      "group": "upperPectorals",
+      "firstIndex": 115731,
+      "indexCount": 954
+    },
+    {
+      "name": "clavicular part of left pectoralis major",
+      "source": "BodyParts3D/FJ1447M",
+      "group": "upperPectorals",
+      "firstIndex": 116685,
+      "indexCount": 942
+    },
+    {
+      "name": "external intercostal muscle",
+      "source": "BodyParts3D/FJ1451",
+      "group": "neutral",
+      "firstIndex": 117627,
+      "indexCount": 26094
+    },
+    {
+      "name": "external intercostal muscle",
+      "source": "BodyParts3D/FJ1451M",
+      "group": "neutral",
+      "firstIndex": 143721,
+      "indexCount": 26046
+    },
+    {
+      "name": "right external oblique",
+      "source": "BodyParts3D/FJ1452",
+      "group": "obliques",
+      "firstIndex": 169767,
+      "indexCount": 23268
+    },
+    {
+      "name": "left external oblique",
+      "source": "BodyParts3D/FJ1452M",
+      "group": "obliques",
+      "firstIndex": 193035,
+      "indexCount": 23232
+    },
+    {
+      "name": "right pectoralis minor",
+      "source": "BodyParts3D/FJ1456",
+      "group": "pectorals",
+      "firstIndex": 216267,
+      "indexCount": 2268
+    },
+    {
+      "name": "left pectoralis minor",
+      "source": "BodyParts3D/FJ1456M",
+      "group": "pectorals",
+      "firstIndex": 218535,
+      "indexCount": 2256
+    },
+    {
+      "name": "right serratus anterior",
+      "source": "BodyParts3D/FJ1459",
+      "group": "serratusAnterior",
+      "firstIndex": 220791,
+      "indexCount": 11436
+    },
+    {
+      "name": "left serratus anterior",
+      "source": "BodyParts3D/FJ1459M",
+      "group": "serratusAnterior",
+      "firstIndex": 232227,
+      "indexCount": 11460
+    },
+    {
+      "name": "sternocostal part of right pectoralis major",
+      "source": "BodyParts3D/FJ1464",
+      "group": "pectorals",
+      "firstIndex": 243687,
+      "indexCount": 3420
+    },
+    {
+      "name": "clavicular head surface projection on sternocostal part of right pectoralis major",
+      "source": "BodyParts3D/FJ1464",
+      "group": "upperPectorals",
+      "firstIndex": 247107,
+      "indexCount": 18
+    },
+    {
+      "name": "sternocostal part of left pectoralis major",
+      "source": "BodyParts3D/FJ1464M",
+      "group": "pectorals",
+      "firstIndex": 247125,
+      "indexCount": 3411
+    },
+    {
+      "name": "clavicular head surface projection on sternocostal part of left pectoralis major",
+      "source": "BodyParts3D/FJ1464M",
+      "group": "upperPectorals",
+      "firstIndex": 250536,
+      "indexCount": 27
+    },
+    {
+      "name": "acromial part of right deltoid",
+      "source": "BodyParts3D/FJ1467",
+      "group": "lateralDeltoids",
+      "firstIndex": 250563,
+      "indexCount": 1098
+    },
+    {
+      "name": "acromial part of left deltoid",
+      "source": "BodyParts3D/FJ1467M",
+      "group": "lateralDeltoids",
+      "firstIndex": 251661,
+      "indexCount": 1098
+    },
+    {
+      "name": "clavicular part of right deltoid",
+      "source": "BodyParts3D/FJ1468",
+      "group": "anteriorDeltoids",
+      "firstIndex": 252759,
+      "indexCount": 972
+    },
+    {
+      "name": "clavicular part of left deltoid",
+      "source": "BodyParts3D/FJ1468M",
+      "group": "anteriorDeltoids",
+      "firstIndex": 253731,
+      "indexCount": 942
+    },
+    {
+      "name": "right extensor carpi ulnaris",
+      "source": "BodyParts3D/FJ1472",
+      "group": "forearms",
+      "firstIndex": 254673,
+      "indexCount": 585
+    },
+    {
+      "name": "left extensor carpi ulnaris",
+      "source": "BodyParts3D/FJ1472M",
+      "group": "forearms",
+      "firstIndex": 255258,
+      "indexCount": 567
+    },
+    {
+      "name": "humeral head of right flexor carpi ulnaris",
+      "source": "BodyParts3D/FJ1473",
+      "group": "forearms",
+      "firstIndex": 255825,
+      "indexCount": 771
+    },
+    {
+      "name": "humeral head of left flexor carpi ulnaris",
+      "source": "BodyParts3D/FJ1473M",
+      "group": "forearms",
+      "firstIndex": 256596,
+      "indexCount": 771
+    },
+    {
+      "name": "humeral head of right pronator teres",
+      "source": "BodyParts3D/FJ1474",
+      "group": "forearms",
+      "firstIndex": 257367,
+      "indexCount": 594
+    },
+    {
+      "name": "humeral head of left pronator teres",
+      "source": "BodyParts3D/FJ1474M",
+      "group": "forearms",
+      "firstIndex": 257961,
+      "indexCount": 594
+    },
+    {
+      "name": "right flexor digitorum superficialis",
+      "source": "BodyParts3D/FJ1475",
+      "group": "forearms",
+      "firstIndex": 258555,
+      "indexCount": 1248
+    },
+    {
+      "name": "left flexor digitorum superficialis",
+      "source": "BodyParts3D/FJ1475M",
+      "group": "forearms",
+      "firstIndex": 259803,
+      "indexCount": 1272
+    },
+    {
+      "name": "lateral head of right triceps brachii",
+      "source": "BodyParts3D/FJ1477",
+      "group": "triceps",
+      "firstIndex": 261075,
+      "indexCount": 1290
+    },
+    {
+      "name": "lateral head of left triceps brachii",
+      "source": "BodyParts3D/FJ1477M",
+      "group": "triceps",
+      "firstIndex": 262365,
+      "indexCount": 1290
+    },
+    {
+      "name": "long head of right biceps brachii",
+      "source": "BodyParts3D/FJ1478",
+      "group": "biceps",
+      "firstIndex": 263655,
+      "indexCount": 1128
+    },
+    {
+      "name": "long head of left biceps brachii",
+      "source": "BodyParts3D/FJ1478M",
+      "group": "biceps",
+      "firstIndex": 264783,
+      "indexCount": 1128
+    },
+    {
+      "name": "long head of right triceps brachii",
+      "source": "BodyParts3D/FJ1479",
+      "group": "triceps",
+      "firstIndex": 265911,
+      "indexCount": 1320
+    },
+    {
+      "name": "long head of left triceps brachii",
+      "source": "BodyParts3D/FJ1479M",
+      "group": "triceps",
+      "firstIndex": 267231,
+      "indexCount": 1320
+    },
+    {
+      "name": "medial head of right triceps brachii",
+      "source": "BodyParts3D/FJ1480",
+      "group": "triceps",
+      "firstIndex": 268551,
+      "indexCount": 996
+    },
+    {
+      "name": "medial head of left triceps brachii",
+      "source": "BodyParts3D/FJ1480M",
+      "group": "triceps",
+      "firstIndex": 269547,
+      "indexCount": 996
+    },
+    {
+      "name": "right abductor pollicis longus",
+      "source": "BodyParts3D/FJ1484",
+      "group": "forearms",
+      "firstIndex": 270543,
+      "indexCount": 492
+    },
+    {
+      "name": "left abductor pollicis longus",
+      "source": "BodyParts3D/FJ1484M",
+      "group": "forearms",
+      "firstIndex": 271035,
+      "indexCount": 492
+    },
+    {
+      "name": "right anconeus",
+      "source": "BodyParts3D/FJ1485",
+      "group": "triceps",
+      "firstIndex": 271527,
+      "indexCount": 438
+    },
+    {
+      "name": "left anconeus",
+      "source": "BodyParts3D/FJ1485M",
+      "group": "triceps",
+      "firstIndex": 271965,
+      "indexCount": 444
+    },
+    {
+      "name": "right brachialis",
+      "source": "BodyParts3D/FJ1486",
+      "group": "brachialis",
+      "firstIndex": 272409,
+      "indexCount": 1254
+    },
+    {
+      "name": "left brachialis",
+      "source": "BodyParts3D/FJ1486M",
+      "group": "brachialis",
+      "firstIndex": 273663,
+      "indexCount": 1254
+    },
+    {
+      "name": "right brachioradialis",
+      "source": "BodyParts3D/FJ1487",
+      "group": "forearms",
+      "firstIndex": 274917,
+      "indexCount": 1623
+    },
+    {
+      "name": "left brachioradialis",
+      "source": "BodyParts3D/FJ1487M",
+      "group": "forearms",
+      "firstIndex": 276540,
+      "indexCount": 1644
+    },
+    {
+      "name": "right coracobrachialis",
+      "source": "BodyParts3D/FJ1488",
+      "group": "neutral",
+      "firstIndex": 278184,
+      "indexCount": 252
+    },
+    {
+      "name": "left coracobrachialis",
+      "source": "BodyParts3D/FJ1488M",
+      "group": "neutral",
+      "firstIndex": 278436,
+      "indexCount": 252
+    },
+    {
+      "name": "right extensor carpi radialis brevis",
+      "source": "BodyParts3D/FJ1489",
+      "group": "forearms",
+      "firstIndex": 278688,
+      "indexCount": 621
+    },
+    {
+      "name": "left extensor carpi radialis brevis",
+      "source": "BodyParts3D/FJ1489M",
+      "group": "forearms",
+      "firstIndex": 279309,
+      "indexCount": 639
+    },
+    {
+      "name": "right extensor carpi radialis longus",
+      "source": "BodyParts3D/FJ1490",
+      "group": "forearms",
+      "firstIndex": 279948,
+      "indexCount": 780
+    },
+    {
+      "name": "left extensor carpi radialis longus",
+      "source": "BodyParts3D/FJ1490M",
+      "group": "forearms",
+      "firstIndex": 280728,
+      "indexCount": 762
+    },
+    {
+      "name": "right extensor digiti minimi",
+      "source": "BodyParts3D/FJ1491",
+      "group": "forearms",
+      "firstIndex": 281490,
+      "indexCount": 408
+    },
+    {
+      "name": "left extensor digiti minimi",
+      "source": "BodyParts3D/FJ1491M",
+      "group": "forearms",
+      "firstIndex": 281898,
+      "indexCount": 408
+    },
+    {
+      "name": "right extensor digitorum",
+      "source": "BodyParts3D/FJ1492",
+      "group": "forearms",
+      "firstIndex": 282306,
+      "indexCount": 582
+    },
+    {
+      "name": "left extensor digitorum",
+      "source": "BodyParts3D/FJ1492M",
+      "group": "forearms",
+      "firstIndex": 282888,
+      "indexCount": 582
+    },
+    {
+      "name": "right extensor indicis",
+      "source": "BodyParts3D/FJ1493",
+      "group": "forearms",
+      "firstIndex": 283470,
+      "indexCount": 171
+    },
+    {
+      "name": "left extensor indicis",
+      "source": "BodyParts3D/FJ1493M",
+      "group": "forearms",
+      "firstIndex": 283641,
+      "indexCount": 171
+    },
+    {
+      "name": "right extensor pollicis brevis",
+      "source": "BodyParts3D/FJ1494",
+      "group": "forearms",
+      "firstIndex": 283812,
+      "indexCount": 213
+    },
+    {
+      "name": "left extensor pollicis brevis",
+      "source": "BodyParts3D/FJ1494M",
+      "group": "forearms",
+      "firstIndex": 284025,
+      "indexCount": 213
+    },
+    {
+      "name": "right extensor pollicis longus",
+      "source": "BodyParts3D/FJ1495",
+      "group": "forearms",
+      "firstIndex": 284238,
+      "indexCount": 240
+    },
+    {
+      "name": "left extensor pollicis longus",
+      "source": "BodyParts3D/FJ1495M",
+      "group": "forearms",
+      "firstIndex": 284478,
+      "indexCount": 243
+    },
+    {
+      "name": "right flexor carpi radialis",
+      "source": "BodyParts3D/FJ1496",
+      "group": "forearms",
+      "firstIndex": 284721,
+      "indexCount": 558
+    },
+    {
+      "name": "left flexor carpi radialis",
+      "source": "BodyParts3D/FJ1496M",
+      "group": "forearms",
+      "firstIndex": 285279,
+      "indexCount": 558
+    },
+    {
+      "name": "right flexor digitorum profundus",
+      "source": "BodyParts3D/FJ1497",
+      "group": "forearms",
+      "firstIndex": 285837,
+      "indexCount": 864
+    },
+    {
+      "name": "left flexor digitorum profundus",
+      "source": "BodyParts3D/FJ1497M",
+      "group": "forearms",
+      "firstIndex": 286701,
+      "indexCount": 861
+    },
+    {
+      "name": "right flexor pollicis longus",
+      "source": "BodyParts3D/FJ1498",
+      "group": "forearms",
+      "firstIndex": 287562,
+      "indexCount": 327
+    },
+    {
+      "name": "left flexor pollicis longus",
+      "source": "BodyParts3D/FJ1498M",
+      "group": "forearms",
+      "firstIndex": 287889,
+      "indexCount": 327
+    },
+    {
+      "name": "right flexor digitorum superficialis",
+      "source": "BodyParts3D/FJ1499",
+      "group": "forearms",
+      "firstIndex": 288216,
+      "indexCount": 438
+    },
+    {
+      "name": "left flexor digitorum superficialis",
+      "source": "BodyParts3D/FJ1499M",
+      "group": "forearms",
+      "firstIndex": 288654,
+      "indexCount": 441
+    },
+    {
+      "name": "right infraspinatus muscle",
+      "source": "BodyParts3D/FJ1500",
+      "group": "rotatorCuff",
+      "firstIndex": 289095,
+      "indexCount": 1122
+    },
+    {
+      "name": "left infraspinatus muscle",
+      "source": "BodyParts3D/FJ1500M",
+      "group": "rotatorCuff",
+      "firstIndex": 290217,
+      "indexCount": 1122
+    },
+    {
+      "name": "right palmaris longus",
+      "source": "BodyParts3D/FJ1502",
+      "group": "forearms",
+      "firstIndex": 291339,
+      "indexCount": 567
+    },
+    {
+      "name": "left palmaris longus",
+      "source": "BodyParts3D/FJ1502M",
+      "group": "forearms",
+      "firstIndex": 291906,
+      "indexCount": 561
+    },
+    {
+      "name": "right pronator quadratus",
+      "source": "BodyParts3D/FJ1503",
+      "group": "forearms",
+      "firstIndex": 292467,
+      "indexCount": 726
+    },
+    {
+      "name": "left pronator quadratus",
+      "source": "BodyParts3D/FJ1503M",
+      "group": "forearms",
+      "firstIndex": 293193,
+      "indexCount": 738
+    },
+    {
+      "name": "right subscapularis",
+      "source": "BodyParts3D/FJ1504",
+      "group": "rotatorCuff",
+      "firstIndex": 293931,
+      "indexCount": 1122
+    },
+    {
+      "name": "left subscapularis",
+      "source": "BodyParts3D/FJ1504M",
+      "group": "rotatorCuff",
+      "firstIndex": 295053,
+      "indexCount": 1128
+    },
+    {
+      "name": "right supinator",
+      "source": "BodyParts3D/FJ1505",
+      "group": "forearms",
+      "firstIndex": 296181,
+      "indexCount": 984
+    },
+    {
+      "name": "left supinator",
+      "source": "BodyParts3D/FJ1505M",
+      "group": "forearms",
+      "firstIndex": 297165,
+      "indexCount": 978
+    },
+    {
+      "name": "right supraspinatus",
+      "source": "BodyParts3D/FJ1506",
+      "group": "rotatorCuff",
+      "firstIndex": 298143,
+      "indexCount": 546
+    },
+    {
+      "name": "left supraspinatus",
+      "source": "BodyParts3D/FJ1506M",
+      "group": "rotatorCuff",
+      "firstIndex": 298689,
+      "indexCount": 546
+    },
+    {
+      "name": "right teres major",
+      "source": "BodyParts3D/FJ1507",
+      "group": "neutral",
+      "firstIndex": 299235,
+      "indexCount": 534
+    },
+    {
+      "name": "left teres major",
+      "source": "BodyParts3D/FJ1507M",
+      "group": "neutral",
+      "firstIndex": 299769,
+      "indexCount": 534
+    },
+    {
+      "name": "right teres minor",
+      "source": "BodyParts3D/FJ1508",
+      "group": "rotatorCuff",
+      "firstIndex": 300303,
+      "indexCount": 480
+    },
+    {
+      "name": "left teres minor",
+      "source": "BodyParts3D/FJ1508M",
+      "group": "rotatorCuff",
+      "firstIndex": 300783,
+      "indexCount": 480
+    },
+    {
+      "name": "short head of right biceps brachii",
+      "source": "BodyParts3D/FJ1512",
+      "group": "biceps",
+      "firstIndex": 301263,
+      "indexCount": 996
+    },
+    {
+      "name": "short head of left biceps brachii",
+      "source": "BodyParts3D/FJ1512M",
+      "group": "biceps",
+      "firstIndex": 302259,
+      "indexCount": 996
+    },
+    {
+      "name": "spinal part of right deltoid",
+      "source": "BodyParts3D/FJ1513",
+      "group": "posteriorDeltoids",
+      "firstIndex": 303255,
+      "indexCount": 1554
+    },
+    {
+      "name": "spinal part of left deltoid",
+      "source": "BodyParts3D/FJ1513M",
+      "group": "posteriorDeltoids",
+      "firstIndex": 304809,
+      "indexCount": 1554
+    },
+    {
+      "name": "ulnar head of right pronator teres",
+      "source": "BodyParts3D/FJ1516",
+      "group": "forearms",
+      "firstIndex": 306363,
+      "indexCount": 390
+    },
+    {
+      "name": "ulnar head of left pronator teres",
+      "source": "BodyParts3D/FJ1516M",
+      "group": "forearms",
+      "firstIndex": 306753,
+      "indexCount": 390
+    },
+    {
+      "name": "right extensor carpi ulnaris",
+      "source": "BodyParts3D/FJ1517",
+      "group": "forearms",
+      "firstIndex": 307143,
+      "indexCount": 339
+    },
+    {
+      "name": "left extensor carpi ulnaris",
+      "source": "BodyParts3D/FJ1517M",
+      "group": "forearms",
+      "firstIndex": 307482,
+      "indexCount": 321
+    },
+    {
+      "name": "ulnar head of right flexor carpi ulnaris",
+      "source": "BodyParts3D/FJ1518",
+      "group": "forearms",
+      "firstIndex": 307803,
+      "indexCount": 612
+    },
+    {
+      "name": "ulnar head of left flexor carpi ulnaris",
+      "source": "BodyParts3D/FJ1518M",
+      "group": "forearms",
+      "firstIndex": 308415,
+      "indexCount": 600
+    },
+    {
+      "name": "ascending part of right trapezius",
+      "source": "BodyParts3D/FJ1520",
+      "group": "trapezius",
+      "firstIndex": 309015,
+      "indexCount": 3756
+    },
+    {
+      "name": "ascending part of left trapezius",
+      "source": "BodyParts3D/FJ1520M",
+      "group": "trapezius",
+      "firstIndex": 312771,
+      "indexCount": 3762
+    },
+    {
+      "name": "descending part of right trapezius",
+      "source": "BodyParts3D/FJ1521",
+      "group": "upperTrapezius",
+      "firstIndex": 316533,
+      "indexCount": 2394
+    },
+    {
+      "name": "descending part of left trapezius",
+      "source": "BodyParts3D/FJ1521M",
+      "group": "upperTrapezius",
+      "firstIndex": 318927,
+      "indexCount": 2418
+    },
+    {
+      "name": "right iliocostalis cervicis",
+      "source": "BodyParts3D/FJ1526",
+      "group": "spinalErectors",
+      "firstIndex": 321345,
+      "indexCount": 888
+    },
+    {
+      "name": "left iliocostalis cervicis",
+      "source": "BodyParts3D/FJ1526M",
+      "group": "spinalErectors",
+      "firstIndex": 322233,
+      "indexCount": 894
+    },
+    {
+      "name": "right iliocostalis lumborum",
+      "source": "BodyParts3D/FJ1527",
+      "group": "spinalErectors",
+      "firstIndex": 323127,
+      "indexCount": 4008
+    },
+    {
+      "name": "left iliocostalis lumborum",
+      "source": "BodyParts3D/FJ1527M",
+      "group": "spinalErectors",
+      "firstIndex": 327135,
+      "indexCount": 4020
+    },
+    {
+      "name": "right iliocostalis thoracis",
+      "source": "BodyParts3D/FJ1528",
+      "group": "spinalErectors",
+      "firstIndex": 331155,
+      "indexCount": 2322
+    },
+    {
+      "name": "left iliocostalis thoracis",
+      "source": "BodyParts3D/FJ1528M",
+      "group": "spinalErectors",
+      "firstIndex": 333477,
+      "indexCount": 2334
+    },
+    {
+      "name": "right levator scapulae",
+      "source": "BodyParts3D/FJ1532",
+      "group": "bone",
+      "firstIndex": 335811,
+      "indexCount": 1242
+    },
+    {
+      "name": "left levator scapulae",
+      "source": "BodyParts3D/FJ1532M",
+      "group": "bone",
+      "firstIndex": 337053,
+      "indexCount": 1248
+    },
+    {
+      "name": "right longissimus capitis",
+      "source": "BodyParts3D/FJ1533",
+      "group": "spinalErectors",
+      "firstIndex": 338301,
+      "indexCount": 690
+    },
+    {
+      "name": "left longissimus capitis",
+      "source": "BodyParts3D/FJ1533M",
+      "group": "spinalErectors",
+      "firstIndex": 338991,
+      "indexCount": 696
+    },
+    {
+      "name": "right longissimus cervicis",
+      "source": "BodyParts3D/FJ1534",
+      "group": "spinalErectors",
+      "firstIndex": 339687,
+      "indexCount": 828
+    },
+    {
+      "name": "left longissimus cervicis",
+      "source": "BodyParts3D/FJ1534M",
+      "group": "spinalErectors",
+      "firstIndex": 340515,
+      "indexCount": 816
+    },
+    {
+      "name": "right longissimus thoracis",
+      "source": "BodyParts3D/FJ1535",
+      "group": "spinalErectors",
+      "firstIndex": 341331,
+      "indexCount": 5268
+    },
+    {
+      "name": "left longissimus thoracis",
+      "source": "BodyParts3D/FJ1535M",
+      "group": "spinalErectors",
+      "firstIndex": 346599,
+      "indexCount": 5292
+    },
+    {
+      "name": "right rhomboid major",
+      "source": "BodyParts3D/FJ1536",
+      "group": "rhomboids",
+      "firstIndex": 351891,
+      "indexCount": 1872
+    },
+    {
+      "name": "left rhomboid major",
+      "source": "BodyParts3D/FJ1536M",
+      "group": "rhomboids",
+      "firstIndex": 353763,
+      "indexCount": 1878
+    },
+    {
+      "name": "right rhomboid minor",
+      "source": "BodyParts3D/FJ1537",
+      "group": "rhomboids",
+      "firstIndex": 355641,
+      "indexCount": 582
+    },
+    {
+      "name": "left rhomboid minor",
+      "source": "BodyParts3D/FJ1537M",
+      "group": "rhomboids",
+      "firstIndex": 356223,
+      "indexCount": 594
+    },
+    {
+      "name": "right semispinalis capitis",
+      "source": "BodyParts3D/FJ1538",
+      "group": "spinalErectors",
+      "firstIndex": 356817,
+      "indexCount": 636
+    },
+    {
+      "name": "left semispinalis capitis",
+      "source": "BodyParts3D/FJ1538M",
+      "group": "spinalErectors",
+      "firstIndex": 357453,
+      "indexCount": 624
+    },
+    {
+      "name": "right semispinalis cervicis",
+      "source": "BodyParts3D/FJ1539",
+      "group": "spinalErectors",
+      "firstIndex": 358077,
+      "indexCount": 1056
+    },
+    {
+      "name": "left semispinalis cervicis",
+      "source": "BodyParts3D/FJ1539M",
+      "group": "spinalErectors",
+      "firstIndex": 359133,
+      "indexCount": 1032
+    },
+    {
+      "name": "right semispinalis thoracis",
+      "source": "BodyParts3D/FJ1540",
+      "group": "spinalErectors",
+      "firstIndex": 360165,
+      "indexCount": 1698
+    },
+    {
+      "name": "left semispinalis thoracis",
+      "source": "BodyParts3D/FJ1540M",
+      "group": "spinalErectors",
+      "firstIndex": 361863,
+      "indexCount": 1668
+    },
+    {
+      "name": "right serratus posterior inferior",
+      "source": "BodyParts3D/FJ1541",
+      "group": "neutral",
+      "firstIndex": 363531,
+      "indexCount": 3858
+    },
+    {
+      "name": "left serratus posterior inferior",
+      "source": "BodyParts3D/FJ1541M",
+      "group": "neutral",
+      "firstIndex": 367389,
+      "indexCount": 3840
+    },
+    {
+      "name": "right serratus posterior superior",
+      "source": "BodyParts3D/FJ1542",
+      "group": "neutral",
+      "firstIndex": 371229,
+      "indexCount": 2448
+    },
+    {
+      "name": "left serratus posterior superior",
+      "source": "BodyParts3D/FJ1542M",
+      "group": "neutral",
+      "firstIndex": 373677,
+      "indexCount": 2442
+    },
+    {
+      "name": "spinalis",
+      "source": "BodyParts3D/FJ1543",
+      "group": "spinalErectors",
+      "firstIndex": 376119,
+      "indexCount": 462
+    },
+    {
+      "name": "spinalis",
+      "source": "BodyParts3D/FJ1543M",
+      "group": "spinalErectors",
+      "firstIndex": 376581,
+      "indexCount": 432
+    },
+    {
+      "name": "right spinalis thoracis",
+      "source": "BodyParts3D/FJ1544",
+      "group": "spinalErectors",
+      "firstIndex": 377013,
+      "indexCount": 1776
+    },
+    {
+      "name": "left spinalis thoracis",
+      "source": "BodyParts3D/FJ1544M",
+      "group": "spinalErectors",
+      "firstIndex": 378789,
+      "indexCount": 1806
+    },
+    {
+      "name": "right splenius capitis",
+      "source": "BodyParts3D/FJ1545",
+      "group": "neutral",
+      "firstIndex": 380595,
+      "indexCount": 1878
+    },
+    {
+      "name": "left splenius capitis",
+      "source": "BodyParts3D/FJ1545M",
+      "group": "neutral",
+      "firstIndex": 382473,
+      "indexCount": 1836
+    },
+    {
+      "name": "right splenius cervicis",
+      "source": "BodyParts3D/FJ1546",
+      "group": "neutral",
+      "firstIndex": 384309,
+      "indexCount": 1740
+    },
+    {
+      "name": "left splenius cervicis",
+      "source": "BodyParts3D/FJ1546M",
+      "group": "neutral",
+      "firstIndex": 386049,
+      "indexCount": 1722
+    },
+    {
+      "name": "right interspinalis thoracis",
+      "source": "BodyParts3D/FJ1551",
+      "group": "spinalErectors",
+      "firstIndex": 387771,
+      "indexCount": 144
+    },
+    {
+      "name": "left interspinalis thoracis",
+      "source": "BodyParts3D/FJ1551M",
+      "group": "spinalErectors",
+      "firstIndex": 387915,
+      "indexCount": 144
+    },
+    {
+      "name": "transverse part of right trapezius",
+      "source": "BodyParts3D/FJ1554",
+      "group": "trapezius",
+      "firstIndex": 388059,
+      "indexCount": 1764
+    },
+    {
+      "name": "transverse part of left trapezius",
+      "source": "BodyParts3D/FJ1554M",
+      "group": "trapezius",
+      "firstIndex": 389823,
+      "indexCount": 1806
+    },
+    {
+      "name": "left omohyoid",
+      "source": "BodyParts3D/FJ1565",
+      "group": "neutral",
+      "firstIndex": 391629,
+      "indexCount": 966
+    },
+    {
+      "name": "left scalenus anterior",
+      "source": "BodyParts3D/FJ1570",
+      "group": "neutral",
+      "firstIndex": 392595,
+      "indexCount": 480
+    },
+    {
+      "name": "left scalenus medius",
+      "source": "BodyParts3D/FJ1571",
+      "group": "neutral",
+      "firstIndex": 393075,
+      "indexCount": 828
+    },
+    {
+      "name": "left scalenus posterior",
+      "source": "BodyParts3D/FJ1572",
+      "group": "neutral",
+      "firstIndex": 393903,
+      "indexCount": 546
+    },
+    {
+      "name": "left sternocleidomastoid",
+      "source": "BodyParts3D/FJ1573",
+      "group": "neutral",
+      "firstIndex": 394449,
+      "indexCount": 2124
+    },
+    {
+      "name": "left sternohyoid",
+      "source": "BodyParts3D/FJ1574",
+      "group": "neutral",
+      "firstIndex": 396573,
+      "indexCount": 708
+    },
+    {
+      "name": "right omohyoid",
+      "source": "BodyParts3D/FJ1586",
+      "group": "neutral",
+      "firstIndex": 397281,
+      "indexCount": 996
+    },
+    {
+      "name": "right scalenus anterior",
+      "source": "BodyParts3D/FJ1592",
+      "group": "neutral",
+      "firstIndex": 398277,
+      "indexCount": 498
+    },
+    {
+      "name": "right scalenus medius",
+      "source": "BodyParts3D/FJ1593",
+      "group": "neutral",
+      "firstIndex": 398775,
+      "indexCount": 870
+    },
+    {
+      "name": "right scalenus posterior",
+      "source": "BodyParts3D/FJ1594",
+      "group": "neutral",
+      "firstIndex": 399645,
+      "indexCount": 558
+    },
+    {
+      "name": "right sternocleidomastoid",
+      "source": "BodyParts3D/FJ1595",
+      "group": "neutral",
+      "firstIndex": 400203,
+      "indexCount": 2178
+    },
+    {
+      "name": "right sternohyoid",
+      "source": "BodyParts3D/FJ1596",
+      "group": "neutral",
+      "firstIndex": 402381,
+      "indexCount": 726
+    },
+    {
+      "name": "right hip bone",
+      "source": "BodyParts3D/FJ3152",
+      "group": "bone",
+      "firstIndex": 403107,
+      "indexCount": 2004
+    },
+    {
+      "name": "tenth thoracic vertebra",
+      "source": "BodyParts3D/FJ3154",
+      "group": "bone",
+      "firstIndex": 405111,
+      "indexCount": 1218
+    },
+    {
+      "name": "eleventh thoracic vertebra",
+      "source": "BodyParts3D/FJ3155",
+      "group": "bone",
+      "firstIndex": 406329,
+      "indexCount": 1218
+    },
+    {
+      "name": "twelfth thoracic vertebra",
+      "source": "BodyParts3D/FJ3156",
+      "group": "bone",
+      "firstIndex": 407547,
+      "indexCount": 1260
+    },
+    {
+      "name": "first lumbar vertebra",
+      "source": "BodyParts3D/FJ3157",
+      "group": "bone",
+      "firstIndex": 408807,
+      "indexCount": 1356
+    },
+    {
+      "name": "first thoracic vertebra",
+      "source": "BodyParts3D/FJ3158",
+      "group": "bone",
+      "firstIndex": 410163,
+      "indexCount": 834
+    },
+    {
+      "name": "second lumbar vertebra",
+      "source": "BodyParts3D/FJ3159",
+      "group": "bone",
+      "firstIndex": 410997,
+      "indexCount": 1542
+    },
+    {
+      "name": "second thoracic vertebra",
+      "source": "BodyParts3D/FJ3160",
+      "group": "bone",
+      "firstIndex": 412539,
+      "indexCount": 924
+    },
+    {
+      "name": "third cervical vertebra",
+      "source": "BodyParts3D/FJ3161",
+      "group": "bone",
+      "firstIndex": 413463,
+      "indexCount": 900
+    },
+    {
+      "name": "third lumbar vertebra",
+      "source": "BodyParts3D/FJ3162",
+      "group": "bone",
+      "firstIndex": 414363,
+      "indexCount": 1512
+    },
+    {
+      "name": "third thoracic vertebra",
+      "source": "BodyParts3D/FJ3163",
+      "group": "bone",
+      "firstIndex": 415875,
+      "indexCount": 972
+    },
+    {
+      "name": "fourth cervical vertebra",
+      "source": "BodyParts3D/FJ3164",
+      "group": "bone",
+      "firstIndex": 416847,
+      "indexCount": 966
+    },
+    {
+      "name": "fourth lumbar vertebra",
+      "source": "BodyParts3D/FJ3165",
+      "group": "bone",
+      "firstIndex": 417813,
+      "indexCount": 1542
+    },
+    {
+      "name": "fourth thoracic vertebra",
+      "source": "BodyParts3D/FJ3166",
+      "group": "bone",
+      "firstIndex": 419355,
+      "indexCount": 918
+    },
+    {
+      "name": "fifth cervical vertebra",
+      "source": "BodyParts3D/FJ3167",
+      "group": "bone",
+      "firstIndex": 420273,
+      "indexCount": 1014
+    },
+    {
+      "name": "fifth lumbar vertebra",
+      "source": "BodyParts3D/FJ3168",
+      "group": "bone",
+      "firstIndex": 421287,
+      "indexCount": 1728
+    },
+    {
+      "name": "fifth thoracic vertebra",
+      "source": "BodyParts3D/FJ3169",
+      "group": "bone",
+      "firstIndex": 423015,
+      "indexCount": 984
+    },
+    {
+      "name": "sixth cervical vertebra",
+      "source": "BodyParts3D/FJ3170",
+      "group": "bone",
+      "firstIndex": 423999,
+      "indexCount": 990
+    },
+    {
+      "name": "sixth thoracic vertebra",
+      "source": "BodyParts3D/FJ3171",
+      "group": "bone",
+      "firstIndex": 424989,
+      "indexCount": 972
+    },
+    {
+      "name": "seventh cervical vertebra",
+      "source": "BodyParts3D/FJ3172",
+      "group": "bone",
+      "firstIndex": 425961,
+      "indexCount": 894
+    },
+    {
+      "name": "seventh thoracic vertebra",
+      "source": "BodyParts3D/FJ3173",
+      "group": "bone",
+      "firstIndex": 426855,
+      "indexCount": 1152
+    },
+    {
+      "name": "eighth thoracic vertebra",
+      "source": "BodyParts3D/FJ3174",
+      "group": "bone",
+      "firstIndex": 428007,
+      "indexCount": 1182
+    },
+    {
+      "name": "ninth thoracic vertebra",
+      "source": "BodyParts3D/FJ3175",
+      "group": "bone",
+      "firstIndex": 429189,
+      "indexCount": 1152
+    },
+    {
+      "name": "intervertebral disk of axis",
+      "source": "BodyParts3D/FJ3202",
+      "group": "bone",
+      "firstIndex": 430341,
+      "indexCount": 450
+    },
+    {
+      "name": "intervertebral disk of fourth thoracic vertebra",
+      "source": "BodyParts3D/FJ3203",
+      "group": "bone",
+      "firstIndex": 430791,
+      "indexCount": 384
+    },
+    {
+      "name": "intervertebral disk of fifth thoracic vertebra",
+      "source": "BodyParts3D/FJ3204",
+      "group": "bone",
+      "firstIndex": 431175,
+      "indexCount": 408
+    },
+    {
+      "name": "intervertebral disk of sixth thoracic vertebra",
+      "source": "BodyParts3D/FJ3205",
+      "group": "bone",
+      "firstIndex": 431583,
+      "indexCount": 546
+    },
+    {
+      "name": "intervertebral disk of seventh thoracic vertebra",
+      "source": "BodyParts3D/FJ3206",
+      "group": "bone",
+      "firstIndex": 432129,
+      "indexCount": 594
+    },
+    {
+      "name": "intervertebral disk of eighth thoracic vertebra",
+      "source": "BodyParts3D/FJ3207",
+      "group": "bone",
+      "firstIndex": 432723,
+      "indexCount": 654
+    },
+    {
+      "name": "intervertebral disk of ninth thoracic vertebra",
+      "source": "BodyParts3D/FJ3208",
+      "group": "bone",
+      "firstIndex": 433377,
+      "indexCount": 630
+    },
+    {
+      "name": "intervertebral disk of tenth thoracic vertebra",
+      "source": "BodyParts3D/FJ3209",
+      "group": "bone",
+      "firstIndex": 434007,
+      "indexCount": 678
+    },
+    {
+      "name": "intervertebral disk of eleventh thoracic vertebra",
+      "source": "BodyParts3D/FJ3210",
+      "group": "bone",
+      "firstIndex": 434685,
+      "indexCount": 744
+    },
+    {
+      "name": "intervertebral disk",
+      "source": "BodyParts3D/FJ3211",
+      "group": "tendon",
+      "firstIndex": 435429,
+      "indexCount": 720
+    },
+    {
+      "name": "intervertebral disk of first lumbar vertebra",
+      "source": "BodyParts3D/FJ3212",
+      "group": "bone",
+      "firstIndex": 436149,
+      "indexCount": 780
+    },
+    {
+      "name": "intervertebral disk of third cervical vertebra",
+      "source": "BodyParts3D/FJ3213",
+      "group": "bone",
+      "firstIndex": 436929,
+      "indexCount": 210
+    },
+    {
+      "name": "intervertebral disk of second lumbar vertebra",
+      "source": "BodyParts3D/FJ3214",
+      "group": "bone",
+      "firstIndex": 437139,
+      "indexCount": 834
+    },
+    {
+      "name": "intervertebral disk of third lumbar vertebra",
+      "source": "BodyParts3D/FJ3215",
+      "group": "bone",
+      "firstIndex": 437973,
+      "indexCount": 798
+    },
+    {
+      "name": "intervertebral disk of fourth lumbar vertebra",
+      "source": "BodyParts3D/FJ3216",
+      "group": "bone",
+      "firstIndex": 438771,
+      "indexCount": 876
+    },
+    {
+      "name": "intervertebral disk of fifth lumbar vertebra",
+      "source": "BodyParts3D/FJ3217",
+      "group": "bone",
+      "firstIndex": 439647,
+      "indexCount": 714
+    },
+    {
+      "name": "intervertebral disk of fourth cervical vertebra",
+      "source": "BodyParts3D/FJ3218",
+      "group": "bone",
+      "firstIndex": 440361,
+      "indexCount": 246
+    },
+    {
+      "name": "intervertebral disk of fifth cervical vertebra",
+      "source": "BodyParts3D/FJ3219",
+      "group": "bone",
+      "firstIndex": 440607,
+      "indexCount": 252
+    },
+    {
+      "name": "intervertebral disk of sixth cervical vertebra",
+      "source": "BodyParts3D/FJ3220",
+      "group": "bone",
+      "firstIndex": 440859,
+      "indexCount": 252
+    },
+    {
+      "name": "intervertebral disk of seventh cervical vertebra",
+      "source": "BodyParts3D/FJ3221",
+      "group": "bone",
+      "firstIndex": 441111,
+      "indexCount": 324
+    },
+    {
+      "name": "intervertebral disk of first thoracic vertebra",
+      "source": "BodyParts3D/FJ3222",
+      "group": "bone",
+      "firstIndex": 441435,
+      "indexCount": 354
+    },
+    {
+      "name": "intervertebral disk of second thoracic vertebra",
+      "source": "BodyParts3D/FJ3223",
+      "group": "bone",
+      "firstIndex": 441789,
+      "indexCount": 396
+    },
+    {
+      "name": "intervertebral disk of third thoracic vertebra",
+      "source": "BodyParts3D/FJ3224",
+      "group": "bone",
+      "firstIndex": 442185,
+      "indexCount": 426
+    },
+    {
+      "name": "left tenth rib",
+      "source": "BodyParts3D/FJ3225",
+      "group": "bone",
+      "firstIndex": 442611,
+      "indexCount": 990
+    },
+    {
+      "name": "left eleventh rib",
+      "source": "BodyParts3D/FJ3226",
+      "group": "bone",
+      "firstIndex": 443601,
+      "indexCount": 786
+    },
+    {
+      "name": "left twelfth rib",
+      "source": "BodyParts3D/FJ3227",
+      "group": "bone",
+      "firstIndex": 444387,
+      "indexCount": 510
+    },
+    {
+      "name": "left first rib",
+      "source": "BodyParts3D/FJ3228",
+      "group": "bone",
+      "firstIndex": 444897,
+      "indexCount": 564
+    },
+    {
+      "name": "left second rib",
+      "source": "BodyParts3D/FJ3229",
+      "group": "bone",
+      "firstIndex": 445461,
+      "indexCount": 912
+    },
+    {
+      "name": "left third rib",
+      "source": "BodyParts3D/FJ3230",
+      "group": "bone",
+      "firstIndex": 446373,
+      "indexCount": 1104
+    },
+    {
+      "name": "left fourth rib",
+      "source": "BodyParts3D/FJ3231",
+      "group": "bone",
+      "firstIndex": 447477,
+      "indexCount": 1254
+    },
+    {
+      "name": "left fifth rib",
+      "source": "BodyParts3D/FJ3232",
+      "group": "bone",
+      "firstIndex": 448731,
+      "indexCount": 1296
+    },
+    {
+      "name": "left sixth rib",
+      "source": "BodyParts3D/FJ3233",
+      "group": "bone",
+      "firstIndex": 450027,
+      "indexCount": 1350
+    },
+    {
+      "name": "left seventh rib",
+      "source": "BodyParts3D/FJ3234",
+      "group": "bone",
+      "firstIndex": 451377,
+      "indexCount": 1350
+    },
+    {
+      "name": "left eighth rib",
+      "source": "BodyParts3D/FJ3235",
+      "group": "bone",
+      "firstIndex": 452727,
+      "indexCount": 1176
+    },
+    {
+      "name": "left ninth rib",
+      "source": "BodyParts3D/FJ3236",
+      "group": "bone",
+      "firstIndex": 453903,
+      "indexCount": 1128
+    },
+    {
+      "name": "left clavicle",
+      "source": "BodyParts3D/FJ3237",
+      "group": "bone",
+      "firstIndex": 455031,
+      "indexCount": 594
+    },
+    {
+      "name": "left femur",
+      "source": "BodyParts3D/FJ3259",
+      "group": "bone",
+      "firstIndex": 455625,
+      "indexCount": 2142
+    },
+    {
+      "name": "left fibula",
+      "source": "BodyParts3D/FJ3260",
+      "group": "bone",
+      "firstIndex": 457767,
+      "indexCount": 666
+    },
+    {
+      "name": "left humerus",
+      "source": "BodyParts3D/FJ3262",
+      "group": "bone",
+      "firstIndex": 458433,
+      "indexCount": 1698
+    },
+    {
+      "name": "left patella",
+      "source": "BodyParts3D/FJ3275",
+      "group": "bone",
+      "firstIndex": 460131,
+      "indexCount": 192
+    },
+    {
+      "name": "left radius",
+      "source": "BodyParts3D/FJ3277",
+      "group": "bone",
+      "firstIndex": 460323,
+      "indexCount": 498
+    },
+    {
+      "name": "left scapula",
+      "source": "BodyParts3D/FJ3279",
+      "group": "bone",
+      "firstIndex": 460821,
+      "indexCount": 3390
+    },
+    {
+      "name": "left tibia",
+      "source": "BodyParts3D/FJ3282",
+      "group": "bone",
+      "firstIndex": 464211,
+      "indexCount": 1314
+    },
+    {
+      "name": "left ulna",
+      "source": "BodyParts3D/FJ3286",
+      "group": "bone",
+      "firstIndex": 465525,
+      "indexCount": 564
+    },
+    {
+      "name": "left hip bone",
+      "source": "BodyParts3D/FJ3288",
+      "group": "bone",
+      "firstIndex": 466089,
+      "indexCount": 1956
+    },
+    {
+      "name": "right tenth rib",
+      "source": "BodyParts3D/FJ3330",
+      "group": "bone",
+      "firstIndex": 468045,
+      "indexCount": 954
+    },
+    {
+      "name": "right eleventh rib",
+      "source": "BodyParts3D/FJ3331",
+      "group": "bone",
+      "firstIndex": 468999,
+      "indexCount": 744
+    },
+    {
+      "name": "right twelfth rib",
+      "source": "BodyParts3D/FJ3332",
+      "group": "bone",
+      "firstIndex": 469743,
+      "indexCount": 480
+    },
+    {
+      "name": "right first rib",
+      "source": "BodyParts3D/FJ3334",
+      "group": "bone",
+      "firstIndex": 470223,
+      "indexCount": 576
+    },
+    {
+      "name": "right second rib",
+      "source": "BodyParts3D/FJ3336",
+      "group": "bone",
+      "firstIndex": 470799,
+      "indexCount": 918
+    },
+    {
+      "name": "right third rib",
+      "source": "BodyParts3D/FJ3338",
+      "group": "bone",
+      "firstIndex": 471717,
+      "indexCount": 1080
+    },
+    {
+      "name": "right fourth rib",
+      "source": "BodyParts3D/FJ3340",
+      "group": "bone",
+      "firstIndex": 472797,
+      "indexCount": 1230
+    },
+    {
+      "name": "right fifth rib",
+      "source": "BodyParts3D/FJ3342",
+      "group": "bone",
+      "firstIndex": 474027,
+      "indexCount": 1314
+    },
+    {
+      "name": "right sixth rib",
+      "source": "BodyParts3D/FJ3344",
+      "group": "bone",
+      "firstIndex": 475341,
+      "indexCount": 1356
+    },
+    {
+      "name": "right seventh rib",
+      "source": "BodyParts3D/FJ3346",
+      "group": "bone",
+      "firstIndex": 476697,
+      "indexCount": 1410
+    },
+    {
+      "name": "right eighth rib",
+      "source": "BodyParts3D/FJ3347",
+      "group": "bone",
+      "firstIndex": 478107,
+      "indexCount": 1182
+    },
+    {
+      "name": "right ninth rib",
+      "source": "BodyParts3D/FJ3348",
+      "group": "bone",
+      "firstIndex": 479289,
+      "indexCount": 1110
+    },
+    {
+      "name": "right radius",
+      "source": "BodyParts3D/FJ3349",
+      "group": "bone",
+      "firstIndex": 480399,
+      "indexCount": 462
+    },
+    {
+      "name": "right clavicle",
+      "source": "BodyParts3D/FJ3362",
+      "group": "bone",
+      "firstIndex": 480861,
+      "indexCount": 576
+    },
+    {
+      "name": "right femur",
+      "source": "BodyParts3D/FJ3365",
+      "group": "bone",
+      "firstIndex": 481437,
+      "indexCount": 2142
+    },
+    {
+      "name": "right fibula",
+      "source": "BodyParts3D/FJ3366",
+      "group": "bone",
+      "firstIndex": 483579,
+      "indexCount": 666
+    },
+    {
+      "name": "right humerus",
+      "source": "BodyParts3D/FJ3368",
+      "group": "bone",
+      "firstIndex": 484245,
+      "indexCount": 1770
+    },
+    {
+      "name": "right patella",
+      "source": "BodyParts3D/FJ3381",
+      "group": "bone",
+      "firstIndex": 486015,
+      "indexCount": 186
+    },
+    {
+      "name": "right scapula",
+      "source": "BodyParts3D/FJ3384",
+      "group": "bone",
+      "firstIndex": 486201,
+      "indexCount": 3288
+    },
+    {
+      "name": "right tibia",
+      "source": "BodyParts3D/FJ3387",
+      "group": "bone",
+      "firstIndex": 489489,
+      "indexCount": 1314
+    },
+    {
+      "name": "right ulna",
+      "source": "BodyParts3D/FJ3391",
+      "group": "bone",
+      "firstIndex": 490803,
+      "indexCount": 570
+    },
+    {
+      "name": "sacrum",
+      "source": "BodyParts3D/FJ3393",
+      "group": "bone",
+      "firstIndex": 491373,
+      "indexCount": 4320
+    },
+    {
+      "name": "head shell",
+      "source": "BodyParts3D/FJ2810",
+      "group": "shell",
+      "firstIndex": 495693,
+      "indexCount": 21600
+    },
+    {
+      "name": "left hand shell",
+      "source": "BodyParts3D/FJ2810",
+      "group": "shell",
+      "firstIndex": 517293,
+      "indexCount": 11856
+    },
+    {
+      "name": "right hand shell",
+      "source": "BodyParts3D/FJ2810",
+      "group": "shell",
+      "firstIndex": 529149,
+      "indexCount": 11850
+    },
+    {
+      "name": "left foot shell",
+      "source": "BodyParts3D/FJ2810",
+      "group": "shell",
+      "firstIndex": 540999,
+      "indexCount": 15915
+    },
+    {
+      "name": "right foot shell",
+      "source": "BodyParts3D/FJ2810",
+      "group": "shell",
+      "firstIndex": 556914,
+      "indexCount": 15906
+    },
+    {
+      "name": "left latissimus dorsi muscle",
+      "source": "Z-Anatomy/Latissimus dorsi muscle.l",
+      "group": "lats",
+      "firstIndex": 572820,
+      "indexCount": 10218
+    },
+    {
+      "name": "left rectus abdominis muscle",
+      "source": "Z-Anatomy/Rectus abdominis muscle.l",
+      "group": "abdominals",
+      "firstIndex": 583038,
+      "indexCount": 6978
+    },
+    {
+      "name": "left internal abdominal oblique muscle",
+      "source": "Z-Anatomy/Internal abdominal oblique muscle.l",
+      "group": "obliques",
+      "firstIndex": 590016,
+      "indexCount": 11262
+    },
+    {
+      "name": "left transversus abdominis muscle",
+      "source": "Z-Anatomy/Transversus abdominis muscle.l",
+      "group": "abdominals",
+      "firstIndex": 601278,
+      "indexCount": 13344
+    },
+    {
+      "name": "left quadratus lumborum muscle",
+      "source": "Z-Anatomy/Quadratus lumborum muscle.l",
+      "group": "spinalErectors",
+      "firstIndex": 614622,
+      "indexCount": 1398
+    },
+    {
+      "name": "right latissimus dorsi muscle",
+      "source": "Z-Anatomy/Latissimus dorsi muscle.r",
+      "group": "lats",
+      "firstIndex": 616020,
+      "indexCount": 10230
+    },
+    {
+      "name": "right rectus abdominis muscle",
+      "source": "Z-Anatomy/Rectus abdominis muscle.r",
+      "group": "abdominals",
+      "firstIndex": 626250,
+      "indexCount": 6984
+    },
+    {
+      "name": "right internal abdominal oblique muscle",
+      "source": "Z-Anatomy/Internal abdominal oblique muscle.r",
+      "group": "obliques",
+      "firstIndex": 633234,
+      "indexCount": 11256
+    },
+    {
+      "name": "right transversus abdominis muscle",
+      "source": "Z-Anatomy/Transversus abdominis muscle.r",
+      "group": "abdominals",
+      "firstIndex": 644490,
+      "indexCount": 13344
+    },
+    {
+      "name": "right quadratus lumborum muscle",
+      "source": "Z-Anatomy/Quadratus lumborum muscle.r",
+      "group": "spinalErectors",
+      "firstIndex": 657834,
+      "indexCount": 1410
+    },
+    {
+      "name": "inset trunk and neck",
+      "source": "BodyParts3D/FJ2810/inset",
+      "group": "neutral",
+      "firstIndex": 659244,
+      "indexCount": 8493
+    }
+  ],
+  "vertexCount": 113681,
+  "indexCount": 667737
+}

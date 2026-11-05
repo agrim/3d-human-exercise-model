@@ -1,0 +1,53 @@
+{
+  "sourceCommit": "c252d1fc7f00ba59d87b66b3d32fa3471fc6ee44",
+  "authoringAddonCommit": "ec5e13dcd5a7330b35fa7474b3abd2f406d77bd2",
+  "characterLicense": "CC0 per pinned config.yaml",
+  "authoringCodeLicense": "GPL; isolated build dependency",
+  "runtimeAssetsModified": false,
+  "candidates": [
+    {
+      "path": "vitruvian-athletic-review.blend",
+      "size": 26982720,
+      "sha256": "2a8b2e8637bf68206719972dfc3f2689dfc45c5ee5cd84381eb3f579ebf7f3a2"
+    },
+    {
+      "path": "vitruvian-athletic-clothed-review.blend",
+      "size": 34671120,
+      "sha256": "5b4e61faf0a0452ced94f819ee9343ed4c0dc8f811981e3341b88756aa1baab8"
+    },
+    {
+      "path": "vitruvian-athletic-v2-review.blend",
+      "size": 26977206,
+      "sha256": "b769d684a909feeea0ce4f5757a9da5ef9d4b67d04c931468e3d4cc7c56025a2"
+    },
+    {
+      "path": "vitruvian-athletic-v2-clothed-review.blend",
+      "size": 34682886,
+      "sha256": "863229f2c90faaf06f1b8aed9c63d12a8dd4df2bebb01c28a569c849854a721d"
+    },
+    {
+      "path": "vitruvian-athletic-v2-clothed-hair-review.blend",
+      "size": 37693663,
+      "sha256": "33a0007c43b3d3fe6e5a5aec35e8a96629081ec5bc26c2d5f0cf110e33ffcfa7"
+    }
+  ],
+  "v2Changes": [
+    "Local chest flattening0.40",
+    "Biceps0.38, triceps0.36, forearms0.17",
+    "Shoulder width0.17, shoulderblade width0.10",
+    "Global muscularity and lower-body morph values preserved"
+  ],
+  "nativeRig": {
+    "bodyVertices": 37436,
+    "authoringBones": 1075,
+    "deformBones": 192,
+    "modifiers": [
+      "charmorph_rig",
+      "charmorph_rig_pv",
+      "charmorph_corrective_smooth",
+      "charmorph_subsurf"
+    ]
+  },
+  "criticalTopologyFinding": "censor is2532 actual skin faces with264 shared skin-boundary vertices. Reassign toUDIM.Skin; never omit or make transparent.",
+  "status": "Morphology/native-source setup complete; appearance and motion are separate active derivatives. No production collision certification."
+}

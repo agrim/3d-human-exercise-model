@@ -1,0 +1,35 @@
+{
+  "schema": "hem.walk-camera-provenance.v1",
+  "passes": true,
+  "cpuOnly": true,
+  "preservedInitialFailure": {
+    "receipt": "walking-camera-checks-v1.json",
+    "maximumMissMeters": 0.00287473201751709,
+    "reason": "Conservative head-box lateral extent exceeded the17cm allowance; changed only lateral head allowance to18cm."
+  },
+  "scope": "Current-pose camera framing for the bounded walking model; actual GPU body/hair bounds and conservative head corners. Existing assets unchanged. No GPU readback or file I/O occurs in the runtime helper.",
+  "strictSwift6WarningsAsErrors": true,
+  "remaining": "Root-owned Simulator visual framing review and actual-device performance remain separate.",
+  "sourceFiles": [
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/ios/HumanExerciseModels/LiveWalkingCameraEnvelope.swift",
+      "sha256": "8dd7900a6e1de6d1360f9bc06870c790772df091bef1d51a5d301693fa341057"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/LiveWalkingCameraChecks.swift",
+      "sha256": "08406800ac28971f26dab7071ed11d0ac5fab8ed111b439f126f3395c39095bb"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/prepare_walking_camera_checks.py",
+      "sha256": "e2d3112ddd7aa37f61339d071a7b20aa9b51dd13b9b738264aa2707dcd1a775f"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/live-rig-v1/walking-camera-input-v2.json",
+      "sha256": "294fcccd5f9aea8d4f52ae8a65ba729fa15f525976ba7cf6bd78a81152b2a602"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/live-rig-v1/walking-camera-checks-v2.json",
+      "sha256": "c13b3549bcdb4ca69e13a634da9c11a8f1ef771482bf9288636d0d720afd2c19"
+    }
+  ]
+}

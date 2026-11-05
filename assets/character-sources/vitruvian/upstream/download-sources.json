@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "https://github.com/Upliner/CharMorph-Vitruvian",
+    "commit": "c252d1fc7f00ba59d87b66b3d32fa3471fc6ee44",
+    "archiveSHA256": "c33a4db5fd92d925f377c0d24226a979bd649f3bc0217a2903bbca649e346dac",
+    "directory": "Vitruvian"
+  },
+  {
+    "repository": "https://github.com/Upliner/CharMorph",
+    "commit": "ec5e13dcd5a7330b35fa7474b3abd2f406d77bd2",
+    "archiveSHA256": "9a2d7b314798998c0a3bec0d7407cb636e5ae0459dc53612615edb75dd7bf907",
+    "directory": "charmorph"
+  }
+]

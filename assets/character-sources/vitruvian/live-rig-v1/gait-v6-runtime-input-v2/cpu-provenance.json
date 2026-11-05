@@ -1,0 +1,33 @@
+{
+  "schema": "hem.gait-runtime-cpu-receipt.v1",
+  "status": "cpu_channel_and_session_pass_gpu_visual_pending",
+  "implementation": {
+    "ios/HumanExerciseModels/LiveLocomotionController.swift": "86ecb338521ed7acf48b38d2f30adcb8df6f40add006b143ca9e54b40739f537",
+    "ios/HumanExerciseModels/LiveGaitChannelAdapter.swift": "3cbfa32ce6ab7bc9b292e8f3e1d0d54a5b88fa61473e97e98b65806a21cceee4",
+    "ios/HumanExerciseModels/LiveGaitInputClip.swift": "81377be0af2c1f4812d550e619f78f15d9312f2de314fe9857a31ef0b8592889",
+    "ios/HumanExerciseModels/LiveGaitSession.swift": "8195ed7c74af2fc4f835f7b6f18f2c2560b61e9dfae5464bcefe574b496e416b",
+    "scripts/character_sources/LiveGaitChannelChecks.swift": "19b93abfd87cdc90ceeeb12fb1153f65039e628491f3bfa8b160556e00a116ed",
+    "scripts/character_sources/LiveGaitContinuityChecks.swift": "0edbf8d048fa2423f85332513cf0b003778d295ab6ec771ed1825c9426017136",
+    "scripts/character_sources/LiveGaitSessionChecks.swift": "fa7ea6dc353e03457da8714276d4908c492f8e3d301f074b09db04cb242fa6cb",
+    "scripts/character_sources/prepare_live_gait_runtime.py": "517820095ff67541bb017dbe4d17f2fe2255674d86c4847ac2beb459bcc5fb88"
+  },
+  "manifestSHA256": "807b9f7caa9e88d75c4a49519b7e198cfcf277baf3c505c7f9b44e0f2354ff7b",
+  "configurationSHA256": "f0d26f2e8285d528cf0ebf01da18b1abb3211db14ffdbc52db236c3769ab88a5",
+  "payloadSHA256": "47fc89c2f4c25d9941f5f722d7e3b9217fb833ea5062dbb3a2901483ef82540d",
+  "proofs": {
+    "gait-v6-runtime-channel-v2/checks.json": "aaf79dad96c0ad1497f1a2e391eb9f1c8c0fedb537b358997763b3bcba02594d",
+    "gait-v6-continuity-v2/continuity-checks.json": "54b016bfb4fd1595009684c9e9e146e9293837deff47c42250bb3fc5c3b43558",
+    "gait-v6-session-v2/session-checks.json": "2fa89d74e0f004d533701398c388257b2bf30adc42964f0b79bd87af5b76b80f"
+  },
+  "retainedFailures": [
+    "gait-channel-cpu-v1",
+    "gait-channel-swift-v1",
+    "gait-channel-swift-v2",
+    "gait-v6-continuity-v1"
+  ],
+  "limits": [
+    "Finite start-stop gait,10degree heading envelope and configured rate/acceleration bounds.",
+    "No new root reset, mesh cache, arbitrary stepping/locomotion planner or balance claim.",
+    "Full scene GPU/contact/temporal and visual acceptance pending."
+  ]
+}

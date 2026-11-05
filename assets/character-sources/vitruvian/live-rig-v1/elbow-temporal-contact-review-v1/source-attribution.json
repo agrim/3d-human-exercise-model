@@ -1,0 +1,635 @@
+{
+  "schema": 1,
+  "candidateSHA256": "48375d00ee696c743bfe02063ec4bf91c0a6d33162f5f0b0d38e8dddb25612ad",
+  "captureSHA256": "b201df62f68f5a6de715dbd053cb9468066942189e944b74073fd9f058267412",
+  "nativeCaptureSHA256": "d04aeb5d5ed932534daaaf8a9572d164e99c0a125e8c265ae3cc8262785df28c",
+  "onsetSHA256": "b34346a44e5c67cc2bcff7739bd2d138f25e5f4e5eaacd426c08b577364e3d25",
+  "generatorSHA256": "86a7dd8d45a7acc342455dd5d1913149cf10d12a08e387d1a7c9fcc9e9f2792e",
+  "firstNearWitnesses": [
+    [
+      {
+        "triangle": 128997,
+        "fineQuad": 127954,
+        "sourcePolygon": 31988,
+        "cageVertices": [
+          2691,
+          24718,
+          27981,
+          12635
+        ],
+        "region": "UnassignedSkin",
+        "weights": [
+          {
+            "DEF-forearm.R": 0.23502735793590546,
+            "DEF-upper_arm.R.001": 0.7649726271629333
+          },
+          {
+            "DEF-forearm.R": 0.21237629652023315,
+            "DEF-upper_arm.R.001": 0.7876237034797668
+          },
+          {
+            "DEF-forearm.R": 0.4281333088874817,
+            "DEF-upper_arm.R.001": 0.5718666911125183
+          },
+          {
+            "DEF-forearm.R": 0.38927337527275085,
+            "DEF-upper_arm.R.001": 0.6107265949249268
+          }
+        ],
+        "preserveVolumeMask": [
+          1.0,
+          0.983541090041399,
+          0.9995623790891841,
+          1.0
+        ],
+        "temporalGuideMobility": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "triangle": 129347,
+        "fineQuad": 128283,
+        "sourcePolygon": 32070,
+        "cageVertices": [
+          12635,
+          27981,
+          14447,
+          1871
+        ],
+        "region": "UnassignedSkin",
+        "weights": [
+          {
+            "DEF-forearm.R": 0.38927337527275085,
+            "DEF-upper_arm.R.001": 0.6107265949249268
+          },
+          {
+            "DEF-forearm.R": 0.4281333088874817,
+            "DEF-upper_arm.R.001": 0.5718666911125183
+          },
+          {
+            "DEF-forearm.R": 0.7432299852371216,
+            "DEF-upper_arm.R.001": 0.2567700147628784
+          },
+          {
+            "DEF-forearm.R": 0.6150639057159424,
+            "DEF-upper_arm.R.001": 0.38493612408638
+          }
+        ],
+        "preserveVolumeMask": [
+          1.0,
+          0.9995623790891841,
+          1.0,
+          1.0
+        ],
+        "temporalGuideMobility": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    [
+      {
+        "triangle": 101246,
+        "fineQuad": 91318,
+        "sourcePolygon": 22829,
+        "cageVertices": [
+          6868,
+          23352,
+          30900,
+          18038
+        ],
+        "region": "UnassignedSkin",
+        "weights": [
+          {
+            "DEF-forearm.L": 0.23502735793590546,
+            "DEF-upper_arm.L.001": 0.7649726271629333
+          },
+          {
+            "DEF-forearm.L": 0.38927337527275085,
+            "DEF-upper_arm.L.001": 0.6107265949249268
+          },
+          {
+            "DEF-forearm.L": 0.4281332790851593,
+            "DEF-upper_arm.L.001": 0.5718666911125183
+          },
+          {
+            "DEF-forearm.L": 0.21237629652023315,
+            "DEF-upper_arm.L.001": 0.7876237034797668
+          }
+        ],
+        "preserveVolumeMask": [
+          1.0,
+          1.0,
+          0.999575790396193,
+          0.9833074565976858
+        ],
+        "temporalGuideMobility": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "triangle": 101943,
+        "fineQuad": 91987,
+        "sourcePolygon": 22996,
+        "cageVertices": [
+          21970,
+          30900,
+          23352,
+          6044
+        ],
+        "region": "UnassignedSkin",
+        "weights": [
+          {
+            "DEF-forearm.L": 0.7432299852371216,
+            "DEF-upper_arm.L.001": 0.2567700147628784
+          },
+          {
+            "DEF-forearm.L": 0.4281332790851593,
+            "DEF-upper_arm.L.001": 0.5718666911125183
+          },
+          {
+            "DEF-forearm.L": 0.38927337527275085,
+            "DEF-upper_arm.L.001": 0.6107265949249268
+          },
+          {
+            "DEF-forearm.L": 0.6150639057159424,
+            "DEF-upper_arm.L.001": 0.38493612408638
+          }
+        ],
+        "preserveVolumeMask": [
+          1.0,
+          0.999575790396193,
+          1.0,
+          1.0
+        ],
+        "temporalGuideMobility": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  ],
+  "firstNearFineVertices": [
+    14447,
+    21970,
+    27981,
+    30900,
+    75645,
+    83011,
+    83065,
+    83187,
+    93742,
+    101166,
+    101219,
+    101313,
+    135113,
+    135280,
+    144272,
+    144354
+  ],
+  "firstNearCageSupport": [
+    833,
+    1871,
+    2691,
+    2692,
+    5006,
+    6044,
+    6868,
+    6869,
+    9841,
+    12291,
+    12635,
+    14027,
+    14065,
+    14447,
+    14739,
+    15713,
+    16730,
+    17620,
+    18038,
+    18598,
+    20883,
+    21263,
+    21883,
+    21970,
+    22231,
+    23352,
+    23450,
+    24718,
+    26855,
+    26871,
+    27224,
+    27225,
+    27234,
+    27981,
+    30515,
+    30544,
+    30900,
+    30901,
+    30908,
+    31659
+  ],
+  "firstNearFineMobility": {
+    "minimum": 0.0,
+    "maximum": 0.0,
+    "exactlyFixed": 16
+  },
+  "sourcePVMaskOnFirstNearCageSupport": {
+    "minimum": 0.5511035621166229,
+    "maximum": 1.0,
+    "median": 0.9999938555879453
+  },
+  "sourceStages": [
+    {
+      "id": "curl-deep",
+      "clip": "biceps_curl",
+      "seconds": 1.6666666666666667,
+      "stages": [
+        {
+          "stage": "lbs",
+          "contacts": {
+            "all": 484,
+            "same": 198,
+            "torso": 265,
+            "near": 21,
+            "sameMaximumStraddleMM": 3.982340404106088,
+            "torsoMaximumStraddleMM": 5.707766752581174,
+            "nearMaximumStraddleMM": 1.2421723470450452
+          },
+          "minimumLocalAreaMM2": 0.308939761744768,
+          "minimumLocalQuality": 0.05527361736845588
+        },
+        {
+          "stage": "pv",
+          "contacts": {
+            "all": 477,
+            "same": 181,
+            "torso": 270,
+            "near": 26,
+            "sameMaximumStraddleMM": 3.1453227107002326,
+            "torsoMaximumStraddleMM": 5.732302903262448,
+            "nearMaximumStraddleMM": 1.3383541905813825
+          },
+          "minimumLocalAreaMM2": 0.7797821608450728,
+          "minimumLocalQuality": 0.05490900044142173
+        },
+        {
+          "stage": "corrective_smooth",
+          "contacts": {
+            "all": 457,
+            "same": 180,
+            "torso": 257,
+            "near": 20,
+            "sameMaximumStraddleMM": 3.400483135384269,
+            "torsoMaximumStraddleMM": 5.6452429067054055,
+            "nearMaximumStraddleMM": 1.4853534337329743
+          },
+          "minimumLocalAreaMM2": 0.697883868825178,
+          "minimumLocalQuality": 0.09332261144212492
+        }
+      ],
+      "lbsTopv": {
+        "firstOnsetCageSupportMaximumMM": 24.16883892692267,
+        "witness30900DeltaMM": [
+          5.000025033950806,
+          11.33355125784874,
+          -20.752906799316406
+        ],
+        "witness27981DeltaMM": [
+          -5.010977387428284,
+          11.311102658510208,
+          -20.73383331298828
+        ]
+      },
+      "pvTocorrective_smooth": {
+        "firstOnsetCageSupportMaximumMM": 13.166741956179148,
+        "witness30900DeltaMM": [
+          -2.387315034866333,
+          -8.546382188796997,
+          8.990168571472168
+        ],
+        "witness27981DeltaMM": [
+          2.386748790740967,
+          -8.538022637367249,
+          8.991718292236328
+        ]
+      }
+    },
+    {
+      "id": "hammer-deep",
+      "clip": "hammer_curl",
+      "seconds": 1.6666666666666667,
+      "stages": [
+        {
+          "stage": "lbs",
+          "contacts": {
+            "all": 461,
+            "same": 174,
+            "torso": 268,
+            "near": 19,
+            "sameMaximumStraddleMM": 3.266271022514378,
+            "torsoMaximumStraddleMM": 6.460045065456503,
+            "nearMaximumStraddleMM": 0.7564211803359655
+          },
+          "minimumLocalAreaMM2": 0.15540850314371998,
+          "minimumLocalQuality": 0.011210759340746541
+        },
+        {
+          "stage": "pv",
+          "contacts": {
+            "all": 444,
+            "same": 155,
+            "torso": 268,
+            "near": 21,
+            "sameMaximumStraddleMM": 3.3541926163749944,
+            "torsoMaximumStraddleMM": 6.596854040361281,
+            "nearMaximumStraddleMM": 1.5057946831897484
+          },
+          "minimumLocalAreaMM2": 0.5608425423097667,
+          "minimumLocalQuality": 0.024839589430473156
+        },
+        {
+          "stage": "corrective_smooth",
+          "contacts": {
+            "all": 418,
+            "same": 135,
+            "torso": 267,
+            "near": 16,
+            "sameMaximumStraddleMM": 2.638015891478894,
+            "torsoMaximumStraddleMM": 6.515405850349132,
+            "nearMaximumStraddleMM": 1.4897966348017901
+          },
+          "minimumLocalAreaMM2": 0.4567266842621246,
+          "minimumLocalQuality": 0.019827334352190532
+        }
+      ],
+      "lbsTopv": {
+        "firstOnsetCageSupportMaximumMM": 11.371721412996518,
+        "witness30900DeltaMM": [
+          0.432819128036499,
+          8.549090474843979,
+          -7.486104965209961
+        ],
+        "witness27981DeltaMM": [
+          -0.4374384880065918,
+          8.532673120498657,
+          -7.484793663024902
+        ]
+      },
+      "pvTocorrective_smooth": {
+        "firstOnsetCageSupportMaximumMM": 8.964345925418446,
+        "witness30900DeltaMM": [
+          -1.176774501800537,
+          -6.721187382936478,
+          3.906726837158203
+        ],
+        "witness27981DeltaMM": [
+          1.1814236640930176,
+          -6.715904921293259,
+          3.9081573486328125
+        ]
+      }
+    },
+    {
+      "id": "press-loaded",
+      "clip": "overhead_press",
+      "seconds": 0.0,
+      "stages": [
+        {
+          "stage": "lbs",
+          "contacts": {
+            "all": 311,
+            "same": 279,
+            "torso": 0,
+            "near": 32,
+            "sameMaximumStraddleMM": 4.291648427440336,
+            "torsoMaximumStraddleMM": 0.0,
+            "nearMaximumStraddleMM": 1.3051810007783138
+          },
+          "minimumLocalAreaMM2": 0.46054383335826643,
+          "minimumLocalQuality": 0.06117715508136519
+        },
+        {
+          "stage": "pv",
+          "contacts": {
+            "all": 314,
+            "same": 283,
+            "torso": 0,
+            "near": 31,
+            "sameMaximumStraddleMM": 3.470836872548095,
+            "torsoMaximumStraddleMM": 0.0,
+            "nearMaximumStraddleMM": 1.2514256918067208
+          },
+          "minimumLocalAreaMM2": 0.3370392240877576,
+          "minimumLocalQuality": 0.02146151911044961
+        },
+        {
+          "stage": "corrective_smooth",
+          "contacts": {
+            "all": 286,
+            "same": 269,
+            "torso": 0,
+            "near": 17,
+            "sameMaximumStraddleMM": 3.8503326776843934,
+            "torsoMaximumStraddleMM": 0.0,
+            "nearMaximumStraddleMM": 1.2586334226763274
+          },
+          "minimumLocalAreaMM2": 0.4537510278605117,
+          "minimumLocalQuality": 0.044219051623753766
+        }
+      ],
+      "lbsTopv": {
+        "firstOnsetCageSupportMaximumMM": 15.48269703726857,
+        "witness30900DeltaMM": [
+          -5.877882242202759,
+          1.854829490184784,
+          0.02777576446533203
+        ],
+        "witness27981DeltaMM": [
+          5.853176116943359,
+          1.8503963947296143,
+          0.009775161743164062
+        ]
+      },
+      "pvTocorrective_smooth": {
+        "firstOnsetCageSupportMaximumMM": 8.501440297619169,
+        "witness30900DeltaMM": [
+          0.19082427024841309,
+          -0.9307563304901123,
+          4.954814910888672
+        ],
+        "witness27981DeltaMM": [
+          -0.182420015335083,
+          -0.9285286068916321,
+          4.957079887390137
+        ]
+      }
+    },
+    {
+      "id": "push-mid",
+      "clip": "push_up",
+      "seconds": 1.0,
+      "stages": [
+        {
+          "stage": "lbs",
+          "contacts": {
+            "all": 392,
+            "same": 239,
+            "torso": 137,
+            "near": 16,
+            "sameMaximumStraddleMM": 5.162710231986934,
+            "torsoMaximumStraddleMM": 2.870267787391505,
+            "nearMaximumStraddleMM": 2.1181926293086257
+          },
+          "minimumLocalAreaMM2": 0.30864850367694163,
+          "minimumLocalQuality": 0.026783350963119106
+        },
+        {
+          "stage": "pv",
+          "contacts": {
+            "all": 368,
+            "same": 213,
+            "torso": 138,
+            "near": 17,
+            "sameMaximumStraddleMM": 4.868337762620769,
+            "torsoMaximumStraddleMM": 2.819100783511297,
+            "nearMaximumStraddleMM": 0.8067794967678027
+          },
+          "minimumLocalAreaMM2": 0.3667742364031821,
+          "minimumLocalQuality": 0.024116785004883012
+        },
+        {
+          "stage": "corrective_smooth",
+          "contacts": {
+            "all": 370,
+            "same": 212,
+            "torso": 141,
+            "near": 17,
+            "sameMaximumStraddleMM": 5.340702672792818,
+            "torsoMaximumStraddleMM": 2.486280901194165,
+            "nearMaximumStraddleMM": 1.1558085241051932
+          },
+          "minimumLocalAreaMM2": 0.3698877706497377,
+          "minimumLocalQuality": 0.01652334141209557
+        }
+      ],
+      "lbsTopv": {
+        "firstOnsetCageSupportMaximumMM": 19.637926991102702,
+        "witness30900DeltaMM": [
+          -8.896291255950928,
+          -15.895307064056396,
+          -0.8100420236587524
+        ],
+        "witness27981DeltaMM": [
+          8.882492780685425,
+          -15.885233879089355,
+          -0.8398145437240601
+        ]
+      },
+      "pvTocorrective_smooth": {
+        "firstOnsetCageSupportMaximumMM": 9.158628850114237,
+        "witness30900DeltaMM": [
+          3.230184316635132,
+          5.288243293762207,
+          3.839626908302307
+        ],
+        "witness27981DeltaMM": [
+          -3.2268762588500977,
+          5.2773356437683105,
+          3.8470178842544556
+        ]
+      }
+    },
+    {
+      "id": "push-loaded",
+      "clip": "push_up",
+      "seconds": 2.0,
+      "stages": [
+        {
+          "stage": "lbs",
+          "contacts": {
+            "all": 526,
+            "same": 458,
+            "torso": 51,
+            "near": 17,
+            "sameMaximumStraddleMM": 8.846026182039266,
+            "torsoMaximumStraddleMM": 1.376925297099915,
+            "nearMaximumStraddleMM": 1.809862456757454
+          },
+          "minimumLocalAreaMM2": 0.7720530434474003,
+          "minimumLocalQuality": 0.06581887044599909
+        },
+        {
+          "stage": "pv",
+          "contacts": {
+            "all": 494,
+            "same": 434,
+            "torso": 45,
+            "near": 15,
+            "sameMaximumStraddleMM": 8.828124715743149,
+            "torsoMaximumStraddleMM": 1.1859670033886132,
+            "nearMaximumStraddleMM": 1.429282698220505
+          },
+          "minimumLocalAreaMM2": 1.3034874080807672,
+          "minimumLocalQuality": 0.06294555941293382
+        },
+        {
+          "stage": "corrective_smooth",
+          "contacts": {
+            "all": 474,
+            "same": 406,
+            "torso": 50,
+            "near": 18,
+            "sameMaximumStraddleMM": 7.288057516181876,
+            "torsoMaximumStraddleMM": 1.5196658932394533,
+            "nearMaximumStraddleMM": 1.61514361018195
+          },
+          "minimumLocalAreaMM2": 1.2038000526006345,
+          "minimumLocalQuality": 0.06029632097954293
+        }
+      ],
+      "lbsTopv": {
+        "firstOnsetCageSupportMaximumMM": 29.971192511138828,
+        "witness30900DeltaMM": [
+          -16.63348078727722,
+          -22.905945777893066,
+          -9.844660758972168
+        ],
+        "witness27981DeltaMM": [
+          16.627490520477295,
+          -22.872447967529297,
+          -9.922683238983154
+        ]
+      },
+      "pvTocorrective_smooth": {
+        "firstOnsetCageSupportMaximumMM": 13.004506700019354,
+        "witness30900DeltaMM": [
+          8.333384990692139,
+          4.518091678619385,
+          6.087973713874817
+        ],
+        "witness27981DeltaMM": [
+          -8.337467908859253,
+          4.4956207275390625,
+          6.104767322540283
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Saved native LBS and PV stages are measured without subsequent smoothing; these are modifier attribution, not a tested replacement mask.",
+    "No new target or weight/mask variant was evaluated. This review cannot prove a local mask edit alone will cure the crease.",
+    "Fine quad/source polygon mapping uses the verified fixed four-children subdivision layout.",
+    "This contact prototype uses a conservative curl-derived outer-half guide; zero mobility is a solver restriction, not proof of bony anatomy."
+  ]
+}

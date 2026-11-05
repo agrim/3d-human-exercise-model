@@ -1,0 +1,40 @@
+.DS_Store
+Thumbs.db
+*.blend1
+*.blend2
+*.tmp
+*.bak
+__pycache__/
+.export/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+.venv-physics/
+.blender-security/
+
+# Local build and replay products; keep source scripts and canonical assets.
+*.pyc
+*.bphys
+/assets/.mobile-functional-*/
+/assets/mobile-live-*/
+/assets/character-sources/mhr/v8-native-rig-v1/runtime/*-cage.bin
+/assets/character-sources/mhr/v8-native-rig-v1/runtime/*/*-cage.bin
+/assets/character-sources/vitruvian/live-rig-v1/movement-battery-gpu-v1/**/*.bin
+
+# Historical experiments are local archives, outside the current wrapper.
+/assets/
+/ios/
+/scripts/
+/docs/
+/Revision/Authoring/
+/Revision/Tools/make_review.py
+/Revision/Tools/verify_native.py
+
+# Review exports stay local; retain JSON fixtures and written verification.
+/Revision/Review/**/*.png
+/Revision/Review/**/*.jpg
+/Revision/Review/**/*.jpeg
+/Revision/Review/**/*.webp
+/Revision/Review/**/*.mp4
+/Revision/Review/**/*.gif
+/Revision/Review/**/*.html

@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "commit": "d9b05d470b1a481c222372c85b75772faf8f7792",
+  "files": [
+    {
+      "file": "wrist.osim",
+      "sourcePath": "Models/WristModel/wrist.osim",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Models/WristModel/wrist.osim",
+      "gitBlobSHA1": "8e07378779257a1ccbca3cc54d4736328536a286",
+      "sha256": "66488a7819cecac562bda9c59b935c1e4c7b78c7bdb21d2ef44e23f6198c1996",
+      "bytes": 419036
+    },
+    {
+      "file": "humerus.vtp",
+      "sourcePath": "Geometry/humerus.vtp",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/humerus.vtp",
+      "gitBlobSHA1": "9057918340892a1d99779f9a9a8712cec18c06b9",
+      "sha256": "d8a1aa6821d5b6a3a153c47336a06b5425e75b20467a468886089223e8b8bbca",
+      "bytes": 26608
+    },
+    {
+      "file": "ulna.vtp",
+      "sourcePath": "Geometry/ulna.vtp",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/ulna.vtp",
+      "gitBlobSHA1": "b5403faa0d1b17bbc1f6128394a602519338bd84",
+      "sha256": "87de86df317a28031cc6b9a2481c95b81bb240081c504367bf30ffd60489abe3",
+      "bytes": 14263
+    },
+    {
+      "file": "radius.vtp",
+      "sourcePath": "Geometry/radius.vtp",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/radius.vtp",
+      "gitBlobSHA1": "24814c71af160259edcd2be6031f462fe377a977",
+      "sha256": "41aae2b100141028d153ffaf4495ce8303ea8265db9de1a9e45451ab6f48553b",
+      "bytes": 13335
+    }
+  ],
+  "authors": "Robert Gonzalez, Thomas Buchanan, Scott Delp",
+  "publication": "Gonzalez RV, Buchanan TS, Delp SL. How muscle architecture and moment arms affect wrist flexion-extension moments. Journal of Biomechanics 30:705-712, 1997.",
+  "license": "Creative Commons Attribution 3.0, as listed for Wrist Model in official OpenSim documentation.",
+  "licenseSource": "https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53090607",
+  "licenseChecked": "2026-11-01",
+  "limitations": [
+    "Simplified wrist kinematics for education; model has no inertial properties and is not a dynamics model.",
+    "Distinct geometry and joint frames from Arm26; do not mix their landmark coordinates.",
+    "Reference only; not yet fitted to the dummy or accepted."
+  ]
+}

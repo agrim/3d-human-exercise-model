@@ -1,0 +1,146 @@
+{
+  "schema": 1,
+  "commit": "d9b05d470b1a481c222372c85b75772faf8f7792",
+  "files": [
+    {
+      "file": "wrist.osim",
+      "sourcePath": "Models/WristModel/wrist.osim",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Models/WristModel/wrist.osim",
+      "gitBlobSHA1": "8e07378779257a1ccbca3cc54d4736328536a286",
+      "sha256": "66488a7819cecac562bda9c59b935c1e4c7b78c7bdb21d2ef44e23f6198c1996",
+      "bytes": 419036
+    },
+    {
+      "file": "humerus.vtp",
+      "sourcePath": "Geometry/humerus.vtp",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/humerus.vtp",
+      "gitBlobSHA1": "9057918340892a1d99779f9a9a8712cec18c06b9",
+      "sha256": "d8a1aa6821d5b6a3a153c47336a06b5425e75b20467a468886089223e8b8bbca",
+      "bytes": 26608
+    },
+    {
+      "file": "ulna.vtp",
+      "sourcePath": "Geometry/ulna.vtp",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/ulna.vtp",
+      "gitBlobSHA1": "b5403faa0d1b17bbc1f6128394a602519338bd84",
+      "sha256": "87de86df317a28031cc6b9a2481c95b81bb240081c504367bf30ffd60489abe3",
+      "bytes": 14263
+    },
+    {
+      "file": "radius.vtp",
+      "sourcePath": "Geometry/radius.vtp",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/radius.vtp",
+      "gitBlobSHA1": "24814c71af160259edcd2be6031f462fe377a977",
+      "sha256": "41aae2b100141028d153ffaf4495ce8303ea8265db9de1a9e45451ab6f48553b",
+      "bytes": 13335
+    },
+    {
+      "file": "fingers1.vtp",
+      "sourcePath": "Geometry/fingers1.vtp",
+      "gitBlobSHA1": "92cb9e040557cf86679dc13a3b313df318460823",
+      "sha256": "673dd1f4390574590bbf5ccd9b01be2b4a13289f2a8520cf3a0b7020a866ba5c",
+      "bytes": 15940,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/fingers1.vtp"
+    },
+    {
+      "file": "fingers12.vtp",
+      "sourcePath": "Geometry/fingers12.vtp",
+      "gitBlobSHA1": "be00b700d738f3847574c070fc46da8162288541",
+      "sha256": "7e9ccb4f6a812aadcc439320ce84da8ab8c0ae8e52b8c1a951b30e0ce4269672",
+      "bytes": 6692,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/fingers12.vtp"
+    },
+    {
+      "file": "fingers16.vtp",
+      "sourcePath": "Geometry/fingers16.vtp",
+      "gitBlobSHA1": "aeb38badee6b3a473458894b7166333c84fc007a",
+      "sha256": "e3e878bf48339b7c3b0b1dd21f6ecd68f729dcb3ec80637f04d641a2c60d589d",
+      "bytes": 6692,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/fingers16.vtp"
+    },
+    {
+      "file": "fingers8.vtp",
+      "sourcePath": "Geometry/fingers8.vtp",
+      "gitBlobSHA1": "5517aea5e684bece716b382a6fd24e1af98374fc",
+      "sha256": "a3fcd5f624f26b3bea4e08e8cf08bd68e0493dfd326327708ff4ade20d31ce1f",
+      "bytes": 6692,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/fingers8.vtp"
+    },
+    {
+      "file": "r_cap.vtp",
+      "sourcePath": "Geometry/r_cap.vtp",
+      "gitBlobSHA1": "49270ae8d20543aaeb7385e10fbccd562f8c1e06",
+      "sha256": "d421488208826d2f08925f39187ae4d2adc4558c3cf6731c86bf60002ffcd8cb",
+      "bytes": 3812,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_cap.vtp"
+    },
+    {
+      "file": "r_ham.vtp",
+      "sourcePath": "Geometry/r_ham.vtp",
+      "gitBlobSHA1": "af2542cbbc12e38f1e350efe29d255a999ea3559",
+      "sha256": "a6f7c886f8232f04ecfd23154107f22dd455589034935ee07eb20002012c3a74",
+      "bytes": 3920,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_ham.vtp"
+    },
+    {
+      "file": "r_lun.vtp",
+      "sourcePath": "Geometry/r_lun.vtp",
+      "gitBlobSHA1": "e40c5301dce88c97837ac00946d64fd5b8327312",
+      "sha256": "17fb867435245637c1370bcbcebede800c2f0cec06528895b687cc499cc5e0ea",
+      "bytes": 2997,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_lun.vtp"
+    },
+    {
+      "file": "r_pis.vtp",
+      "sourcePath": "Geometry/r_pis.vtp",
+      "gitBlobSHA1": "21001f6fd8139d4362b593cb8494260e13b4c756",
+      "sha256": "be50a8c93564821068f4838d1e0e8af3faa80ba1ecfc7fa0d7f06748ff5cf1a4",
+      "bytes": 2079,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_pis.vtp"
+    },
+    {
+      "file": "r_scaph.vtp",
+      "sourcePath": "Geometry/r_scaph.vtp",
+      "gitBlobSHA1": "a466ae7e0afeefaeecf7e08f6ad426ed4da97e1c",
+      "sha256": "b5c5d79f498f79107f5aa55338548ba1ec0b84cf98850af16dda80ee4b565846",
+      "bytes": 2950,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_scaph.vtp"
+    },
+    {
+      "file": "r_triq.vtp",
+      "sourcePath": "Geometry/r_triq.vtp",
+      "gitBlobSHA1": "ab7e1a9ac407c0a74151221ac3b9fd84935379ed",
+      "sha256": "95a40f190789ec004a8d33d726674d9f6ba63cade408af91f77edcc515258fc4",
+      "bytes": 2557,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_triq.vtp"
+    },
+    {
+      "file": "r_trpzd.vtp",
+      "sourcePath": "Geometry/r_trpzd.vtp",
+      "gitBlobSHA1": "28e6ab535994926ea93d81afb741c9bea1fe1fe2",
+      "sha256": "3bb753bb7f9e07a60b5be314df592a39afd3853a334e041f34ccd904a73d7a69",
+      "bytes": 2537,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_trpzd.vtp"
+    },
+    {
+      "file": "r_trpzm.vtp",
+      "sourcePath": "Geometry/r_trpzm.vtp",
+      "gitBlobSHA1": "d7553a81eed7f4ae611c345c891f6134839b3f2f",
+      "sha256": "2f30ecfde5354f983ef8101c37c596a3735eb12398a55aa0f1a58219f6850395",
+      "bytes": 3293,
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/r_trpzm.vtp"
+    }
+  ],
+  "authors": "Robert Gonzalez, Thomas Buchanan, Scott Delp",
+  "publication": "Gonzalez RV, Buchanan TS, Delp SL. How muscle architecture and moment arms affect wrist flexion-extension moments. Journal of Biomechanics 30:705-712, 1997.",
+  "license": "Creative Commons Attribution 3.0, as listed for Wrist Model in official OpenSim documentation.",
+  "licenseSource": "https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53090607",
+  "licenseChecked": "2026-11-01",
+  "limitations": [
+    "Simplified wrist kinematics for education; model has no inertial properties and is not a dynamics model.",
+    "Distinct geometry and joint frames from Arm26; do not mix their landmark coordinates.",
+    "Reference only; not yet fitted to the dummy or accepted.",
+    "Additional carpal/metacarpal meshes retain their own wrist-model body frames. Anatomical landmark registration is not yet accepted."
+  ],
+  "parentProvenanceSHA256": "882488d76f69a7657dbd74b25e5341e8e527f66e5ac3a7d0a59eb8638f7331e1"
+}

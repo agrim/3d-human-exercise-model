@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "status": "unmodified_reference_not_character_integration",
+  "repository": "https://github.com/opensim-org/opensim-models",
+  "commit": "d9b05d470b1a481c222372c85b75772faf8f7792",
+  "files": [
+    {
+      "file": "gait2392_thelen2003muscle.osim",
+      "upstreamPath": "Models/Gait2392_Simbody/gait2392_thelen2003muscle.osim",
+      "gitBlobSHA1": "ffea70cc199fdba6ae4703deab6ac3430bf6fb8e",
+      "sha256": "3af1ca20aa87bc88b0b8cd54f2504331afa2aa03537cc868f1175fa1f50f3c0f",
+      "bytes": 576084,
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Models/Gait2392_Simbody/gait2392_thelen2003muscle.osim"
+    },
+    {
+      "file": "sacrum.vtp",
+      "upstreamPath": "Geometry/sacrum.vtp",
+      "gitBlobSHA1": "5a0b356575233ce170f57ed6050df01c8bd55c23",
+      "sha256": "ec82986d7d7f45ad98e9e158c7f583bca2a48b0d59b38207de83ad9dee015e45",
+      "bytes": 11946,
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/sacrum.vtp"
+    },
+    {
+      "file": "pelvis.vtp",
+      "upstreamPath": "Geometry/pelvis.vtp",
+      "gitBlobSHA1": "849430342610459d77405e48e54a086d9cdfb147",
+      "sha256": "302c81039c0b16a1f04dd3f393897dc006ed74efd923cc7761a9d3b7f86266ca",
+      "bytes": 9561,
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/pelvis.vtp"
+    },
+    {
+      "file": "l_pelvis.vtp",
+      "upstreamPath": "Geometry/l_pelvis.vtp",
+      "gitBlobSHA1": "6a34d8aa29383b4f2a196109aaeb14199466225b",
+      "sha256": "221ff377284b3d4607286de7b66b6e30c449b2328db577f308065022d3e8dbec",
+      "bytes": 9684,
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/l_pelvis.vtp"
+    },
+    {
+      "file": "femur_r.vtp",
+      "upstreamPath": "Geometry/femur_r.vtp",
+      "gitBlobSHA1": "8178515e6fee343d61ded7257dc936ec21075b95",
+      "sha256": "2bf9d3edb7861f6b392f0ef547ad912b186a56ccaf262df3a6b7b45910791a57",
+      "bytes": 36860,
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/femur_r.vtp"
+    },
+    {
+      "file": "femur_l.vtp",
+      "upstreamPath": "Geometry/femur_l.vtp",
+      "gitBlobSHA1": "b4f1c76cb7fb09ed70c476cad00602f0d1b27787",
+      "sha256": "dd8bbb1a796b224778334eee384eb787c18361298b6bf0cbeba18cbe7588f2d8",
+      "bytes": 36860,
+      "url": "https://github.com/opensim-org/opensim-models/blob/d9b05d470b1a481c222372c85b75772faf8f7792/Geometry/femur_l.vtp"
+    }
+  ],
+  "credits": "Delp S.L., Loan J.P., Hoy M.G., Zajac F.E., Topp E.L., Rosen J.M., Thelen D.G., Anderson F.C., Seth A. Notes: 3D, 23 DOF gait model created by D.G. Thelen, Univ. of Wisconsin-Madison, and Ajay Seth, Frank C. Anderson, and Scott L. Delp, Stanford University. Lower extremity joint defintions based on Delp et al. (1990). Low back joint and anthropometry based on Anderson and Pandy (1999, 2001). Planar knee model of Yamaguchi and Zajac (1989). Seth replaced tibia translation constraints with a CustomJoint for the knee and removed the patella to eliminate all kinematic constraints; insertions of the quadrucepts are handled with moving points in the tibia frame as defined by Delp 1990. License: Creative Commons (CCBY 3.0). You are free to distribute, remix, tweak, and build upon this work, even commercially, as long as you credit us for the original creation. http://creativecommons.org/licenses/by/3.0/ More Information: http://simtk-confluence.stanford.edu:8080/display/OpenSim/Gait+2392+and+2354+Models",
+  "publications": "Delp, S.L., Loan, J.P., Hoy, M.G., Zajac, F.E., Topp E.L., Rosen, J.M.: An interactive graphics-based model of the lower extremity to study orthopaedic surgical procedures, IEEE Transactions on Biomedical Engineering, vol. 37, pp. 757-767, 1990. Yamaguchi G.T., Zajac F.E.: A planar model of the knee joint to characterize the knee extensor mechanism.\" J . Biomecl7. vol. 21. pp. 1-10. 1989. Anderson F.C., Pandy M.G.: A dynamic optimization solution for vertical jumping in three dimensions. Computer Methods in Biomechanics and Biomedical Engineering 2:201-231, 1999. Anderson F.C., Pandy M.G.: Dynamic optimization of human walking. Journal of Biomechanical Engineering 123:381-390, 2001.",
+  "licenseStatementLocation": "Model/credits",
+  "scope": "Pelvis and femur geometry and joint definitions for registration; not integrated into the character."
+}

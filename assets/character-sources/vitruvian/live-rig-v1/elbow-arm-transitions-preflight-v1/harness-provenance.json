@@ -1,0 +1,32 @@
+{
+  "cpuOnly": true,
+  "strictSwift6WarningsAsErrors": true,
+  "sourceSnapshot": "/tmp/hem-composed-audit-source-v1/source-hashes.json",
+  "executable": "/tmp/hem-composed-contact-audit",
+  "executableSHA256": "6f209c27e3a4b57db47e2e8602f51026496c78e97ded69e760927f260a22552a",
+  "sources": [
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/LiveComposedContactAudit.swift",
+      "sha256": "2e705a0cf35b4c408530b28c62079acd3b3ed30be3b981fd145a85e4a2ef6ebd"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/ContactElbowQA.swift",
+      "sha256": "8abcfa5937935f7d5cc54ab51f1aa060f2a396449c3f51280c51c846d11d0a40"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/verify_live_elbow_contact.py",
+      "sha256": "0403cd58662dcba317ef3b30143d76b0249b4bfc74a62372db7b90fadc0b448e"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/verify_live_composed_transition_audit.py",
+      "sha256": "d3188589cf18a106ab5dc210a537befeeb463320cfe44d370d3047b4f6c65608"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/scripts/character_sources/verify_live_composed_motion_audit.py",
+      "sha256": "b201243b2dc6ac742aa91e48cbd080691dad66c46424231574d7f0bbe9b64ec9"
+    }
+  ],
+  "preflightSHA256": "cbe5c21e44a6fc40f620000c338bb745194c3114af7fad9b5a15bc1b4124d4ae",
+  "verifierNegativeChecksSHA256": "305f9297dbd898033744a19167082ec6159badec74761b2358c30634f970e676",
+  "geometryProof": "Pending root-owned GPU execution. No Metal device was created in CPU preflight."
+}

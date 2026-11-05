@@ -1,0 +1,14 @@
+{
+  "schema": "hem.gait-runtime-physical-cpu-receipt.v1",
+  "passes": true,
+  "skinProofSHA256": "7b98408ab0e01761070224d1a05e20f69702a13ebd835961c10a8f5da202c7a8",
+  "inputManifestSHA256": "807b9f7caa9e88d75c4a49519b7e198cfcf277baf3c505c7f9b44e0f2354ff7b",
+  "implementationReceiptSHA256": "1ab048ddb05ce7680a33504f9a9308d8be2fd69af221c7b6148220da4e78d0e0",
+  "maximumCageDisplacementMetres": 5.0989847295568325e-06,
+  "samples": 237,
+  "scope": [
+    "Reference is native-generated channels evaluated through the same production Swift B-bone palette and Float32 skin pipeline. Direct native-palette parity remains a separate proof.",
+    "No actual GPU, interpolated between-knot floor, collision or balance acceptance is inferred."
+  ],
+  "status": "cpu_native_channel_relative_skin_pass_gpu_visual_pending"
+}

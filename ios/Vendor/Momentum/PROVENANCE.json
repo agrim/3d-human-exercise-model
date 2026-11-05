@@ -1,0 +1,33 @@
+{
+  "upstream": "https://github.com/facebookresearch/momentum",
+  "revision": "e23c890b2c91198237d334e8b6f12a9f5209766c",
+  "modifiedUpstreamFiles": [],
+  "dependencies": {
+    "Eigen": "5.0.1",
+    "fmt": "11.2.0",
+    "Microsoft GSL": "4.2.0"
+  },
+  "sourceFiles": {
+    "axel/axel/BoundingBox.cpp": "1b360986e8d770b281cadc33dd2ec25355570b91758c79c99b1110720f452d7f",
+    "momentum/character/skeleton.cpp": "ffc1b8af1a8658d82c7ff0d3b881216b6dfaa544e51db3c4bbe70c5aef7aba3c",
+    "momentum/character/joint_state.cpp": "0cc5b9a4fe386c3c5e97db5257867d0b672d27bfc609b2e4a4905a513ee1e75d",
+    "momentum/character/parameter_transform.cpp": "ca89af27d7e4d997179142e654f0cb8306d112f761ee27f105e17e6ba231215d",
+    "momentum/character/parameter_limits.cpp": "7d90d64f9217e6e18804a5ebf48f49dddf51cfe22d86682909585b8f19a083cc",
+    "momentum/character/collision_geometry_state.cpp": "6a7fcb0bf59c76b27a0b165c3926c9394543a36a8f29f616c58604c19b2908ee",
+    "momentum/character/skeleton_state.cpp": "a97d5215e2072817a142f753182340babb29390ceac0f6f2101496f4a5182469",
+    "momentum/solver/solver_function.cpp": "91af25c4a65050bf400fea3bf73b2eb8439fac72ffd75e4888151baef966379c",
+    "momentum/solver/gauss_newton_solver.cpp": "9fd467939b31b4bcd3d229c5a646ab3e551c08676ca914a3d077fbf3290e22cb",
+    "momentum/solver/solver.cpp": "213a35a34f3369e0fbaa6fc86341df0a2bf0e42ec8145ac290eff53a18f7d510",
+    "momentum/math/transform.cpp": "9a4d5e71e3023a8340336a72c04e19da407ded227b4b733edfb36d6e50249e1f",
+    "momentum/math/generalized_loss.cpp": "89eb4c3b7f6758bbe1f847f671f34d78ecfeae6cd77cc43eb103fe1bc9bd90f2",
+    "momentum/math/utility.cpp": "e9a95f4f2d03e71494b280634bfc80d1196543fd04c86750fb41b06f71d5910a",
+    "momentum/character_solver/skinning_weight_iterator.cpp": "da31f17adc00f5eb5ba1ff3f7985c7fe2e080a8f614327abfc354c36b9ad6a72",
+    "momentum/character_solver/plane_error_function.cpp": "92e22f6a051fcb439cd8a66c18accf683b9c5973a9a06d49e71f3b0f966b884a",
+    "momentum/character_solver/model_parameters_error_function.cpp": "37ab3292693f54e16e7c14ad41ce0f25666da05df848d0a26d734013a4a752f2",
+    "momentum/character_solver/position_error_function.cpp": "0c167d108fef5b3fc7fed480cdfcda4a50ce480f27b9d6dc13439ae670ce3fa5",
+    "momentum/character_solver/collision_error_function.cpp": "45b041211340dc63aee18e5a68e817a2e4f797c929f07170b65cc3038df15be9",
+    "momentum/character_solver/skeleton_derivative.cpp": "b5d55ae591890a59471f759d68a07faa7895fbfb6a451fedfd43a08cf22b1d42",
+    "momentum/character_solver/orientation_error_function.cpp": "0575e1f6cbd572b922fee76b014f9d95e4496f24c2278f85d62d50f32fdefada",
+    "momentum/character_solver/limit_error_function.cpp": "26e6f81253859aa980a9b351fb52028aba072e84b816e8fa8acdac24cdbf29c2"
+  }
+}

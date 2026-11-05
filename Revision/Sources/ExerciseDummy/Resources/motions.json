@@ -1,0 +1,5228 @@
+{
+ "version": 1,
+ "joints": [
+  "pelvis",
+  "spine",
+  "chest",
+  "neck",
+  "head",
+  "leftClavicle",
+  "leftUpperArm",
+  "leftForearm",
+  "leftHand",
+  "leftThigh",
+  "leftShin",
+  "leftFoot",
+  "leftToe",
+  "rightClavicle",
+  "rightUpperArm",
+  "rightForearm",
+  "rightHand",
+  "rightThigh",
+  "rightShin",
+  "rightFoot",
+  "rightToe",
+  "leftThumbBase",
+  "leftThumb1",
+  "leftThumb2",
+  "leftIndex1",
+  "leftIndex2",
+  "leftIndex3",
+  "leftMiddle1",
+  "leftMiddle2",
+  "leftMiddle3",
+  "leftRing1",
+  "leftRing2",
+  "leftRing3",
+  "leftLittle1",
+  "leftLittle2",
+  "leftLittle3",
+  "rightThumbBase",
+  "rightThumb1",
+  "rightThumb2",
+  "rightIndex1",
+  "rightIndex2",
+  "rightIndex3",
+  "rightMiddle1",
+  "rightMiddle2",
+  "rightMiddle3",
+  "rightRing1",
+  "rightRing2",
+  "rightRing3",
+  "rightLittle1",
+  "rightLittle2",
+  "rightLittle3"
+ ],
+ "exercises": [
+  {
+   "id": "squat",
+   "title": "Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    44,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    }
+   ],
+   "track": "tracks/squat.bin"
+  },
+  {
+   "id": "bench-press",
+   "title": "Bench Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "bench",
+     "length": 1.2,
+     "radius": 0.145
+    },
+    {
+     "kind": "barbell",
+     "length": 1.6,
+     "radius": 0.14
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/bench-press.bin"
+  },
+  {
+   "id": "deadlift",
+   "title": "Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "secondary": [
+    "spinalErectors",
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    }
+   ],
+   "track": "tracks/deadlift.bin"
+  },
+  {
+   "id": "row",
+   "title": "Row",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.5,
+     "radius": 0.12
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids"
+   ],
+   "track": "tracks/row.bin"
+  },
+  {
+   "id": "push-up",
+   "title": "Push-Up",
+   "seconds": 3.4,
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    54,
+    14
+   ],
+   "equipment": [],
+   "track": "tracks/push-up.bin"
+  },
+  {
+   "id": "kettlebell-swing",
+   "title": "Kettlebell Swing",
+   "seconds": 1.85,
+   "primary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "kettlebell",
+     "length": 0.205,
+     "radius": 0.085
+    }
+   ],
+   "track": "tracks/kettlebell-swing.bin"
+  },
+  {
+   "id": "lunge",
+   "title": "Lunge",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    59,
+    10
+   ],
+   "equipment": [],
+   "track": "tracks/lunge.bin"
+  },
+  {
+   "id": "plank",
+   "title": "Plank",
+   "seconds": 5,
+   "camera": [
+    64,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "abdominals",
+    "obliques"
+   ],
+   "secondary": [
+    "anteriorDeltoids",
+    "glutes"
+   ],
+   "track": "tracks/plank.bin"
+  },
+  {
+   "id": "front-squat",
+   "title": "Front Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "camera": [
+    44,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    }
+   ],
+   "track": "tracks/front-squat.bin"
+  },
+  {
+   "id": "goblet-squat",
+   "title": "Goblet Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    44,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "kettlebell",
+     "length": 0.205,
+     "radius": 0.085
+    }
+   ],
+   "track": "tracks/goblet-squat.bin"
+  },
+  {
+   "id": "bodyweight-squat",
+   "title": "Bodyweight Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    44,
+    10
+   ],
+   "equipment": [],
+   "track": "tracks/bodyweight-squat.bin"
+  },
+  {
+   "id": "smith-machine-squat",
+   "title": "Smith Machine Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    44,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.024,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.48,
+     "radius": 0.0375,
+     "material": "steel",
+     "size": [
+      0.075,
+      0.07,
+      0.48
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.024,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.48,
+     "radius": 0.0375,
+     "material": "steel",
+     "size": [
+      0.075,
+      0.07,
+      0.48
+     ]
+    },
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    }
+   ],
+   "track": "tracks/smith-machine-squat.bin"
+  },
+  {
+   "id": "hack-squat",
+   "title": "Hack Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [],
+   "camera": [
+    45,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.46,
+     "radius": 0.28,
+     "material": "rubber",
+     "size": [
+      0.56,
+      0.06,
+      0.46
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.17,
+     "radius": 0.0475,
+     "material": "pad",
+     "size": [
+      0.095,
+      0.08,
+      0.17
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.016,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.027,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.17,
+     "radius": 0.0475,
+     "material": "pad",
+     "size": [
+      0.095,
+      0.08,
+      0.17
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.016,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.027,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.18,
+     "material": "pad",
+     "size": [
+      0.36,
+      0.54,
+      0.065
+     ]
+    }
+   ],
+   "track": "tracks/hack-squat.bin"
+  },
+  {
+   "id": "leg-press",
+   "title": "Leg Press",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings"
+   ],
+   "camera": [
+    45,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.48,
+     "radius": 0.215,
+     "material": "pad",
+     "size": [
+      0.43,
+      0.08,
+      0.48
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.62,
+      0.065
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 1.18,
+     "radius": 0.029,
+     "material": "steel",
+     "size": [
+      0.058,
+      0.066,
+      1.18
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.028,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.028,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 1.18,
+     "radius": 0.029,
+     "material": "steel",
+     "size": [
+      0.058,
+      0.066,
+      1.18
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.028,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.028,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.027,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "box",
+     "length": 0.44,
+     "radius": 0.27,
+     "material": "rubber",
+     "size": [
+      0.54,
+      0.048,
+      0.44
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.027,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.028,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.027,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.028,
+     "material": "steel"
+    }
+   ],
+   "track": "tracks/leg-press.bin"
+  },
+  {
+   "id": "split-squat",
+   "title": "Split Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    59,
+    10
+   ],
+   "equipment": [],
+   "track": "tracks/split-squat.bin"
+  },
+  {
+   "id": "bulgarian-split-squat",
+   "title": "Bulgarian Split Squat",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    59,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.29,
+     "radius": 0.325,
+     "material": "pad",
+     "size": [
+      0.65,
+      0.32,
+      0.29
+     ]
+    }
+   ],
+   "track": "tracks/bulgarian-split-squat.bin"
+  },
+  {
+   "id": "reverse-lunge",
+   "title": "Reverse Lunge",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    59,
+    10
+   ],
+   "equipment": [],
+   "track": "tracks/reverse-lunge.bin"
+  },
+  {
+   "id": "walking-lunge",
+   "title": "Walking Lunge",
+   "seconds": 5.8,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    59,
+    10
+   ],
+   "equipment": [],
+   "track": "tracks/walking-lunge.bin",
+   "sideFocus": {
+    "groups": [
+     "glutes",
+     "quadriceps",
+     "hamstrings"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 0.5,
+      "side": "left"
+     },
+     {
+      "start": 0.5,
+      "end": 1,
+      "side": "right"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lateral-lunge",
+   "title": "Lateral Lunge",
+   "seconds": 3.4,
+   "primary": [
+    "glutes",
+    "quadriceps",
+    "adductors"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    21,
+    8
+   ],
+   "equipment": [],
+   "track": "tracks/lateral-lunge.bin"
+  },
+  {
+   "id": "step-up",
+   "title": "Step-Up",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    59,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.43,
+     "radius": 0.32,
+     "material": "pad",
+     "size": [
+      0.64,
+      0.28,
+      0.43
+     ]
+    }
+   ],
+   "track": "tracks/step-up.bin",
+   "sideFocus": {
+    "groups": [
+     "quadriceps",
+     "glutes"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "romanian-deadlift",
+   "title": "Romanian Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "hamstrings",
+    "glutes"
+   ],
+   "secondary": [
+    "spinalErectors",
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    }
+   ],
+   "track": "tracks/romanian-deadlift.bin"
+  },
+  {
+   "id": "dumbbell-romanian-deadlift",
+   "title": "Dumbbell Romanian Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "hamstrings",
+    "glutes"
+   ],
+   "secondary": [
+    "spinalErectors",
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    }
+   ],
+   "track": "tracks/dumbbell-romanian-deadlift.bin"
+  },
+  {
+   "id": "single-leg-romanian-deadlift",
+   "title": "Single-Leg Romanian Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "hamstrings",
+    "glutes"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques",
+    "footStabilizers"
+   ],
+   "camera": [
+    124,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    }
+   ],
+   "track": "tracks/single-leg-romanian-deadlift.bin",
+   "sideFocus": {
+    "groups": [
+     "glutes",
+     "hamstrings"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sumo-deadlift",
+   "title": "Sumo Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "glutes",
+    "quadriceps",
+    "adductors"
+   ],
+   "secondary": [
+    "hamstrings",
+    "spinalErectors",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    }
+   ],
+   "track": "tracks/sumo-deadlift.bin"
+  },
+  {
+   "id": "trap-bar-deadlift",
+   "title": "Trap Bar Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "spinalErectors",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.021,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.021,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "rubber"
+    }
+   ],
+   "track": "tracks/trap-bar-deadlift.bin"
+  },
+  {
+   "id": "hip-thrust",
+   "title": "Hip Thrust",
+   "seconds": 3.4,
+   "primary": [
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    55,
+    15
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.32,
+     "radius": 0.385,
+     "material": "pad",
+     "size": [
+      0.77,
+      0.07,
+      0.32
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.41359999999999997,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.45,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.45
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.41359999999999997,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.45,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.45
+     ]
+    },
+    {
+     "kind": "barbell",
+     "length": 1.85,
+     "radius": 0.21
+    },
+    {
+     "kind": "rod",
+     "length": 0.33,
+     "radius": 0.047,
+     "material": "rubber"
+    }
+   ],
+   "track": "tracks/hip-thrust.bin"
+  },
+  {
+   "id": "glute-bridge",
+   "title": "Glute Bridge",
+   "seconds": 3.4,
+   "primary": [
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    55,
+    15
+   ],
+   "equipment": [],
+   "track": "tracks/glute-bridge.bin"
+  },
+  {
+   "id": "single-leg-glute-bridge",
+   "title": "Single-Leg Glute Bridge",
+   "seconds": 3.4,
+   "primary": [
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    55,
+    15
+   ],
+   "equipment": [],
+   "track": "tracks/single-leg-glute-bridge.bin",
+   "sideFocus": {
+    "groups": [
+     "glutes",
+     "hamstrings"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "cable-pull-through",
+   "title": "Cable Pull-Through",
+   "seconds": 3.4,
+   "primary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    75,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.12,
+     "radius": 0.06,
+     "material": "steel",
+     "size": [
+      0.12,
+      0.26,
+      0.12
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.008,
+     "material": "band"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.016,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.016,
+     "material": "rope"
+    }
+   ],
+   "track": "tracks/cable-pull-through.bin"
+  },
+  {
+   "id": "leg-extension",
+   "title": "Leg Extension",
+   "seconds": 3.4,
+   "primary": [
+    "quadriceps"
+   ],
+   "secondary": [],
+   "camera": [
+    64,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.39,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.07,
+      0.39
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.49,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 0.42,
+     "radius": 0.055,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.023,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.026,
+     "material": "steel"
+    }
+   ],
+   "track": "tracks/leg-extension.bin"
+  },
+  {
+   "id": "seated-leg-curl",
+   "title": "Seated Leg Curl",
+   "seconds": 3.4,
+   "primary": [
+    "hamstrings"
+   ],
+   "secondary": [
+    "gastrocnemius",
+    "soleus"
+   ],
+   "camera": [
+    64,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.39,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.07,
+      0.39
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.49,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.07,
+     "material": "pad",
+     "size": [
+      0.14,
+      0.07,
+      0.13
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.07,
+     "material": "pad",
+     "size": [
+      0.14,
+      0.07,
+      0.13
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 0.42,
+     "radius": 0.055,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.023,
+     "material": "steel"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.026,
+     "material": "steel"
+    }
+   ],
+   "track": "tracks/seated-leg-curl.bin"
+  },
+  {
+   "id": "lying-leg-curl",
+   "title": "Lying Leg Curl",
+   "seconds": 3.4,
+   "primary": [
+    "hamstrings"
+   ],
+   "secondary": [
+    "gastrocnemius",
+    "soleus"
+   ],
+   "camera": [
+    45,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 1.21,
+     "radius": 0.2,
+     "material": "pad",
+     "size": [
+      0.4,
+      0.08,
+      1.21
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.16,
+     "material": "steel",
+     "size": [
+      0.32,
+      0.4,
+      0.055
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.16,
+     "material": "steel",
+     "size": [
+      0.32,
+      0.4,
+      0.055
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 0.44,
+     "radius": 0.053,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.023,
+     "material": "steel"
+    }
+   ],
+   "track": "tracks/lying-leg-curl.bin"
+  },
+  {
+   "id": "standing-calf-raise",
+   "title": "Standing Calf Raise",
+   "seconds": 3.4,
+   "primary": [
+    "gastrocnemius",
+    "soleus"
+   ],
+   "secondary": [],
+   "camera": [
+    146,
+    8
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.21,
+     "radius": 0.045,
+     "material": "pad",
+     "size": [
+      0.09,
+      0.075,
+      0.21
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.016,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.023,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.21,
+     "radius": 0.045,
+     "material": "pad",
+     "size": [
+      0.09,
+      0.075,
+      0.21
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.016,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.023,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.25,
+     "material": "rubber",
+     "size": [
+      0.5,
+      0.088,
+      0.13
+     ]
+    }
+   ],
+   "track": "tracks/standing-calf-raise.bin"
+  },
+  {
+   "id": "seated-calf-raise",
+   "title": "Seated Calf Raise",
+   "seconds": 3.4,
+   "primary": [
+    "gastrocnemius",
+    "soleus"
+   ],
+   "secondary": [],
+   "camera": [
+    63,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.39,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.07,
+      0.39
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.49,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "box",
+     "length": 0.14,
+     "radius": 0.07,
+     "material": "pad",
+     "size": [
+      0.14,
+      0.07,
+      0.14
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.022,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.14,
+     "radius": 0.07,
+     "material": "pad",
+     "size": [
+      0.14,
+      0.07,
+      0.14
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.022,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.15,
+     "radius": 0.24,
+     "material": "rubber",
+     "size": [
+      0.48,
+      0.076,
+      0.15
+     ]
+    }
+   ],
+   "track": "tracks/seated-calf-raise.bin"
+  },
+  {
+   "id": "hip-abduction",
+   "title": "Hip Abduction",
+   "seconds": 3.4,
+   "primary": [
+    "hipAbductors"
+   ],
+   "secondary": [],
+   "camera": [
+    45,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.39,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.07,
+      0.39
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.49,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.0275,
+     "material": "pad",
+     "size": [
+      0.055,
+      0.14,
+      0.13
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.19,
+     "radius": 0.06,
+     "material": "rubber",
+     "size": [
+      0.12,
+      0.028,
+      0.19
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.0275,
+     "material": "pad",
+     "size": [
+      0.055,
+      0.14,
+      0.13
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.19,
+     "radius": 0.06,
+     "material": "rubber",
+     "size": [
+      0.12,
+      0.028,
+      0.19
+     ]
+    }
+   ],
+   "track": "tracks/hip-abduction.bin"
+  },
+  {
+   "id": "hip-adduction",
+   "title": "Hip Adduction",
+   "seconds": 3.4,
+   "primary": [
+    "adductors"
+   ],
+   "secondary": [],
+   "camera": [
+    45,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.39,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.07,
+      0.39
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.057,
+     "radius": 0.023,
+     "material": "steel",
+     "size": [
+      0.046,
+      0.4324,
+      0.057
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.52,
+     "radius": 0.0385,
+     "material": "steel",
+     "size": [
+      0.077,
+      0.05,
+      0.52
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.21,
+     "material": "pad",
+     "size": [
+      0.42,
+      0.49,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.015,
+     "material": "rubber"
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.0275,
+     "material": "pad",
+     "size": [
+      0.055,
+      0.14,
+      0.13
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.19,
+     "radius": 0.06,
+     "material": "rubber",
+     "size": [
+      0.12,
+      0.028,
+      0.19
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.13,
+     "radius": 0.0275,
+     "material": "pad",
+     "size": [
+      0.055,
+      0.14,
+      0.13
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.018,
+     "material": "steel"
+    },
+    {
+     "kind": "box",
+     "length": 0.19,
+     "radius": 0.06,
+     "material": "rubber",
+     "size": [
+      0.12,
+      0.028,
+      0.19
+     ]
+    }
+   ],
+   "track": "tracks/hip-adduction.bin"
+  },
+  {
+   "id": "wall-sit",
+   "title": "Wall Sit",
+   "seconds": 5.0,
+   "primary": [
+    "quadriceps"
+   ],
+   "secondary": [
+    "glutes",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    45,
+    12
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.325,
+     "material": "pad",
+     "size": [
+      0.65,
+      1.08,
+      0.055
+     ]
+    }
+   ],
+   "track": "tracks/wall-sit.bin"
+  },
+  {
+   "id": "dumbbell-bench-press",
+   "title": "Dumbbell Bench Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "bench",
+     "length": 1.2,
+     "radius": 0.145
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/dumbbell-bench-press.bin"
+  },
+  {
+   "id": "incline-bench-press",
+   "title": "Incline Bench Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.76,
+     "radius": 0.145,
+     "size": [
+      0.29,
+      0.065,
+      0.76
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.34,
+     "radius": 0.145,
+     "size": [
+      0.29,
+      0.065,
+      0.34
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.044
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "box",
+     "length": 0.09,
+     "radius": 0.23,
+     "size": [
+      0.46,
+      0.05,
+      0.09
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.09,
+     "radius": 0.23,
+     "size": [
+      0.46,
+      0.05,
+      0.09
+     ]
+    },
+    {
+     "kind": "barbell",
+     "length": 1.6,
+     "radius": 0.14
+    }
+   ],
+   "primary": [
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/incline-bench-press.bin"
+  },
+  {
+   "id": "incline-dumbbell-press",
+   "title": "Incline Dumbbell Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.76,
+     "radius": 0.145,
+     "size": [
+      0.29,
+      0.065,
+      0.76
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.34,
+     "radius": 0.145,
+     "size": [
+      0.29,
+      0.065,
+      0.34
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.044
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "box",
+     "length": 0.09,
+     "radius": 0.23,
+     "size": [
+      0.46,
+      0.05,
+      0.09
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.09,
+     "radius": 0.23,
+     "size": [
+      0.46,
+      0.05,
+      0.09
+     ]
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/incline-dumbbell-press.bin"
+  },
+  {
+   "id": "decline-bench-press",
+   "title": "Decline Bench Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.76,
+     "radius": 0.145,
+     "size": [
+      0.29,
+      0.065,
+      0.76
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.34,
+     "radius": 0.145,
+     "size": [
+      0.29,
+      0.065,
+      0.34
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.044
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "box",
+     "length": 0.09,
+     "radius": 0.23,
+     "size": [
+      0.46,
+      0.05,
+      0.09
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.09,
+     "radius": 0.23,
+     "size": [
+      0.46,
+      0.05,
+      0.09
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.043
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.028
+    },
+    {
+     "kind": "barbell",
+     "length": 1.6,
+     "radius": 0.14
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/decline-bench-press.bin"
+  },
+  {
+   "id": "dumbbell-floor-press",
+   "title": "Dumbbell Floor Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals",
+    "triceps"
+   ],
+   "secondary": [
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/dumbbell-floor-press.bin"
+  },
+  {
+   "id": "machine-chest-press",
+   "title": "Machine Chest Press",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.5,
+      0.055
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.024
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.024
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/machine-chest-press.bin"
+  },
+  {
+   "id": "cable-chest-fly",
+   "title": "Cable Chest Fly",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/cable-chest-fly.bin"
+  },
+  {
+   "id": "dumbbell-chest-fly",
+   "title": "Dumbbell Chest Fly",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "bench",
+     "length": 1.2,
+     "radius": 0.145
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/dumbbell-chest-fly.bin"
+  },
+  {
+   "id": "pec-deck",
+   "title": "Pec Deck",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.5,
+      0.055
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.024
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.024
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/pec-deck.bin"
+  },
+  {
+   "id": "incline-push-up",
+   "title": "Incline Push-Up",
+   "seconds": 3.2,
+   "camera": [
+    64,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "bench",
+     "length": 1.1,
+     "radius": 0.17
+    }
+   ],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/incline-push-up.bin"
+  },
+  {
+   "id": "knee-push-up",
+   "title": "Knee Push-Up",
+   "seconds": 3.2,
+   "camera": [
+    64,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "triceps",
+    "anteriorDeltoids",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/knee-push-up.bin"
+  },
+  {
+   "id": "close-grip-bench-press",
+   "title": "Close-Grip Bench Press",
+   "seconds": 3.2,
+   "camera": [
+    119,
+    32
+   ],
+   "equipment": [
+    {
+     "kind": "bench",
+     "length": 1.2,
+     "radius": 0.145
+    },
+    {
+     "kind": "barbell",
+     "length": 1.6,
+     "radius": 0.14
+    }
+   ],
+   "primary": [
+    "triceps",
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/close-grip-bench-press.bin"
+  },
+  {
+   "id": "pull-up",
+   "title": "Pull-Up",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.015
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "forearms",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/pull-up.bin"
+  },
+  {
+   "id": "chin-up",
+   "title": "Chin-Up",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.015
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    }
+   ],
+   "primary": [
+    "lats",
+    "biceps"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids",
+    "forearms",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/chin-up.bin"
+  },
+  {
+   "id": "assisted-pull-up",
+   "title": "Assisted Pull-Up",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.015
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    },
+    {
+     "kind": "box",
+     "length": 0.24,
+     "radius": 0.225,
+     "size": [
+      0.45,
+      0.05,
+      0.24
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.04
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "forearms"
+   ],
+   "track": "tracks/assisted-pull-up.bin"
+  },
+  {
+   "id": "lat-pulldown",
+   "title": "Lat Pulldown",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.055
+    }
+   ],
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "biceps",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "track": "tracks/lat-pulldown.bin"
+  },
+  {
+   "id": "neutral-grip-lat-pulldown",
+   "title": "Neutral-Grip Lat Pulldown",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.018
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.018
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.018
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.055
+    }
+   ],
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "biceps",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "track": "tracks/neutral-grip-lat-pulldown.bin"
+  },
+  {
+   "id": "seated-cable-row",
+   "title": "Seated Cable Row",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "ball",
+     "length": 0.045,
+     "radius": 0.024
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "ball",
+     "length": 0.045,
+     "radius": 0.024
+    },
+    {
+     "kind": "box",
+     "length": 0.045,
+     "radius": 0.075,
+     "size": [
+      0.15,
+      0.18,
+      0.045
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.045,
+     "radius": 0.075,
+     "size": [
+      0.15,
+      0.18,
+      0.045
+     ]
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids"
+   ],
+   "track": "tracks/seated-cable-row.bin"
+  },
+  {
+   "id": "chest-supported-dumbbell-row",
+   "title": "Chest-Supported Dumbbell Row",
+   "seconds": 3.2,
+   "camera": [
+    80,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.82,
+     "radius": 0.1425,
+     "size": [
+      0.285,
+      0.075,
+      0.82
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.048
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids"
+   ],
+   "track": "tracks/chest-supported-dumbbell-row.bin"
+  },
+  {
+   "id": "single-arm-dumbbell-row",
+   "title": "Single-Arm Dumbbell Row",
+   "seconds": 3.2,
+   "camera": [
+    80,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "bench",
+     "length": 1.1,
+     "radius": 0.14
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/single-arm-dumbbell-row.bin",
+   "sideFocus": {
+    "groups": [
+     "lats",
+     "biceps",
+     "posteriorDeltoids",
+     "trapezius",
+     "rhomboids"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "machine-row",
+   "title": "Machine Row",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.115,
+     "size": [
+      0.23,
+      0.32,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.023
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.023
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids"
+   ],
+   "track": "tracks/machine-row.bin"
+  },
+  {
+   "id": "reverse-pec-deck",
+   "title": "Reverse Pec Deck",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.065,
+     "radius": 0.115,
+     "size": [
+      0.23,
+      0.32,
+      0.065
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.023
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.032
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.023
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    }
+   ],
+   "primary": [
+    "posteriorDeltoids"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "track": "tracks/reverse-pec-deck.bin"
+  },
+  {
+   "id": "face-pull",
+   "title": "Face Pull",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "ball",
+     "length": 0.045,
+     "radius": 0.024
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "ball",
+     "length": 0.045,
+     "radius": 0.024
+    }
+   ],
+   "primary": [
+    "posteriorDeltoids",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "rotatorCuff"
+   ],
+   "track": "tracks/face-pull.bin"
+  },
+  {
+   "id": "straight-arm-pulldown",
+   "title": "Straight-Arm Pulldown",
+   "seconds": 3.2,
+   "camera": [
+    140,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    }
+   ],
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques",
+    "triceps"
+   ],
+   "track": "tracks/straight-arm-pulldown.bin"
+  },
+  {
+   "id": "inverted-row",
+   "title": "Inverted Row",
+   "seconds": 3.2,
+   "camera": [
+    64,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.029
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.029
+    }
+   ],
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/inverted-row.bin"
+  },
+  {
+   "id": "overhead-press",
+   "title": "Overhead Press",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.5,
+     "radius": 0.11
+    }
+   ],
+   "primary": [
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "triceps",
+    "abdominals",
+    "obliques"
+   ],
+   "track": "tracks/overhead-press.bin"
+  },
+  {
+   "id": "dumbbell-shoulder-press",
+   "title": "Dumbbell Shoulder Press",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.5,
+      0.055
+     ]
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "triceps"
+   ],
+   "track": "tracks/dumbbell-shoulder-press.bin"
+  },
+  {
+   "id": "arnold-press",
+   "title": "Arnold Press",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.5,
+      0.055
+     ]
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "triceps"
+   ],
+   "track": "tracks/arnold-press.bin"
+  },
+  {
+   "id": "machine-shoulder-press",
+   "title": "Machine Shoulder Press",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.5,
+      0.055
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.14,
+     "radius": 0.14,
+     "size": [
+      0.28,
+      1.3,
+      0.14
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.038
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.034
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.023
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.034
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.023
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    }
+   ],
+   "primary": [
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "triceps"
+   ],
+   "track": "tracks/machine-shoulder-press.bin"
+  },
+  {
+   "id": "dumbbell-lateral-raise",
+   "title": "Dumbbell Lateral Raise",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "track": "tracks/dumbbell-lateral-raise.bin"
+  },
+  {
+   "id": "cable-lateral-raise",
+   "title": "Cable Lateral Raise",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    }
+   ],
+   "primary": [
+    "lateralDeltoids"
+   ],
+   "secondary": [],
+   "track": "tracks/cable-lateral-raise.bin",
+   "sideFocus": {
+    "groups": [
+     "lateralDeltoids"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dumbbell-front-raise",
+   "title": "Dumbbell Front Raise",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "anteriorDeltoids"
+   ],
+   "secondary": [
+    "upperPectorals"
+   ],
+   "track": "tracks/dumbbell-front-raise.bin"
+  },
+  {
+   "id": "bent-over-rear-delt-fly",
+   "title": "Bent-Over Rear Delt Fly",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "posteriorDeltoids"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "track": "tracks/bent-over-rear-delt-fly.bin"
+  },
+  {
+   "id": "dumbbell-shrug",
+   "title": "Dumbbell Shrug",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "upperTrapezius"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/dumbbell-shrug.bin"
+  },
+  {
+   "id": "barbell-curl",
+   "title": "Barbell Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "barbell",
+     "length": 1.02,
+     "radius": 0.083
+    }
+   ],
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/barbell-curl.bin"
+  },
+  {
+   "id": "dumbbell-curl",
+   "title": "Dumbbell Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/dumbbell-curl.bin"
+  },
+  {
+   "id": "hammer-curl",
+   "title": "Hammer Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "biceps",
+    "brachialis"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/hammer-curl.bin"
+  },
+  {
+   "id": "incline-dumbbell-curl",
+   "title": "Incline Dumbbell Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.06,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.59,
+      0.06
+     ]
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/incline-dumbbell-curl.bin"
+  },
+  {
+   "id": "preacher-curl",
+   "title": "Preacher Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.33,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.08,
+      0.33
+     ]
+    },
+    {
+     "kind": "barbell",
+     "length": 1.02,
+     "radius": 0.083
+    }
+   ],
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/preacher-curl.bin"
+  },
+  {
+   "id": "cable-curl",
+   "title": "Cable Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    }
+   ],
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/cable-curl.bin"
+  },
+  {
+   "id": "concentration-curl",
+   "title": "Concentration Curl",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "track": "tracks/concentration-curl.bin",
+   "sideFocus": {
+    "groups": [
+     "biceps",
+     "forearms"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "rope-triceps-pushdown",
+   "title": "Rope Triceps Pushdown",
+   "seconds": 3.2,
+   "camera": [
+    115,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "ball",
+     "length": 0.05,
+     "radius": 0.026
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "ball",
+     "length": 0.05,
+     "radius": 0.026
+    }
+   ],
+   "primary": [
+    "triceps"
+   ],
+   "secondary": [],
+   "track": "tracks/rope-triceps-pushdown.bin"
+  },
+  {
+   "id": "bar-triceps-pushdown",
+   "title": "Bar Triceps Pushdown",
+   "seconds": 3.2,
+   "camera": [
+    115,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.017
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.014
+    }
+   ],
+   "primary": [
+    "triceps"
+   ],
+   "secondary": [],
+   "track": "tracks/bar-triceps-pushdown.bin"
+  },
+  {
+   "id": "overhead-dumbbell-triceps-extension",
+   "title": "Overhead Dumbbell Triceps Extension",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.4,
+     "radius": 0.18,
+     "size": [
+      0.36,
+      0.07,
+      0.4
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.045
+    },
+    {
+     "kind": "box",
+     "length": 0.53,
+     "radius": 0.25,
+     "size": [
+      0.5,
+      0.05,
+      0.53
+     ]
+    },
+    {
+     "kind": "box",
+     "length": 0.055,
+     "radius": 0.15,
+     "size": [
+      0.3,
+      0.5,
+      0.055
+     ]
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "triceps"
+   ],
+   "secondary": [],
+   "track": "tracks/overhead-dumbbell-triceps-extension.bin"
+  },
+  {
+   "id": "lying-dumbbell-triceps-extension",
+   "title": "Lying Dumbbell Triceps Extension",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "bench",
+     "length": 1.2,
+     "radius": 0.145
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.23,
+     "radius": 0.076
+    }
+   ],
+   "primary": [
+    "triceps"
+   ],
+   "secondary": [],
+   "track": "tracks/lying-dumbbell-triceps-extension.bin"
+  },
+  {
+   "id": "assisted-dip",
+   "title": "Assisted Dip",
+   "seconds": 3.2,
+   "camera": [
+    32,
+    9
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.022
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.022
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "box",
+     "length": 0.24,
+     "radius": 0.215,
+     "size": [
+      0.43,
+      0.05,
+      0.24
+     ]
+    }
+   ],
+   "primary": [
+    "triceps",
+    "pectorals",
+    "upperPectorals"
+   ],
+   "secondary": [
+    "anteriorDeltoids"
+   ],
+   "track": "tracks/assisted-dip.bin"
+  },
+  {
+   "id": "side-plank",
+   "title": "Side Plank",
+   "seconds": 5,
+   "camera": [
+    -41,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "obliques",
+    "abdominals"
+   ],
+   "secondary": [
+    "anteriorDeltoids",
+    "lateralDeltoids",
+    "glutes"
+   ],
+   "track": "tracks/side-plank.bin",
+   "sideFocus": {
+    "groups": [
+     "obliques",
+     "anteriorDeltoids",
+     "lateralDeltoids"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dead-bug",
+   "title": "Dead Bug",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "abdominals",
+    "obliques"
+   ],
+   "secondary": [
+    "hipFlexors"
+   ],
+   "track": "tracks/dead-bug.bin"
+  },
+  {
+   "id": "bird-dog",
+   "title": "Bird Dog",
+   "seconds": 3.2,
+   "camera": [
+    64,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "abdominals",
+    "obliques",
+    "spinalErectors"
+   ],
+   "secondary": [
+    "glutes",
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "track": "tracks/bird-dog.bin"
+  },
+  {
+   "id": "crunch",
+   "title": "Crunch",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "abdominals"
+   ],
+   "secondary": [],
+   "track": "tracks/crunch.bin"
+  },
+  {
+   "id": "reverse-crunch",
+   "title": "Reverse Crunch",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "abdominals"
+   ],
+   "secondary": [
+    "hipFlexors"
+   ],
+   "track": "tracks/reverse-crunch.bin"
+  },
+  {
+   "id": "hanging-knee-raise",
+   "title": "Hanging Knee Raise",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.015
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.027
+    }
+   ],
+   "primary": [
+    "abdominals",
+    "hipFlexors"
+   ],
+   "secondary": [
+    "forearms",
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "track": "tracks/hanging-knee-raise.bin"
+  },
+  {
+   "id": "pallof-press",
+   "title": "Pallof Press",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    }
+   ],
+   "primary": [
+    "abdominals",
+    "obliques"
+   ],
+   "secondary": [],
+   "track": "tracks/pallof-press.bin"
+  },
+  {
+   "id": "cable-crunch",
+   "title": "Cable Crunch",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.012
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.012
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.03
+    }
+   ],
+   "primary": [
+    "abdominals"
+   ],
+   "secondary": [],
+   "track": "tracks/cable-crunch.bin"
+  },
+  {
+   "id": "cable-woodchop",
+   "title": "Cable Woodchop",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.031
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.007
+    }
+   ],
+   "primary": [
+    "obliques",
+    "abdominals"
+   ],
+   "secondary": [
+    "anteriorDeltoids",
+    "lateralDeltoids",
+    "glutes"
+   ],
+   "track": "tracks/cable-woodchop.bin"
+  },
+  {
+   "id": "russian-twist",
+   "title": "Russian Twist",
+   "seconds": 3.2,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "obliques",
+    "abdominals"
+   ],
+   "secondary": [],
+   "track": "tracks/russian-twist.bin"
+  },
+  {
+   "id": "hollow-body-hold",
+   "title": "Hollow Body Hold",
+   "seconds": 5,
+   "camera": [
+    63,
+    17
+   ],
+   "equipment": [],
+   "primary": [
+    "abdominals"
+   ],
+   "secondary": [
+    "hipFlexors"
+   ],
+   "track": "tracks/hollow-body-hold.bin"
+  },
+  {
+   "id": "ab-wheel-rollout",
+   "title": "Ab Wheel Rollout",
+   "seconds": 3.2,
+   "camera": [
+    64,
+    17
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 0.067,
+     "radius": 0.117,
+     "material": "rubber"
+    },
+    {
+     "kind": "rod",
+     "length": 1,
+     "radius": 0.016
+    }
+   ],
+   "primary": [
+    "abdominals",
+    "obliques"
+   ],
+   "secondary": [
+    "lats",
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "track": "tracks/ab-wheel-rollout.bin"
+  },
+  {
+   "id": "farmer-carry",
+   "title": "Farmer Carry",
+   "seconds": 2.05,
+   "primary": [
+    "forearms",
+    "abdominals",
+    "obliques"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids",
+    "quadriceps",
+    "glutes",
+    "hamstrings"
+   ],
+   "camera": [
+    30,
+    8
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    }
+   ],
+   "track": "tracks/farmer-carry.bin"
+  },
+  {
+   "id": "suitcase-carry",
+   "title": "Suitcase Carry",
+   "seconds": 2.05,
+   "primary": [
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids",
+    "quadriceps",
+    "glutes",
+    "hamstrings"
+   ],
+   "camera": [
+    30,
+    8
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    }
+   ],
+   "track": "tracks/suitcase-carry.bin",
+   "sideFocus": {
+    "groups": [
+     "forearms"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "goblet-carry",
+   "title": "Goblet Carry",
+   "seconds": 2.05,
+   "primary": [
+    "abdominals",
+    "obliques",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "triceps",
+    "forearms",
+    "quadriceps",
+    "glutes",
+    "hamstrings"
+   ],
+   "camera": [
+    30,
+    8
+   ],
+   "equipment": [
+    {
+     "kind": "kettlebell",
+     "length": 0.205,
+     "radius": 0.085
+    }
+   ],
+   "track": "tracks/goblet-carry.bin"
+  },
+  {
+   "id": "kettlebell-deadlift",
+   "title": "Kettlebell Deadlift",
+   "seconds": 3.4,
+   "primary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "secondary": [
+    "quadriceps",
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "kettlebell",
+     "length": 0.205,
+     "radius": 0.085
+    }
+   ],
+   "track": "tracks/kettlebell-deadlift.bin"
+  },
+  {
+   "id": "kettlebell-clean",
+   "title": "Kettlebell Clean",
+   "seconds": 2.4,
+   "primary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "secondary": [
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids",
+    "abdominals",
+    "obliques",
+    "forearms"
+   ],
+   "camera": [
+    56,
+    8
+   ],
+   "equipment": [
+    {
+     "kind": "kettlebell",
+     "length": 0.205,
+     "radius": 0.085
+    }
+   ],
+   "track": "tracks/kettlebell-clean.bin",
+   "sideFocus": {
+    "groups": [
+     "forearms"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "kettlebell-overhead-press",
+   "title": "Kettlebell Overhead Press",
+   "seconds": 3.4,
+   "primary": [
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "triceps",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    28,
+    8
+   ],
+   "equipment": [
+    {
+     "kind": "kettlebell",
+     "length": 0.205,
+     "radius": 0.085
+    }
+   ],
+   "track": "tracks/kettlebell-overhead-press.bin",
+   "sideFocus": {
+    "groups": [
+     "lateralDeltoids",
+     "anteriorDeltoids",
+     "triceps"
+    ],
+    "intervals": [
+     {
+      "start": 0,
+      "end": 1,
+      "side": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dumbbell-thruster",
+   "title": "Dumbbell Thruster",
+   "seconds": 3.8,
+   "primary": [
+    "quadriceps",
+    "glutes",
+    "anteriorDeltoids",
+    "lateralDeltoids"
+   ],
+   "secondary": [
+    "triceps",
+    "abdominals",
+    "obliques"
+   ],
+   "camera": [
+    44,
+    10
+   ],
+   "equipment": [
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    },
+    {
+     "kind": "dumbbell",
+     "length": 0.27,
+     "radius": 0.073
+    }
+   ],
+   "track": "tracks/dumbbell-thruster.bin"
+  },
+  {
+   "id": "burpee",
+   "title": "Burpee",
+   "seconds": 5.4,
+   "primary": [
+    "quadriceps",
+    "glutes",
+    "hamstrings",
+    "pectorals",
+    "upperPectorals",
+    "abdominals",
+    "obliques"
+   ],
+   "secondary": [
+    "anteriorDeltoids",
+    "triceps"
+   ],
+   "camera": [
+    62,
+    14
+   ],
+   "equipment": [],
+   "track": "tracks/burpee.bin"
+  },
+  {
+   "id": "mountain-climber",
+   "title": "Mountain Climber",
+   "seconds": 1.8,
+   "primary": [
+    "abdominals",
+    "obliques",
+    "hipFlexors"
+   ],
+   "secondary": [
+    "anteriorDeltoids",
+    "lateralDeltoids",
+    "quadriceps",
+    "glutes",
+    "hamstrings"
+   ],
+   "camera": [
+    62,
+    14
+   ],
+   "equipment": [],
+   "track": "tracks/mountain-climber.bin"
+  },
+  {
+   "id": "bear-crawl",
+   "title": "Bear Crawl",
+   "seconds": 2.8,
+   "primary": [
+    "abdominals",
+    "obliques",
+    "anteriorDeltoids",
+    "quadriceps"
+   ],
+   "secondary": [
+    "glutes"
+   ],
+   "camera": [
+    62,
+    14
+   ],
+   "equipment": [],
+   "track": "tracks/bear-crawl.bin"
+  },
+  {
+   "id": "battle-rope-waves",
+   "title": "Battle Rope Waves",
+   "seconds": 1.12,
+   "primary": [
+    "anteriorDeltoids",
+    "lateralDeltoids",
+    "biceps",
+    "triceps",
+    "forearms"
+   ],
+   "secondary": [
+    "abdominals",
+    "obliques",
+    "quadriceps",
+    "glutes",
+    "hamstrings"
+   ],
+   "camera": [
+    48,
+    20
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.14,
+     "radius": 0.07,
+     "material": "steel",
+     "size": [
+      0.14,
+      0.15,
+      0.14
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.02,
+     "material": "rope"
+    }
+   ],
+   "track": "tracks/battle-rope-waves.bin"
+  },
+  {
+   "id": "band-pull-apart",
+   "title": "Band Pull-Apart",
+   "seconds": 3.4,
+   "primary": [
+    "posteriorDeltoids",
+    "trapezius",
+    "upperTrapezius",
+    "rhomboids"
+   ],
+   "secondary": [],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.01,
+     "material": "band"
+    }
+   ],
+   "track": "tracks/band-pull-apart.bin"
+  },
+  {
+   "id": "band-row",
+   "title": "Band Row",
+   "seconds": 3.4,
+   "primary": [
+    "lats",
+    "trapezius",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "posteriorDeltoids"
+   ],
+   "camera": [
+    139,
+    13
+   ],
+   "equipment": [
+    {
+     "kind": "box",
+     "length": 0.095,
+     "radius": 0.045,
+     "material": "steel",
+     "size": [
+      0.09,
+      0.16,
+      0.095
+     ]
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.009,
+     "material": "band"
+    },
+    {
+     "kind": "rod",
+     "length": 1.0,
+     "radius": 0.009,
+     "material": "band"
+    }
+   ],
+   "track": "tracks/band-row.bin"
+  }
+ ]
+}

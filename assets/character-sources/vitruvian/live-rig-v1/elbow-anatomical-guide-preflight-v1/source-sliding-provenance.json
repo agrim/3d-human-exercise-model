@@ -1,0 +1,290 @@
+{
+  "schema": 1,
+  "classification": "Upstream CharMorph sliding-joint extension on modified Rigify, not ordinary stock rubber_tweak and not a new authored change",
+  "evidence": [
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/upstream/Vitruvian/config.yaml",
+      "sha256": "3a09ac1ba030d39fa90e67690bb280e5c85f2d623a170640720493b624bb92d6"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/upstream/charmorph/lib/sliding_joints.py",
+      "sha256": "da1febb8ddd88ed65fde4119a24ece7eb2b7d1bd4e1ca5f07d8971e9c6e0c7ac"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/motion-audition/inspect.json",
+      "sha256": "2c03309d60e12b228f00a34182eaa21f5b2c960afbf05a5cab32f2f9af0d24d8"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/live-rig-v1/rig-inspection-v4/live-rig-inspection.json",
+      "sha256": "faa73f9872ceb096715f538d907f9a8e1946d76bfe742119228896a3ee73d4ed"
+    },
+    {
+      "path": "/Users/agrim/coding/resources/3d-human-exercise-model/assets/character-sources/vitruvian/live-rig-v1/arm-hand-source-audit-v1/source-audit.json",
+      "sha256": "d04aeb5d5ed932534daaaf8a9572d164e99c0a125e8c265ae3cc8262785df28c"
+    }
+  ],
+  "config": {
+    "repository": "https://github.com/Upliner/CharMorph-Vitruvian",
+    "commit": "c252d1fc7f00ba59d87b66b3d32fa3471fc6ee44",
+    "path": "config.yaml",
+    "lines": [
+      73,
+      81
+    ],
+    "influence": 0.08
+  },
+  "mechanism": {
+    "repository": "https://github.com/Upliner/CharMorph",
+    "commit": "ec5e13dcd5a7330b35fa7474b3abd2f406d77bd2",
+    "path": "lib/sliding_joints.py",
+    "creationLines": [
+      156,
+      208
+    ],
+    "constraintLines": [
+      232,
+      263
+    ],
+    "behavior": "Reversed mechanism bone pivots about the wrist and carries the forearm tweak at its tail. It copies only localX rotation at constant0.08 influence and limits that axis. The lower deform bone and downstream tweak are redirected to this sliding tweak; distal upper-arm Bbone uses the lower deform bone as tangent handle.",
+    "rubberTweak": "Explicitly locked tozero by this upstream extension; it is separate from the0.08 constraint influence.",
+    "calibration": "The config contains a geometry expression, but explicit influence takes precedence in _calc_influence lines79\u201382. No evidence here that this athlete was anatomically calibrated by that expression."
+  },
+  "retainedVersions": {
+    "earliestAuditionInfluenceBothSides": 0.07999999821186066,
+    "earliestAuditionSource": "vitruvian-athletic-review.blend",
+    "V4InfluenceBothSides": 0.07999999821186066,
+    "V7InfluenceBothSides": 0.07999999821186066
+  },
+  "influenceDrivers": [],
+  "measuredOffsets": [
+    {
+      "id": "standing",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            -1.4901161193847656e-05,
+            4.470348358154297e-05,
+            0.00011920928955078125
+          ],
+          "distanceMM": 0.00012818463544611076,
+          "wristToAnatomicalMM": 241.79467325319513,
+          "wristToDeformMM": 241.79479917546504
+        },
+        "R": {
+          "offsetMM": [
+            5.9604644775390625e-05,
+            -7.450580596923828e-06,
+            -0.00011920928955078125
+          ],
+          "distanceMM": 0.00013348812510944095,
+          "wristToAnatomicalMM": 241.8100126662559,
+          "wristToDeformMM": 241.80990623882022
+        }
+      }
+    },
+    {
+      "id": "curl-mid",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            -25.66315233707428,
+            -3.6664344370365143,
+            -3.37982177734375
+          ],
+          "distanceMM": 26.143131499565527,
+          "wristToAnatomicalMM": 241.79453111226508,
+          "wristToDeformMM": 241.79455198520841
+        },
+        "R": {
+          "offsetMM": [
+            25.664284825325012,
+            -3.669923171401024,
+            -3.372669219970703
+          ],
+          "distanceMM": 26.14380900608654,
+          "wristToAnatomicalMM": 241.81007640253364,
+          "wristToDeformMM": 241.81008393867515
+        }
+      }
+    },
+    {
+      "id": "curl-deep",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            -26.39368176460266,
+            -4.409570246934891,
+            -3.381013870239258
+          ],
+          "distanceMM": 26.972245024182225,
+          "wristToAnatomicalMM": 241.79464579151895,
+          "wristToDeformMM": 241.7946221271103
+        },
+        "R": {
+          "offsetMM": [
+            26.39588713645935,
+            -4.408625885844231,
+            -3.3708810806274414
+          ],
+          "distanceMM": 26.97298053945407,
+          "wristToAnatomicalMM": 241.8102066173898,
+          "wristToDeformMM": 241.81019900587498
+        }
+      }
+    },
+    {
+      "id": "hammer-mid",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            -5.040913820266724,
+            0.10124221444129944,
+            -18.43893527984619
+          ],
+          "distanceMM": 19.11584150341537,
+          "wristToAnatomicalMM": 241.79456883104254,
+          "wristToDeformMM": 241.79454770063194
+        },
+        "R": {
+          "offsetMM": [
+            5.041345953941345,
+            0.1005902886390686,
+            -18.42021942138672
+          ],
+          "distanceMM": 19.097899648011605,
+          "wristToAnatomicalMM": 241.81021737812966,
+          "wristToDeformMM": 241.81017590486897
+        }
+      }
+    },
+    {
+      "id": "hammer-deep",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            -5.803704261779785,
+            -16.631674021482468,
+            -24.24490451812744
+          ],
+          "distanceMM": 29.968499445387184,
+          "wristToAnatomicalMM": 241.79464126756474,
+          "wristToDeformMM": 241.79449184010096
+        },
+        "R": {
+          "offsetMM": [
+            5.810722708702087,
+            -16.622689552605152,
+            -24.22809600830078
+          ],
+          "distanceMM": 29.951276142213956,
+          "wristToAnatomicalMM": 241.81009404025855,
+          "wristToDeformMM": 241.80997718268878
+        }
+      }
+    },
+    {
+      "id": "press-loaded",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            32.778412103652954,
+            -6.540950387716293,
+            0.6971359252929688
+          ],
+          "distanceMM": 33.431935787653735,
+          "wristToAnatomicalMM": 241.79483864286874,
+          "wristToDeformMM": 241.79494100150484
+        },
+        "R": {
+          "offsetMM": [
+            -32.76562690734863,
+            -6.558842957019806,
+            0.6965398788452148
+          ],
+          "distanceMM": 33.42289477841856,
+          "wristToAnatomicalMM": 241.81007466918732,
+          "wristToDeformMM": 241.8101175990136
+        }
+      }
+    },
+    {
+      "id": "press-extended",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            2.9802322387695312e-05,
+            -2.2351741790771484e-05,
+            0.0
+          ],
+          "distanceMM": 3.725290298461914e-05,
+          "wristToAnatomicalMM": 241.79469636990436,
+          "wristToDeformMM": 241.79469402770962
+        },
+        "R": {
+          "offsetMM": [
+            -5.9604644775390625e-05,
+            -3.725290298461914e-05,
+            0.00011920928955078125
+          ],
+          "distanceMM": 0.0001383883924857282,
+          "wristToAnatomicalMM": 241.81010505565064,
+          "wristToDeformMM": 241.80998173724916
+        }
+      }
+    },
+    {
+      "id": "push-mid",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            32.42191672325134,
+            -5.7700276374816895,
+            -19.839078187942505
+          ],
+          "distanceMM": 38.445583963493696,
+          "wristToAnatomicalMM": 241.79493783257385,
+          "wristToDeformMM": 241.7950806285626
+        },
+        "R": {
+          "offsetMM": [
+            -32.42439031600952,
+            -5.743861198425293,
+            -19.840538501739502
+          ],
+          "distanceMM": 38.4445054184693,
+          "wristToAnatomicalMM": 241.81043552833592,
+          "wristToDeformMM": 241.81034575981315
+        }
+      }
+    },
+    {
+      "id": "push-loaded",
+      "sides": {
+        "L": {
+          "offsetMM": [
+            36.04215383529663,
+            -13.35078477859497,
+            -23.37968349456787
+          ],
+          "distanceMM": 44.98766394910632,
+          "wristToAnatomicalMM": 241.79498304140648,
+          "wristToDeformMM": 241.79509140058587
+        },
+        "R": {
+          "offsetMM": [
+            -36.05538606643677,
+            -13.338983058929443,
+            -23.372411727905273
+          ],
+          "distanceMM": 44.990987580013545,
+          "wristToAnatomicalMM": 241.8102346313618,
+          "wristToDeformMM": 241.81017260512644
+        }
+      }
+    }
+  ],
+  "purpose": "Intentional visual sliding-joint deformation mechanism. The retained implementation/config do not supply anatomical validation for a45mm deformation-head departure or a stable ulna/olecranon model.",
+  "conclusion": "Do not automatically preserve or remove this displacement. The next authorized diagnostic isolates original0.08 versus0 under unchanged native actions and all existing modifiers; zero is not assumed acceptable.",
+  "licenseBoundary": "Upstream GPL source inspected for provenance and semantics only; no implementation copied into mobile/runtime code.",
+  "originalBlendExecution": "No original/source Blender file was executed in this provenance review; retained native inspections and pinned upstream source were read."
+}
