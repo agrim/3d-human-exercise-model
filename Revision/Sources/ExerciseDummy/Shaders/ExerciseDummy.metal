@@ -13,6 +13,7 @@ struct Scene {
     float4 right, up, back, center, key;
     float4 shadows[4]; // contact center in world xyz, radius in meters
     float4 sideWeights, passiveMuscle;
+    float4 wristPivots[2], wristTurns[2];
 };
 struct Surface {
     float4 position [[position]];
@@ -20,12 +21,30 @@ struct Surface {
     float4 material;
     float visibility;
 };
-float4x4 skinMatrix(Vertex v, const device float4x4 *joints) {
+float3x3 wristCorrection(float4 q, float t) {
+    // Replace the chord between the two rotations with a rotation about the bind wrist.
+    // R(q) = I + 2wK + 2K², where K rotates by cross(q.xyz, v).
+    float3 a = q.xyz;
+    float3x3 k(float3(0,a.z,-a.y),float3(-a.z,0,a.x),float3(a.y,-a.x,0));
+    float w = mix(1.0f,q.w,t), n = w*w + t*t*dot(a,a);
+    return k * (2*t*(w/n-q.w)) + (k*k) * (2*t*(t/n-1));
+}
+float4x4 skinMatrix(Vertex v, const device float4x4 *joints, constant Scene &s) {
     if (v.weights.x == 255) return joints[v.joints.x];
     float4 w = float4(v.weights) / 255.0;
     float4x4 t = joints[v.joints.x] * w.x + joints[v.joints.y] * w.y;
     if (v.weights.z != 0) t += joints[v.joints.z] * w.z;
     if (v.weights.w != 0) t += joints[v.joints.w] * w.w;
+    uint tag = (v.reserved >> 8) & 255u;
+    if (tag == 1u || tag == 2u) {
+        float4 pivot = s.wristPivots[tag-1];
+        float a = float((v.reserved >> 16) & 255u), b = float(v.reserved >> 24);
+        float4x4 parent = joints[uint(pivot.w)];
+        float3x3 basis(parent[0].xyz,parent[1].xyz,parent[2].xyz);
+        float3x3 delta = basis * wristCorrection(s.wristTurns[tag-1], b/(a+b)) * ((a+b)/255.0f);
+        t[0].xyz += delta[0]; t[1].xyz += delta[1]; t[2].xyz += delta[2];
+        t[3].xyz -= delta * pivot.xyz;
+    }
     return t;
 }
 vertex float4 shadowVertex(uint id [[vertex_id]],
@@ -33,7 +52,7 @@ vertex float4 shadowVertex(uint id [[vertex_id]],
                            constant Scene &s [[buffer(1)]],
                            const device float4x4 *joints [[buffer(2)]]) {
     Vertex v = mesh[id];
-    return s.lightVP * (skinMatrix(v,joints) * float4(float3(v.position),1));
+    return s.lightVP * (skinMatrix(v,joints,s) * float4(float3(v.position),1));
 }
 float lightVisibility(float3 p, constant Scene &s, depth2d<float> shadow) {
     float3 sc = (s.lightVP*float4(p,1)).xyz;
@@ -53,7 +72,7 @@ vertex Surface bodyVertex(uint id [[vertex_id]],
                           const device float4x4 *joints [[buffer(2)]],
                           const device float4 *palette [[buffer(3)]]) {
     Vertex v = mesh[id];
-    float4x4 t = skinMatrix(v,joints);
+    float4x4 t = skinMatrix(v,joints,s);
     float4 world = t * float4(float3(v.position),1);
     // Cofactor columns give the inverse-transpose normal direction under weighted
     // skinning and under the nonuniform scaling of authored equipment transforms.

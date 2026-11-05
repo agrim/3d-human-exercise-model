@@ -7,6 +7,8 @@ struct SceneUniforms {
   var footA, footB, handA, handB: SIMD4<Float>
   var sideWeights = SIMD4<Float>(1, 1, 0, 0)
   var passiveMuscle = SIMD4<Float>(0.27, 0.34, 0.39, 0.70)
+  var wristPivots = (SIMD4<Float>.zero, SIMD4<Float>.zero)
+  var wristTurns = (SIMD4<Float>(0, 0, 0, 1), SIMD4<Float>(0, 0, 0, 1))
 }
 
 @MainActor
@@ -15,6 +17,7 @@ final class Renderer {
   let queue: MTLCommandQueue
   let model: ModelData
   let body: BodyMesh
+  private let wristIndices: [Int]
   let bodyPipeline, stagePipeline, shadowPipeline: MTLRenderPipelineState
   let sampleCount: Int
   private let shadowMap: MTLTexture
@@ -27,6 +30,7 @@ final class Renderer {
   private var equipmentPalettes = [MTLBuffer]()
   private var points = [SIMD3<Float>]()
   private var fixtures = [SIMD3<Float>]()
+  private var headPath = [SIMD3<Float>]()
   private var worldBounds = AABB()
   private var contact: [Int?] = []
   var mirrored = false
@@ -36,14 +40,24 @@ final class Renderer {
   private var nextSlot = 0
   private var captureTarget: (MTLRenderPassDescriptor, MTLTexture)?
 
-  init(device: MTLDevice, model: ModelData) throws {
+  init(device: MTLDevice, model: ModelData, anatomy: URL? = nil) throws {
     self.device = device
     self.model = model
+    wristIndices = try (model.wristPivots ?? []).map { name in
+      guard let i = model.joints.firstIndex(where: { $0.name == name }), model.joints[i].parent >= 0
+      else {
+        throw ExerciseDummyError.invalidAsset("Unknown wrist pivot " + name)
+      }
+      return i
+    }
+    guard wristIndices.isEmpty || wristIndices.count == 2 else {
+      throw ExerciseDummyError.invalidAsset("Expected two wrist pivots")
+    }
     guard let queue = device.makeCommandQueue() else {
       throw ExerciseDummyError.rendering("Metal command queue unavailable.")
     }
     self.queue = queue
-    self.body = try BodyMesh(device: device, model: model)
+    self.body = try BodyMesh(device: device, model: model, anatomy: anatomy)
     guard let shader = Bundle.module.url(forResource: "ExerciseDummy", withExtension: "metal")
     else { throw ExerciseDummyError.invalidAsset("Missing Metal shader.") }
     let library = try device.makeLibrary(
@@ -130,7 +144,15 @@ final class Renderer {
     let propCorners = newMeshes.map { $0.bounds.corners }
     var support = [SIMD3<Float>]()
     var station = [SIMD3<Float>]()
-    for frame in c.frames {
+    headPath = []
+    if let paths = c.emlFramingPaths {
+      support = paths.flatMap(\.corners)
+      if let head = model.joints.firstIndex(where: { $0.name == "head" }) {
+        headPath = paths[head].corners
+      }
+      station = c.emlSceneBounds?.corners ?? []
+    }
+    for frame in (c.emlFramingPaths == nil ? c.frames : []) {
       let pose = c.pose(at: frame.phase, joints: model.joints)
       for (j, box) in corners.enumerated() {
         let transform = pose.skin[j]
@@ -197,10 +219,10 @@ final class Renderer {
     return p
   }
 
-  private func scene(clip: Clip, pose: Pose, yaw: Float, pitch: Float, aspect: Float)
+  private func scene(clip: Clip, pose: Pose, yaw: Float, pitch: Float, zoom: Float, aspect: Float)
     -> SceneUniforms
   {
-    let key = SIMD4<Float>(yaw, pitch, aspect, mirrored ? 1 : 0)
+    let key = SIMD4<Float>(yaw, pitch, aspect, mirrored ? -zoom : zoom)
     var s: SceneUniforms
     if key == cameraKey, let cached = cameraScene {
       s = cached
@@ -212,19 +234,28 @@ final class Renderer {
       let up = simd_cross(back, right)
       let flip: SIMD3<Float> = [mirrored ? -1 : 1, 1, 1]
       var box = AABB()
-      for point in points {
+      func projected(_ point: SIMD3<Float>) -> SIMD3<Float> {
         let p = point * flip
-        box.include([simd_dot(right, p), simd_dot(up, p), simd_dot(back, p)])
+        return [simd_dot(right, p), simd_dot(up, p), simd_dot(back, p)]
       }
-      // Show the whole body and handheld implements. Limit extra screen area
-      // consumed by a distant cable anchor or machine frame, while keeping its true depth.
-      let margin = SIMD3<Float>(0.22, 0.20, Float.greatestFiniteMagnitude)
-      let low = box.low - margin
-      let high = box.high + margin
-      for point in fixtures {
-        let p = point * flip
-        let projected = SIMD3(simd_dot(right, p), simd_dot(up, p), simd_dot(back, p))
-        box.include(simd_clamp(projected, low, high))
+      for point in points { box.include(projected(point)) }
+      // The head pivot sits below the crown. Credit the existing fit margins before adding
+      // the measured mesh radius, so a standing head clears the frame without shrinking other poses.
+      let crown = SIMD3(
+        max(0, body.headRadius + 0.025 - 0.11), max(0, body.headRadius + 0.025 - 0.15), 0)
+      for point in headPath {
+        let p = projected(point)
+        box.include(p - crown)
+        box.include(p + crown)
+      }
+      // EML already supplied the full moving subject. Legacy clips also frame nearby fixtures.
+      if clip.emlFramingPaths == nil {
+        let margin = SIMD3<Float>(0.22, 0.20, Float.greatestFiniteMagnitude)
+        let low = box.low - margin
+        let high = box.high + margin
+        for point in fixtures {
+          box.include(simd_clamp(projected(point), low, high))
+        }
       }
       let middle = (box.low + box.high) * 0.5
       let origin =
@@ -233,8 +264,12 @@ final class Renderer {
       let oy = simd_dot(origin, up)
       let halfWidth = max(ox - box.low.x, box.high.x - ox)
       let halfHeight = max(oy - box.low.y, box.high.y - oy)
-      let h = max(
-        max(halfWidth / aspect, halfHeight) * 1.08, max(0.12, (clip.cameraDistance ?? 0) * 0.20))
+      let fit =
+        clip.emlFramingPaths != nil
+        ? max(0.45, (halfWidth + 0.11) / aspect, halfHeight + 0.15)
+        : max(
+          max(halfWidth / aspect, halfHeight) * 1.08, max(0.12, (clip.cameraDistance ?? 0) * 0.20))
+      let h = fit / zoom
       let w = h * aspect
       // Metal's clip-space depth increases away from the camera and is in [0,1].
       let depth = max(4, 2 * (box.high.z - box.low.z) + 2)
@@ -324,7 +359,7 @@ final class Renderer {
   }
 
   func encode(
-    clip: Clip, phase: Float, yaw: Float, pitch: Float, width: Int, height: Int,
+    clip: Clip, phase: Float, yaw: Float, pitch: Float, zoom: Float = 1, width: Int, height: Int,
     pass: MTLRenderPassDescriptor, drawable: CAMetalDrawable? = nil
   ) throws -> MTLCommandBuffer {
     guard width > 0, height > 0, let cb = queue.makeCommandBuffer(),
@@ -333,8 +368,21 @@ final class Renderer {
     let sampled = clip.pose(at: phase, joints: model.joints)
     let pose = mirrored ? sampled.reflectingX() : sampled
     var s = scene(
-      clip: clip, pose: pose, yaw: yaw, pitch: pitch, aspect: Float(width) / Float(height))
-    let weights = clip.sideFocus?.weights(at: phase) ?? .one
+      clip: clip, pose: pose, yaw: yaw, pitch: pitch, zoom: zoom,
+      aspect: Float(width) / Float(height))
+    if wristIndices.count == 2 {
+      // Relative turns are invariant to reflection. Use the rigid, unmirrored transforms.
+      func wrist(_ i: Int) -> (SIMD4<Float>, SIMD4<Float>) {
+        let joint = model.joints[i]
+        let turn = (simd_quatf(sampled.skin[joint.parent]).inverse * simd_quatf(sampled.skin[i]))
+          .normalized.vector
+        return (SIMD4(joint.position, Float(joint.parent)), turn.w < 0 ? -turn : turn)
+      }
+      (s.wristPivots.0, s.wristTurns.0) = wrist(wristIndices[0])
+      (s.wristPivots.1, s.wristTurns.1) = wrist(wristIndices[1])
+    }
+    let weights =
+      clip.annotation(at: phase)?.sideWeights ?? clip.sideFocus?.weights(at: phase) ?? .one
     s.sideWeights = SIMD4(weights.x, weights.y, 0, 0)
     flights.wait()
     let bones = boneSlots[nextSlot]

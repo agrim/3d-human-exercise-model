@@ -5,15 +5,8 @@ var products: [Product] = [.library(name: "ExerciseDummy", targets: ["ExerciseDu
 var targets: [Target] = [
   .target(
     name: "ExerciseDummy",
-    resources: [
-      .copy("Resources/model.json"),
-      .copy("Resources/motions.json"),
-      .copy("Resources/vertices.bin"),
-      .copy("Resources/indices.bin"),
-      .copy("Resources/ATTRIBUTION.md"),
-      .copy("Resources/tracks"),
-      .copy("Shaders/ExerciseDummy.metal"),
-    ]),
+    exclude: ["Resources"],
+    resources: [.copy("Shaders/ExerciseDummy.metal")]),
   .testTarget(name: "ExerciseDummyTests", dependencies: ["ExerciseDummy"]),
 ]
 #if os(macOS)

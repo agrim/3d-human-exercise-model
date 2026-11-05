@@ -34,6 +34,7 @@ struct ModelData: Decodable {
   let version, vertexCount, indexCount: Int
   let joints: [Joint]
   let groups: [String]
+  let wristPivots: [String]?
 }
 
 enum PropKind: String, Decodable { case dumbbell, barbell, kettlebell, bench, box, rod, ball }
@@ -54,6 +55,7 @@ struct Keyframe: Decodable {
   let root: SIMD3<Float>
   let rotations: [SIMD4<Float>]
   let props: [PropPose]
+  var annotation: FrameAnnotation? = nil
 }
 struct SideFocus: Decodable {
   enum Side: String, Decodable { case left, right }
@@ -96,6 +98,36 @@ struct Clip: Decodable {
   var frames: [Keyframe]
   let equipment: [Equipment]
   let track: String?
+  var cycles = 1
+  var travelFrames: [[Keyframe]] = []
+  var emlPartOffsets: [simd_float4x4]?
+  var emlFramingPaths: [AABB]?
+  var emlSceneBounds: AABB?
+  var movementIssues: [MovementIssue] = []
+  var duration: Float { seconds * Float(cycles) }
+
+  init(
+    eml wire: CompiledEML, equipment: [Equipment], frames: [Keyframe],
+    travelFrames: [[Keyframe]], partOffsets: [simd_float4x4], framing: [AABB], scene: AABB
+  ) {
+    id = wire.id
+    title = wire.title
+    seconds = wire.duration
+    primary = wire.muscles.primary
+    secondary = wire.muscles.secondary
+    camera = wire.camera
+    cameraTarget = nil
+    cameraDistance = nil
+    sideFocus = wire.sideFocus
+    self.frames = frames
+    self.equipment = equipment
+    track = nil
+    cycles = wire.repeatPolicy.count
+    self.travelFrames = travelFrames
+    emlPartOffsets = partOffsets
+    emlFramingPaths = framing
+    emlSceneBounds = scene
+  }
 
   enum CodingKeys: String, CodingKey {
     case id, title, seconds, primary, secondary, camera, cameraTarget, cameraDistance, frames,
@@ -131,23 +163,30 @@ struct MotionData: Decodable {
 
 enum Library {
   static func resource(_ name: String) throws -> URL {
-    guard !name.hasPrefix("/"), !name.split(separator: "/").contains(".."),
-      let url = Bundle.module.url(forResource: name, withExtension: nil)
-    else {
-      throw ExerciseDummyError.invalidAsset("Missing exercise resource \(name).")
+    guard !name.hasPrefix("/"), !name.split(separator: "/").contains("..") else {
+      throw ExerciseDummyError.invalidAsset("Invalid resource name.")
     }
-    return url
+    // EXM1 is a desktop authoring fixture. The iOS app ships the EML checkout's data.
+    #if os(macOS)
+      let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent()
+        .appendingPathComponent("Resources", isDirectory: true)
+      let path = root.appendingPathComponent(name)
+      if FileManager.default.fileExists(atPath: path.path) { return path }
+    #endif
+    throw ExerciseDummyError.invalidAsset(
+      "Missing legacy fixture \(name). Initialize with an EML root.")
   }
   static func load<T: Decodable>(_ name: String, as: T.Type) throws -> T {
     try JSONDecoder().decode(T.self, from: Data(contentsOf: resource(name)))
   }
   static let structural: Set<String> = ["bone", "tendon", "shell", "neutral"]
 
-  static func validate(_ model: ModelData, _ motion: MotionData) throws {
-    func require(_ pass: Bool, _ detail: String) throws {
-      if !pass { throw ExerciseDummyError.invalidAsset(detail) }
-    }
-    try require(model.version == 1 && motion.version == 1, "Unsupported exercise asset version.")
+  private static func require(_ pass: Bool, _ detail: String) throws {
+    if !pass { throw ExerciseDummyError.invalidAsset(detail) }
+  }
+
+  static func validateModel(_ model: ModelData) throws {
+    try require(model.version == 1, "Unsupported exercise anatomy.")
     try require(
       (1...256).contains(model.joints.count) && !model.groups.isEmpty,
       "Empty or unsupported skeleton or palette.")
@@ -161,6 +200,11 @@ enum Library {
         "Joints must be in parent-first order with one root.")
       try require(j.position.isFiniteVector, "Invalid joint center.")
     }
+  }
+
+  static func validate(_ model: ModelData, _ motion: MotionData) throws {
+    try validateModel(model)
+    try require(motion.version == 1, "Unsupported exercise asset version.")
     try require(
       motion.joints == model.joints.map(\.name),
       "Exercise tracks and skeleton use different joints.")
@@ -172,7 +216,8 @@ enum Library {
       let primary = Set(c.primary)
       let secondary = Set(c.secondary)
       try require(
-        c.seconds.isFinite && c.seconds > 0 && !c.id.isEmpty && !primary.isEmpty
+        c.seconds.isFinite && c.seconds > 0 && !c.id.isEmpty
+          && (c.emlFramingPaths != nil || !primary.isEmpty)
           && primary.isSubset(of: groups) && secondary.isSubset(of: groups)
           && primary.isDisjoint(with: secondary),
         "Invalid exercise duration or muscle roles for \(c.id).")
@@ -251,7 +296,31 @@ struct Pose {
   }
 }
 extension Clip {
+  /// Normalized progress covers the demonstration, including its last endpoint.
+  func sampleLocation(_ progress: Float) -> (frames: [Keyframe], phase: Float) {
+    let t = min(1, max(0, progress)) * Float(cycles)
+    let cycle = min(Int(t), cycles - 1)
+    let frames = cycle == 0 || travelFrames.isEmpty ? self.frames : travelFrames[cycle - 1]
+    return (frames, t - Float(cycle))
+  }
+
+  func annotation(at progress: Float) -> FrameAnnotation? {
+    let (frames, phase) = sampleLocation(progress)
+    guard frames.first?.annotation != nil else { return nil }
+    // A boundary belongs to the completed phase. Between samples the next endpoint owns the interval.
+    var low = 0
+    var high = frames.count - 1
+    while low < high {
+      let mid = (low + high) / 2
+      if frames[mid].phase < phase { low = mid + 1 } else { high = mid }
+    }
+    return frames[low].annotation
+  }
+
   func pose(at phase: Float, joints: [Joint]) -> Pose {
+    let location = sampleLocation(phase)
+    let frames = location.frames
+    let phase = location.phase
     var lo = 0
     var hi = frames.count - 1
     while hi - lo > 1 {
@@ -280,10 +349,31 @@ extension Clip {
       world.append(transform)
       skin.append(transform * .translated(-j.position))
     }
-    let props: [simd_float4x4] = zip(a.props, b.props).map { p, q in
+    let props: [simd_float4x4] = a.props.indices.map { index in
+      let p = a.props[index]
+      let q = b.props[index]
+      let position = simd_mix(p.position, q.position, SIMD3(repeating: fraction))
+      if let offsets = emlPartOffsets {
+        if index < offsets.count {
+          // A rigid plate or pad rotates about its item's origin, not its own center.
+          return .translated(position) * rotation(p.rotation, q.rotation) * offsets[index]
+        }
+        // Connection endpoints interpolate in world space, including when the line changes length.
+        func direction(_ pose: PropPose) -> SIMD3<Float> {
+          simd_quatf(vector: pose.rotation).act([(pose.scale ?? .one).x, 0, 0])
+        }
+        let delta = simd_mix(direction(p), direction(q), SIMD3(repeating: fraction))
+        let length = simd_length(delta)
+        let aligned =
+          length > 1e-6
+          ? simd_float4x4(simd_quatf(from: [1, 0, 0], to: delta / length))
+          : matrix_identity_float4x4
+        return .translated(position) * aligned
+          * simd_float4x4(diagonal: [max(1e-6, length), 1, 1, 1])
+      }
       let scale = simd_mix(p.scale ?? .one, q.scale ?? .one, SIMD3(repeating: fraction))
-      return .translated(simd_mix(p.position, q.position, SIMD3(repeating: fraction)))
-        * rotation(p.rotation, q.rotation) * simd_float4x4(diagonal: SIMD4(scale, 1))
+      return .translated(position) * rotation(p.rotation, q.rotation)
+        * simd_float4x4(diagonal: SIMD4(scale, 1))
     }
     return Pose(skin: skin, positions: world.map(\.origin), props: props)
   }

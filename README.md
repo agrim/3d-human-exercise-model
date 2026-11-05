@@ -1,66 +1,46 @@
-# Simple Trainer exercise dummy
+# Exercise Studio for iOS
 
-The native exercise player demonstrates all **108 built-in Simple Trainer exercises** on an anatomical model. Pass the app's catalog ID to select an exercise. The player applies the movement, equipment, camera and muscle roles together.
+Exercise Studio opens on the anatomy model. The caption names the exercise and the primary (red-orange) and secondary (amber) muscle groups. Gray tissue is unhighlighted. Drag to orbit, pinch to zoom, or tap **Pause** to hold a posture. The curved-arrow **Reset view** button restores the exercise’s camera angle and framing without changing its pose or playback.
 
-This source checkout contains the player, exercise tracks and regression fixtures. Review media and earlier model-authoring work are retained in the local development archive.
+- **Exercises** searches the 108 catalog exercises by name or muscle and lists personal exercises under **My EML**. **Create custom EML** opens the step builder. **Load EML** accepts an existing JSON file, pasted source or a working example.
+- **Inspect** pauses the movement. Read its instructions, examine muscle groups, or choose an authored position such as **Press** or **Lower** to see that pose. The list follows the recipe’s own phases, including for custom exercises; it does not repeat entries for every rep. Static holds have no unnecessary position selector.
 
-## In Simple Trainer
+The app compiles [Exercise Markup Language](https://github.com/agrim/exercise-markup-language) recipes on the device and renders their anatomy and equipment with Metal. The built-in catalog and new manual drafts use EML 1.1. Existing 1.0 documents use their original definitions and equipment. A personal recipe is separate from the built-in catalog even when the IDs match.
 
-Add `Revision` as a local Swift package in Xcode and link its **ExerciseDummy** library to the iPhone target. Retain one player for the workout screen. The package supports iOS 17 and newer. All execution and rendering are local.
+**Load EML → Preview** lets you examine an unsaved recipe. If the compiler detects a movement problem, the model pauses at a measured pose. **Inspect → Movement checks** shows the phase, time and measurement; selecting a finding takes you to that sample. **Save and play** and **Export EML** require a conforming v1.1 exercise. [See the posture and apparatus review](Revision/Review/PostureV11/README.md).
 
-```swift
-import ExerciseDummy
-import SwiftUI
+## Build an exercise by hand
 
-@MainActor
-func makeDemo(catalogID: String) throws -> ExercisePlayer {
-    let player = try ExercisePlayer(exerciseID: catalogID)
-    try player.send(.play)
-    return player
-}
+Open **Exercises → Create custom EML**, name the exercise and choose a starting pose. **Add step** opens a phase: give it a name and duration, then pick one or more movements. The searchable list comes directly from EML’s libraries (101 coordinated movements in v1). For finer control, set an angle on an individual joint or on both sides. The setup also supports stance, equipment, muscle roles and repetition settings.
 
-// In the host view, with a retained player:
-// ExerciseDummyView(player: player)
-```
+For a simple curl, use **Standing**, add **Bend** with **Bend Elbows**, then add **Return** with no movements or joint overrides. Each step describes its endpoint relative to the starting pose, so the empty second step brings the arms back down. **Hold previous position** keeps the preceding endpoint instead. You can insert, reorder and delete steps. Each step inherits the exercise’s primary and secondary muscles unless you choose different roles for that step.
 
-```swift
-try player.send(.selectExercise("concentration-curl"))
-try player.send(.orient(yaw: 35, pitch: 12))
-try player.send(.setTempo(0.75))
-try player.send(.pause)
-try player.send(.seek(0.5))
-try player.send(.setMirrored(true))         // Demonstrate the opposite side.
-```
+When EML publishes verified movements for the chosen starting pose, the picker groups them at the top. Grounded macros such as **Squat Down** plant the feet by default. **Starting pose → Fixed points** can pin a hand or foot to its starting position for a personal exercise. An individual step can inherit, replace or release those contacts. Abruptly releasing a contact that would make the body jump fails validation.
 
-The catalog is available through `player.exercises`. A lookup such as `player.exercise(id: catalogID)` returns nil for custom exercises without a demonstration. Selecting an unknown ID throws. The host can present its own fallback for those entries. `player.attribution` exposes the bundled credits.
+**Export EML** checks the recipe with EML’s reference compiler and opens Files with a portable JSON document. It leaves the draft open and does not save to the library. **Save and play** checks the recipe, adds it to **My EML** and starts the anatomy model. Later, open **Inspect → Edit steps** to continue working on a builder-created exercise. **Inspect → Export EML** shares any saved personal recipe. The editable form stays on the device; the exported file contains EML only and can also be loaded in the browser viewer.
 
-Commands also have a flat Codable representation. For example, the JSON below selects and starts a deadlift. Decode it as `[ExerciseCommand]` and send the commands in order.
+[Try an exercise built and exported on the simulator: Standing Curl and Return](Revision/Review/AnatomyViewer/standing-curl-and-return.json). Load it in Exercise Studio or in the [localhost anatomy viewer](http://127.0.0.1:8765/). In Exercise Studio, select **Inspect → Curl** to hold the peak contraction while you rotate or magnify the anatomy.
 
-```json
-[{"op":"selectExercise","id":"deadlift"},{"op":"play"}]
-```
+[Read the manual builder, camera controls and viewport verification](Revision/Review/AnatomyViewer/README.md).
 
-**Red-orange** identifies primary targets, **amber** identifies secondary targets, and **gray** identifies unhighlighted tissue. These are the app's authored training roles. A gray muscle can still participate in the movement. Selected unilateral clips restrict the relevant colors to the working side. The host may override the roles with `.setMuscles(primary:secondary:)` and restore them with `.useExerciseMuscles`.
+## Build and run
 
-## Model and motion
-
-The anatomy model combines BodyParts3D and Z-Anatomy into 28 controllable muscle groups on a 51-joint skeleton. Metal draws the body in a single indexed draw with a separate shadow pass. The player loads each exercise's animation track on demand. Each exercise supplies its prescribed camera, equipment dimensions, world-space equipment motion, root translation and local joint rotations. Static holds preserve their held posture. The compact package has no runtime dependency on Blender or a third-party engine. [Model comparisons and adaptation notes](Revision/Authoring/SOURCES.md) · [Attribution and licenses](Revision/ATTRIBUTION.md)
-
-The catalog snapshot comes from Simple Trainer commit `a33c437c45c092d6895891c5088763d108627cb7`. It joins the eight original exercises in `WorkoutCatalog.swift` with the 100 defaults in `ExerciseCatalog+Defaults.swift`. The historical catalog compiler rejected missing or duplicate IDs and unmapped muscle roles.
-
-## Preview and test
-
-Open **HumanExerciseModels.xcodeproj** and run the **HumanExerciseModels** scheme on an iPhone. The preview includes exercise search, camera controls, playback, a phase slider, muscle highlighting and credits. The independently maintained Simple Trainer app can integrate the package through the interface above.
-
-On a fresh checkout, install Git LFS and run `git lfs pull --include="Revision/Sources/ExerciseDummy/Resources/**"` to fetch the two mesh buffers. The exercise metadata and tracks are included in the source checkout. Previewing, testing and rendering these fixtures do not require Blender or a review reel.
-
-Current model authoring, the editable Blender master and rebuild instructions are maintained in the [EML anatomy repository](https://github.com/agrim/exercise-markup-language/tree/main/anatomy). The wrapper's earlier authoring scripts and Blender copies are local archives, not rebuild dependencies of this checkout.
-
-Run the package checks and batch renderer from the repository root:
+Use Xcode on macOS with an iOS 17 or newer simulator or device. Check out the wrapper and EML in sibling folders, then prepare the embedded Python runtime before opening the Xcode project. The following commands assume you are in the wrapper root.
 
 ```sh
-swift test --package-path Revision -c release
-swift run --package-path Revision -c release RenderBatch /tmp/exercise-poses 4
+git clone --branch v1.1.0 https://github.com/agrim/exercise-markup-language.git ../eml
+bash Revision/Runtime/bootstrap.sh
+open HumanExerciseModels.xcodeproj
 ```
 
-The render command writes generated frames to `/tmp/exercise-poses`. Retain the [geometry attribution and license](Revision/Sources/ExerciseDummy/Resources/ATTRIBUTION.md) with distributed model copies.
+If you already have the EML checkout, use it directly. To build against another location, pass `EML_ROOT=/absolute/path/to/eml` as an Xcode build setting. Build the **HumanExerciseModels** scheme. Each build stages the current EML source and runtime assets into the app. Rebuild after changing EML in the checkout. Installed apps play from their own bundle, including when the Mac or viewer is offline. Only the build machine needs to fetch the compiler dependencies.
+
+## Compare with the browser
+
+The [localhost anatomy viewer](http://127.0.0.1:8765/?id=suitcase-carry) reads the same EML checkout. Its login service follows the Simple Trainer review setup and restarts if the process exits. See [service setup](Revision/Tools/viewer-service/README.md) and the [written simulator and browser comparison](Revision/Review/EML/README.md).
+
+## Repository layout
+
+- [Revision/Preview](Revision/Preview) contains the iOS catalog, EML editor and playback UI.
+- [Revision/Runtime](Revision/Runtime) embeds the EML compiler for iOS. [ExerciseDummy](Revision/Sources/ExerciseDummy) interprets the compiled frames and renders the anatomy, equipment and muscle colors.
+- [The EML repository](https://github.com/agrim/exercise-markup-language/tree/v1.1.0) owns the language, authoring guide, catalog, Blender master, runtime anatomy and asset credits. This repository contains the iOS wrapper, renderer and regression fixtures. Model authoring belongs to EML.

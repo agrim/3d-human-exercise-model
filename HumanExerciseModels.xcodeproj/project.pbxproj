@@ -7,18 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2951DD9480FF894EC5756A76 /* CameraGestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F061FAFD0101AF19488C0D /* CameraGestureTests.swift */; };
 		2BCA249E7AD8DB797D581C6A /* ExerciseDummy in Frameworks */ = {isa = PBXBuildFile; productRef = FD2F9E92B6A2F75F6690E82B /* ExerciseDummy */; };
+		34D170874BD469A0C258C456 /* BuilderAuthoringFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC928E9519CFF390DFAEDA5 /* BuilderAuthoringFlowTests.swift */; };
 		35E10F56B62BCA7D2EF6AECF /* StudioSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA3B18C05EE4234A61DA5 /* StudioSheets.swift */; };
+		40DCAEE0048DF35016D59FEB /* EMLBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9593996E1C7ED536E88CE703 /* EMLBuilderView.swift */; };
+		88F6E8FF4B0C3A1269FE7A3C /* StudioIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9DA29564984262D141679A /* StudioIntegrationTests.swift */; };
+		8F67B2F1CADD3CF00FEDAD4B /* RecipeLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597B4B813CCE65B2A359D62 /* RecipeLibrary.swift */; };
 		9AD6D743BBC5DF9CED89A171 /* ExerciseStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966749F4293ECBCA4EC3E4D0 /* ExerciseStudioApp.swift */; };
+		A186D865236F99AB04BC7FB9 /* EMLAuthoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2601D1B61BB7033F198E4D /* EMLAuthoringTests.swift */; };
+		AD16BBCF278B01416BC4D483 /* Python.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5D15BAF090DCA2FF6BF1DC /* Python.xcframework */; };
+		B1939E70E394B90B7A5ED785 /* EMLEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1506D8705CD18E0A342D4192 /* EMLEditor.swift */; };
+		B61CCF7AD8439B9B62C15DC2 /* EMLBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 060724A634C992AF0C32103A /* EMLBridge.c */; };
+		B7BA14DFA642D813C900D1E7 /* EMLAuthoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A8109908564D7D3A375A7 /* EMLAuthoring.swift */; };
+		B8417EB0FEDDC9E04909C04A /* EMLCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4F1605A91FFB55F68C689 /* EMLCompiler.swift */; };
 		C44B2470636D86A720FAE101 /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2361D7A2B397BD36102BC0 /* StudioView.swift */; };
+		D2F6CB537BB15A3B8720F807 /* EMLBuilderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CACDF8D7414C9754098833 /* EMLBuilderFields.swift */; };
+		D61EA585FA2D2860F3A37A25 /* Python.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5D15BAF090DCA2FF6BF1DC /* Python.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED20F943B75D8C43B23B7598 /* viewer-reference.json in Resources */ = {isa = PBXBuildFile; fileRef = E9B07D21D19BB96189157B4E /* viewer-reference.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1221D2A59495CFE847F22D1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AE9F9F5A914818E10F0FDCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0FBA5DCC4AFCCAEF5A1146B;
+			remoteInfo = HumanExerciseModels;
+		};
+		F3C8544900CDA66CBE44E20A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AE9F9F5A914818E10F0FDCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0FBA5DCC4AFCCAEF5A1146B;
+			remoteInfo = HumanExerciseModels;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		867FA58A88E71A697DFEC68A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D61EA585FA2D2860F3A37A25 /* Python.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0036291F8A18AD365FF3E26D /* Revision */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Revision; path = Revision; sourceTree = SOURCE_ROOT; };
+		060724A634C992AF0C32103A /* EMLBridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EMLBridge.c; sourceTree = "<group>"; };
+		1506D8705CD18E0A342D4192 /* EMLEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLEditor.swift; sourceTree = "<group>"; };
+		1F5D15BAF090DCA2FF6BF1DC /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Python.xcframework; path = Revision/Runtime/.cache/Python.xcframework; sourceTree = "<group>"; };
+		20CACDF8D7414C9754098833 /* EMLBuilderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLBuilderFields.swift; sourceTree = "<group>"; };
+		2C2601D1B61BB7033F198E4D /* EMLAuthoringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLAuthoringTests.swift; sourceTree = "<group>"; };
+		2D1104073088406469BEB03A /* EMLBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMLBridge.h; sourceTree = "<group>"; };
 		3A78D6CE7E93533BFC59C466 /* HumanExerciseModels.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HumanExerciseModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48B4F1605A91FFB55F68C689 /* EMLCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLCompiler.swift; sourceTree = "<group>"; };
 		4C2361D7A2B397BD36102BC0 /* StudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
+		5B9DA29564984262D141679A /* StudioIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioIntegrationTests.swift; sourceTree = "<group>"; };
+		5DC928E9519CFF390DFAEDA5 /* BuilderAuthoringFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderAuthoringFlowTests.swift; sourceTree = "<group>"; };
+		621A8109908564D7D3A375A7 /* EMLAuthoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLAuthoring.swift; sourceTree = "<group>"; };
+		871B9B741404B8EB94FEAA81 /* EMLStudioUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EMLStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F061FAFD0101AF19488C0D /* CameraGestureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraGestureTests.swift; sourceTree = "<group>"; };
+		9593996E1C7ED536E88CE703 /* EMLBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLBuilderView.swift; sourceTree = "<group>"; };
 		966749F4293ECBCA4EC3E4D0 /* ExerciseStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStudioApp.swift; sourceTree = "<group>"; };
+		9E3060E81235E130C85A5306 /* EMLIntegrationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EMLIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58EA3B18C05EE4234A61DA5 /* StudioSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioSheets.swift; sourceTree = "<group>"; };
+		E9B07D21D19BB96189157B4E /* viewer-reference.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "viewer-reference.json"; sourceTree = "<group>"; };
+		F597B4B813CCE65B2A359D62 /* RecipeLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,16 +88,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCA249E7AD8DB797D581C6A /* ExerciseDummy in Frameworks */,
+				AD16BBCF278B01416BC4D483 /* Python.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		078D8F49E293C05998C5D160 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F5D15BAF090DCA2FF6BF1DC /* Python.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		438FB2F370E9BB00C844C9F2 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				621A8109908564D7D3A375A7 /* EMLAuthoring.swift */,
+				20CACDF8D7414C9754098833 /* EMLBuilderFields.swift */,
+				9593996E1C7ED536E88CE703 /* EMLBuilderView.swift */,
+				1506D8705CD18E0A342D4192 /* EMLEditor.swift */,
 				966749F4293ECBCA4EC3E4D0 /* ExerciseStudioApp.swift */,
+				F597B4B813CCE65B2A359D62 /* RecipeLibrary.swift */,
 				D58EA3B18C05EE4234A61DA5 /* StudioSheets.swift */,
 				4C2361D7A2B397BD36102BC0 /* StudioView.swift */,
 			);
@@ -52,32 +127,109 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		684956E815D74B2980BC03E2 /* iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C2601D1B61BB7033F198E4D /* EMLAuthoringTests.swift */,
+				5B9DA29564984262D141679A /* StudioIntegrationTests.swift */,
+				E9B07D21D19BB96189157B4E /* viewer-reference.json */,
+			);
+			name = iOSTests;
+			path = Revision/iOSTests;
+			sourceTree = "<group>";
+		};
 		78C1A8E7570F22D5405D3F47 = {
 			isa = PBXGroup;
 			children = (
+				E3EFD14CEC514C0148964DE6 /* Bridge */,
+				684956E815D74B2980BC03E2 /* iOSTests */,
 				6592ACE7E3EF39FE56CE7940 /* Packages */,
 				438FB2F370E9BB00C844C9F2 /* Preview */,
+				A64D704C8494A064DCED85B5 /* UITests */,
+				078D8F49E293C05998C5D160 /* Frameworks */,
 				AEC1D1BFA77A5614A8F3862D /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		A64D704C8494A064DCED85B5 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DC928E9519CFF390DFAEDA5 /* BuilderAuthoringFlowTests.swift */,
+				87F061FAFD0101AF19488C0D /* CameraGestureTests.swift */,
+			);
+			name = UITests;
+			path = Revision/UITests;
 			sourceTree = "<group>";
 		};
 		AEC1D1BFA77A5614A8F3862D /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				9E3060E81235E130C85A5306 /* EMLIntegrationTests.xctest */,
+				871B9B741404B8EB94FEAA81 /* EMLStudioUITests.xctest */,
 				3A78D6CE7E93533BFC59C466 /* HumanExerciseModels.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E3EFD14CEC514C0148964DE6 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				060724A634C992AF0C32103A /* EMLBridge.c */,
+				2D1104073088406469BEB03A /* EMLBridge.h */,
+				48B4F1605A91FFB55F68C689 /* EMLCompiler.swift */,
+			);
+			name = Bridge;
+			path = Revision/Runtime/Bridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		334674728E97F97985FE4B53 /* EMLStudioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71B52EEFF4982591F3C01AB1 /* Build configuration list for PBXNativeTarget "EMLStudioUITests" */;
+			buildPhases = (
+				F608DA215FB3C2C4D1E01C73 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				761B4718FB9D878238A82159 /* PBXTargetDependency */,
+			);
+			name = EMLStudioUITests;
+			packageProductDependencies = (
+			);
+			productName = EMLStudioUITests;
+			productReference = 871B9B741404B8EB94FEAA81 /* EMLStudioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9DBFCAF214D558CD01AFB79D /* EMLIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 481036B4AE8BA76681933BF3 /* Build configuration list for PBXNativeTarget "EMLIntegrationTests" */;
+			buildPhases = (
+				C279EAEA1D002CAD19481496 /* Sources */,
+				14C138C39C297025A78C349E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10EA610F33A1A2BE4700BBA1 /* PBXTargetDependency */,
+			);
+			name = EMLIntegrationTests;
+			packageProductDependencies = (
+			);
+			productName = EMLIntegrationTests;
+			productReference = 9E3060E81235E130C85A5306 /* EMLIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B0FBA5DCC4AFCCAEF5A1146B /* HumanExerciseModels */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFD94B506BF8BC85296FB7C3 /* Build configuration list for PBXNativeTarget "HumanExerciseModels" */;
 			buildPhases = (
 				5AFB0E212250BB2F2F086FF1 /* Sources */,
 				B3B62E75D4AFFA8B56BC50B1 /* Frameworks */,
+				867FA58A88E71A697DFEC68A /* Embed Frameworks */,
+				BCF4E6FD599B08DB1F91B42F /* Bundle Python and EML from the source checkout */,
 			);
 			buildRules = (
 			);
@@ -100,6 +252,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					334674728E97F97985FE4B53 = {
+						TestTargetID = B0FBA5DCC4AFCCAEF5A1146B;
+					};
 				};
 			};
 			buildConfigurationList = 673A3E54F6E1DBA78009317C /* Build configuration list for PBXProject "HumanExerciseModels" */;
@@ -120,22 +275,95 @@
 			projectRoot = "";
 			targets = (
 				B0FBA5DCC4AFCCAEF5A1146B /* HumanExerciseModels */,
+				9DBFCAF214D558CD01AFB79D /* EMLIntegrationTests */,
+				334674728E97F97985FE4B53 /* EMLStudioUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14C138C39C297025A78C349E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED20F943B75D8C43B23B7598 /* viewer-reference.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCF4E6FD599B08DB1F91B42F /* Bundle Python and EML from the source checkout */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle Python and EML from the source checkout";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/bash \"$SRCROOT/Revision/Runtime/embed.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5AFB0E212250BB2F2F086FF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BA14DFA642D813C900D1E7 /* EMLAuthoring.swift in Sources */,
+				B61CCF7AD8439B9B62C15DC2 /* EMLBridge.c in Sources */,
+				D2F6CB537BB15A3B8720F807 /* EMLBuilderFields.swift in Sources */,
+				40DCAEE0048DF35016D59FEB /* EMLBuilderView.swift in Sources */,
+				B8417EB0FEDDC9E04909C04A /* EMLCompiler.swift in Sources */,
+				B1939E70E394B90B7A5ED785 /* EMLEditor.swift in Sources */,
 				9AD6D743BBC5DF9CED89A171 /* ExerciseStudioApp.swift in Sources */,
+				8F67B2F1CADD3CF00FEDAD4B /* RecipeLibrary.swift in Sources */,
 				35E10F56B62BCA7D2EF6AECF /* StudioSheets.swift in Sources */,
 				C44B2470636D86A720FAE101 /* StudioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C279EAEA1D002CAD19481496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A186D865236F99AB04BC7FB9 /* EMLAuthoringTests.swift in Sources */,
+				88F6E8FF4B0C3A1269FE7A3C /* StudioIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F608DA215FB3C2C4D1E01C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D170874BD469A0C258C456 /* BuilderAuthoringFlowTests.swift in Sources */,
+				2951DD9480FF894EC5756A76 /* CameraGestureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10EA610F33A1A2BE4700BBA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0FBA5DCC4AFCCAEF5A1146B /* HumanExerciseModels */;
+			targetProxy = F3C8544900CDA66CBE44E20A /* PBXContainerItemProxy */;
+		};
+		761B4718FB9D878238A82159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0FBA5DCC4AFCCAEF5A1146B /* HumanExerciseModels */;
+			targetProxy = 1221D2A59495CFE847F22D1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		000180DBD62A79355E42B50E /* Release */ = {
@@ -194,13 +422,56 @@
 			};
 			name = Release;
 		};
+		18BC71500149F74F83906039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agrimgupta.exercisedummy.ui-tests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HumanExerciseModels;
+			};
+			name = Release;
+		};
+		1F53422C477FCF8BC71CD096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agrimgupta.exercisedummy.ui-tests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HumanExerciseModels;
+			};
+			name = Debug;
+		};
 		36083498F9F465924455CAAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Revision/Runtime/.cache\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Revision/Preview/StudioInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Exercise Studio";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -209,9 +480,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.agrimgupta.exercisedummy.revision;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Revision/Runtime/Bridge/EMLBridge.h;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -280,13 +552,56 @@
 			};
 			name = Debug;
 		};
+		5F2687C05F792C70D7A81273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agrimgupta.exercisedummy.integration-tests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HumanExerciseModels.app/HumanExerciseModels";
+			};
+			name = Debug;
+		};
+		766FA98965D18F30F3890FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agrimgupta.exercisedummy.integration-tests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HumanExerciseModels.app/HumanExerciseModels";
+			};
+			name = Release;
+		};
 		93F7449F8F9ED804FF335D34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Revision/Runtime/.cache\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Revision/Preview/StudioInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Exercise Studio";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,9 +610,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.agrimgupta.exercisedummy.revision;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Revision/Runtime/Bridge/EMLBridge.h;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -306,11 +622,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		481036B4AE8BA76681933BF3 /* Build configuration list for PBXNativeTarget "EMLIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F2687C05F792C70D7A81273 /* Debug */,
+				766FA98965D18F30F3890FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		673A3E54F6E1DBA78009317C /* Build configuration list for PBXProject "HumanExerciseModels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4549AFCE75C54B554112EC2E /* Debug */,
 				000180DBD62A79355E42B50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		71B52EEFF4982591F3C01AB1 /* Build configuration list for PBXNativeTarget "EMLStudioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F53422C477FCF8BC71CD096 /* Debug */,
+				18BC71500149F74F83906039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

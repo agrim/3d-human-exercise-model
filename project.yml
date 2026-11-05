@@ -10,13 +10,30 @@ targets:
     type: application
     platform: iOS
     sources:
-      - Revision/Preview
+      - path: Revision/Preview
+        excludes: ["StudioInfo.plist"]
+      - Revision/Runtime/Bridge
     dependencies:
       - package: ExerciseDummy
         product: ExerciseDummy
+      - framework: Revision/Runtime/.cache/Python.xcframework
+        embed: true
+    info:
+      path: Revision/Preview/StudioInfo.plist
+      properties:
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+    postBuildScripts:
+      - name: Bundle Python and EML from the source checkout
+        basedOnDependencyAnalysis: false
+        script: |
+          /bin/bash "$SRCROOT/Revision/Runtime/embed.sh"
     settings:
       base:
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        SWIFT_OBJC_BRIDGING_HEADER: Revision/Runtime/Bridge/EMLBridge.h
         SWIFT_VERSION: '6.0'
+        ENABLE_TESTABILITY: YES
         TARGETED_DEVICE_FAMILY: '1'
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.agrimgupta.exercisedummy.revision
@@ -24,10 +41,39 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
-        MARKETING_VERSION: '1.0'
-        CURRENT_PROJECT_VERSION: '1'
+        MARKETING_VERSION: '1.1'
+        CURRENT_PROJECT_VERSION: '2'
+  EMLIntegrationTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Revision/iOSTests
+        excludes: ["*.py", "README.md"]
+    dependencies:
+      - target: HumanExerciseModels
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.agrimgupta.exercisedummy.integration-tests
+        SWIFT_VERSION: '6.0'
+  EMLStudioUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [Revision/UITests]
+    dependencies:
+      - target: HumanExerciseModels
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.agrimgupta.exercisedummy.ui-tests
+        TEST_TARGET_NAME: HumanExerciseModels
+        SWIFT_VERSION: '6.0'
 schemes:
   HumanExerciseModels:
     build:
       targets:
         HumanExerciseModels: all
+    test:
+      targets:
+        - EMLIntegrationTests
+        - EMLStudioUITests

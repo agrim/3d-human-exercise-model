@@ -90,21 +90,36 @@ public final class ExercisePlayer {
   public private(set) var rate: Float = 1
   public private(set) var yaw: Float
   public private(set) var pitch: Float
+  public private(set) var zoom: Float = 1
   public private(set) var isMirrored = false
   public private(set) var highlighting = true
   public private(set) var primary: Set<String>
   public private(set) var secondary: Set<String>
+  /// Repeat the entire demonstration in a studio preview, including its authored cycle count.
+  public var loopsPreview = false
+  public var movementIssues: [MovementIssue] { clip.movementIssues }
+  public var contactWarning: String? { clip.movementIssues.first?.message }
+  public var phaseName: String { clip.annotation(at: phase)?.phase ?? "" }
+  /// Authored pose names in movement order. A stationary hold has no distinct positions to inspect.
+  public var inspectablePositions: [String] { positions.map(\.name) }
+  public var demonstrationSeconds: Float { clip.duration }
   public var phase: Float {
     guard isPlaying else { return anchoredPhase }
-    let advance = (CACurrentMediaTime() - anchorTime) * Double(rate) / Double(clip.seconds)
-    return Float((Double(anchoredPhase) + advance).truncatingRemainder(dividingBy: 1))
+    let advance = (CACurrentMediaTime() - anchorTime) * Double(rate) / Double(clip.duration)
+    let elapsed = Double(anchoredPhase) + advance
+    return loopsPreview ? Float(elapsed.truncatingRemainder(dividingBy: 1)) : Float(min(1, elapsed))
   }
 
   public func exercise(id: String) -> ExerciseDefinition? { clips[id]?.definition }
 
   let renderer: Renderer
   private let clips: [String: Clip]
+  private var kit: [String: EMLProp]?
+  private var legacyKit: [String: EMLProp]?
+  private var usesFrameRoles = true
+  @ObservationIgnored private var lastFrameRoles: MuscleRoles?
   private var clip: Clip
+  private var positions = [InspectionPosition]()
   private var anchoredPhase: Float = 0
   private var anchorTime: CFTimeInterval = 0
   private let views = NSHashTable<ExerciseMetalView>.weakObjects()
@@ -139,14 +154,136 @@ public final class ExercisePlayer {
     self.pitch = loaded.camera[1]
     self.primary = p
     self.secondary = s
+    self.loopsPreview = true
+  }
+
+  /// Load geometry and equipment directly from the same EML tree that compiled this clip.
+  public init(emlRoot: URL, compiledClip: Data, device: MTLDevice? = MTLCreateSystemDefaultDevice())
+    throws
+  {
+    guard let device else {
+      throw ExerciseDummyError.rendering("This device has no Metal renderer.")
+    }
+    let anatomy = emlRoot.appendingPathComponent("anatomy", isDirectory: true)
+    let model = try JSONDecoder().decode(
+      ModelData.self, from: Data(contentsOf: anatomy.appendingPathComponent("model.json")))
+    let kit = try JSONDecoder().decode(
+      [String: EMLProp].self,
+      from: Data(contentsOf: emlRoot.appendingPathComponent("library/equipment.json")))
+    let previous = emlRoot.appendingPathComponent("compat/1.0/library/equipment.json")
+    let legacyKit =
+      FileManager.default.fileExists(atPath: previous.path)
+      ? try JSONDecoder().decode([String: EMLProp].self, from: Data(contentsOf: previous)) : nil
+    let wire = try JSONDecoder().decode(CompiledEML.self, from: compiledClip)
+    let clip = try wire.makeClip(model: model, kit: wire.eml == "1.0" ? legacyKit ?? kit : kit)
+    let renderer = try Renderer(device: device, model: model, anatomy: anatomy)
+    try renderer.prepare(clip)
+    self.attribution = try String(
+      contentsOf: anatomy.appendingPathComponent("ATTRIBUTION.md"), encoding: .utf8)
+    self.renderer = renderer
+    self.clips = [:]
+    self.kit = kit
+    self.legacyKit = legacyKit
+    self.clip = clip
+    self.positions = clip.inspectionPositions()
+    self.exercises = []
+    self.muscleGroups = model.groups.filter { !Library.structural.contains($0) }
+    self.yaw = clip.camera[0]
+    self.pitch = clip.camera[1]
+    self.primary = Set(clip.primary)
+    self.secondary = Set(clip.secondary)
+    try updateFrameRoles(at: 0)
+  }
+
+  /// Replace the displayed exercise only after validation and GPU preparation succeed.
+  public func load(compiledClip: Data) throws {
+    guard let kit else {
+      throw ExerciseDummyError.invalidCommand("Initialize with an EML root first.")
+    }
+    let wire = try JSONDecoder().decode(CompiledEML.self, from: compiledClip)
+    let next = try wire.makeClip(
+      model: renderer.model, kit: wire.eml == "1.0" ? legacyKit ?? kit : kit)
+    try replaceClip(next)
+    for view in views.allObjects { view.refresh() }
+  }
+
+  private func replaceClip(_ next: Clip) throws {
+    try renderer.prepare(next, highlighting: highlighting)
+    clip = next
+    positions = next.inspectionPositions()
+    primary = Set(next.primary)
+    secondary = Set(next.secondary)
+    usesFrameRoles = true
+    lastFrameRoles = nil
+    yaw = next.camera[0]
+    pitch = next.camera[1]
+    zoom = 1
+    setClock(0)
+    try updateFrameRoles(at: 0)
+  }
+
+  private func setClock(_ f: Float) {
+    anchoredPhase = f
+    anchorTime = CACurrentMediaTime()
+  }
+
+  /// Change camera magnification relative to this exercise's fitted view.
+  public func setZoom(_ factor: Float) {
+    guard factor.isFinite else { return }
+    let bounded = min(3, max(0.75, factor))
+    guard zoom != bounded else { return }
+    zoom = bounded
+    for view in views.allObjects { view.refresh() }
+  }
+
+  /// Restore the authored view without seeking or changing playback.
+  public func resetView() {
+    yaw = clip.camera[0]
+    pitch = clip.camera[1]
+    zoom = 1
+    for view in views.allObjects { view.refresh() }
+  }
+
+  /// Pause at the selected position. Identifiers come from the current EML recipe.
+  public func inspectPosition(_ name: String) throws {
+    guard let position = positions.first(where: { $0.name == name }) else {
+      throw ExerciseDummyError.invalidCommand("No position named \(name) in this exercise.")
+    }
+    try pauseAt(position.progress)
+  }
+
+  public func inspectIssue(_ issue: MovementIssue) throws {
+    guard let current = movementIssues.first(where: { $0.id == issue.id }) else {
+      throw ExerciseDummyError.invalidCommand("This issue is no longer in the selected exercise.")
+    }
+    try pauseAt(min(1, max(0, current.seconds / clip.duration)))
+  }
+
+  private func pauseAt(_ progress: Float) throws {
+    try updateFrameRoles(at: progress)
+    setClock(progress)
+    isPlaying = false
+    for view in views.allObjects { view.refresh() }
+  }
+
+  private func updateFrameRoles(at phase: Float) throws {
+    guard usesFrameRoles, let a = clip.annotation(at: phase) else { return }
+    // Allocate a new immutable Metal palette only when the authored role actually changes.
+    if lastFrameRoles == a.roles { return }
+    let p = Set(a.roles.primary)
+    let s = Set(a.roles.secondary)
+    if primary == p, secondary == s {
+      lastFrameRoles = a.roles
+      return
+    }
+    try renderer.setRoles(primary: highlighting ? p : [], secondary: highlighting ? s : [])
+    lastFrameRoles = a.roles
+    primary = p
+    secondary = s
   }
 
   /// Selecting an exercise resets its clock, prescribed camera and roles. It preserves playback and tempo.
   public func send(_ command: ExerciseCommand) throws {
-    func setClock(_ f: Float) {
-      anchoredPhase = f
-      anchorTime = CACurrentMediaTime()
-    }
     func applyRoles(
       _ p: Set<String>, _ s: Set<String>, _ show: Bool, restricted: Set<String>? = nil
     ) throws {
@@ -162,21 +299,16 @@ public final class ExercisePlayer {
         throw ExerciseDummyError.invalidCommand("Unknown exercise \(id).")
       }
       let loaded = try selected.loaded(model: renderer.model)
-      try renderer.prepare(loaded, highlighting: highlighting)
-      primary = Set(loaded.primary)
-      secondary = Set(loaded.secondary)
-      clip = loaded
-      yaw = loaded.camera[0]
-      pitch = loaded.camera[1]
-      setClock(0)
+      try replaceClip(loaded)
     case .seek(let f):
       guard f.isFinite && (0...1).contains(f) else {
         throw ExerciseDummyError.invalidCommand("Phase must be between zero and one.")
       }
       setClock(f)
+      try updateFrameRoles(at: f)
     case .play:
       if !isPlaying {
-        setClock(anchoredPhase)
+        setClock(anchoredPhase >= 1 ? 0 : anchoredPhase)
         isPlaying = true
       }
     case .pause:
@@ -204,6 +336,7 @@ public final class ExercisePlayer {
         throw ExerciseDummyError.invalidCommand("Muscle IDs must exist and have one role each.")
       }
       try applyRoles(p, s, highlighting, restricted: [])
+      usesFrameRoles = false
     case .setHighlighting(let flag):
       try applyRoles(primary, secondary, flag)
     case .setMirrored(let value):
@@ -213,6 +346,9 @@ public final class ExercisePlayer {
       try applyRoles(
         Set(clip.primary), Set(clip.secondary), highlighting,
         restricted: Set(clip.sideFocus?.groups ?? []))
+      usesFrameRoles = true
+      lastFrameRoles = nil
+      try updateFrameRoles(at: phase)
     }
     for view in views.allObjects { view.refresh() }
   }
@@ -223,8 +359,15 @@ public final class ExercisePlayer {
     guard let pass = view.currentRenderPassDescriptor, let drawable = view.currentDrawable else {
       return
     }
+    let progress = phase
+    if isPlaying && !loopsPreview && progress == 1 {
+      setClock(1)
+      isPlaying = false
+      for view in views.allObjects { view.refresh() }
+    }
+    try? updateFrameRoles(at: progress)
     _ = try? renderer.encode(
-      clip: clip, phase: phase, yaw: yaw, pitch: pitch,
+      clip: clip, phase: progress, yaw: yaw, pitch: pitch, zoom: zoom,
       width: drawable.texture.width, height: drawable.texture.height,
       pass: pass, drawable: drawable)
   }
@@ -234,9 +377,11 @@ public final class ExercisePlayer {
     guard (1...8192).contains(width), (1...8192).contains(height) else {
       throw ExerciseDummyError.rendering("Unsupported snapshot dimensions.")
     }
+    let progress = phase
+    try updateFrameRoles(at: progress)
     let (pass, color) = try renderer.offscreenTarget(width: width, height: height)
     let cb = try renderer.encode(
-      clip: clip, phase: phase, yaw: yaw, pitch: pitch,
+      clip: clip, phase: progress, yaw: yaw, pitch: pitch, zoom: zoom,
       width: width, height: height, pass: pass)
     cb.waitUntilCompleted()
     if let error = cb.error { throw error }

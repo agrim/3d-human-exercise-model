@@ -27,16 +27,23 @@ struct GPUMesh {
 struct BodyMesh {
   let gpu: GPUMesh
   let jointBounds: [AABB]
+  let headRadius: Float
 
-  init(device: MTLDevice, model: ModelData) throws {
-    let v = try Data(contentsOf: Library.resource("vertices.bin"), options: .mappedIfSafe)
-    let ix = try Data(contentsOf: Library.resource("indices.bin"), options: .mappedIfSafe)
+  init(device: MTLDevice, model: ModelData, anatomy: URL?) throws {
+    let v = try Data(
+      contentsOf: anatomy?.appendingPathComponent("vertices.bin")
+        ?? Library.resource("vertices.bin"), options: .mappedIfSafe)
+    let ix = try Data(
+      contentsOf: anatomy?.appendingPathComponent("indices.bin") ?? Library.resource("indices.bin"),
+      options: .mappedIfSafe)
     guard model.vertexCount > 0, model.indexCount > 0, model.indexCount % 3 == 0,
       model.vertexCount == v.count / 40, v.count % 40 == 0,
       model.indexCount == ix.count / 4, ix.count % 4 == 0
     else {
       throw ExerciseDummyError.invalidAsset("Mesh and manifest counts differ.")
     }
+    let head = model.joints.firstIndex { $0.name == "head" }
+    var headRadiusSquared: Float = 0
     var bounds = Array(repeating: AABB(), count: model.joints.count)
     let vertices: MTLBuffer = try v.withUnsafeBytes { (raw: UnsafeRawBufferPointer) in
       for n in 0..<model.vertexCount {
@@ -54,7 +61,13 @@ struct BodyMesh {
           guard joint < bounds.count else {
             throw ExerciseDummyError.invalidAsset("Unknown vertex joint.")
           }
-          if raw[b + 28 + slot] > 0 { bounds[joint].include(p) }
+          if raw[b + 28 + slot] > 0 {
+            bounds[joint].include(p)
+            if joint == head {
+              headRadiusSquared = max(
+                headRadiusSquared, simd_distance_squared(p, model.joints[joint].position))
+            }
+          }
         }
       }
       guard let buffer = device.makeBuffer(bytes: raw.baseAddress!, length: raw.count) else {
@@ -72,6 +85,7 @@ struct BodyMesh {
     }
     self.gpu = GPUMesh(vertices: vertices, indices: indices, count: model.indexCount)
     self.jointBounds = bounds
+    self.headRadius = sqrt(headRadiusSquared)
   }
 }
 
@@ -170,7 +184,9 @@ struct PropMesh {
         for i in 0...cols {
           let a = 2 * Float.pi * Float(i) / Float(cols)
           let n = SIMD3<Float>(sin(lat) * cos(a), cos(lat), sin(lat) * sin(a))
-          vertex(center + n * r, n, 0)
+          let radii =
+            e.kind == .ball ? (e.size.map { $0 / 2 } ?? SIMD3(repeating: r)) : SIMD3(repeating: r)
+          vertex(center + n * radii, simd_normalize(n / radii), 0)
         }
       }
       for j in 0..<rows {

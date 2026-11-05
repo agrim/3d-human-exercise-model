@@ -1,0 +1,162 @@
+{
+  "eml": "1.0",
+  "id": "studio-custom-goblet",
+  "title": "Studio Custom Goblet",
+  "instructions": "Hold the bell at the chest. Lower to the chosen depth, look left during the pause, then stand facing forward.",
+  "start": {
+    "pose": "goblet-hold",
+    "stance": {
+      "width": {
+        "param": "stance-width"
+      },
+      "toeOut": {
+        "param": "toe-angle"
+      }
+    }
+  },
+  "equipment": [
+    {
+      "id": "bell",
+      "kind": "kettlebell",
+      "follow": {
+        "joint": "chest",
+        "offset": [
+          0,
+          0.125,
+          0.17
+        ]
+      }
+    }
+  ],
+  "contacts": [
+    {
+      "effector": "leftBall",
+      "target": "floor",
+      "pole": [
+        0.1,
+        0,
+        1
+      ]
+    },
+    {
+      "effector": "rightBall",
+      "target": "floor",
+      "pole": [
+        -0.1,
+        0,
+        1
+      ]
+    },
+    {
+      "effector": "leftGrip",
+      "target": {
+        "item": "bell",
+        "socket": "leftGrip"
+      },
+      "pole": [
+        0.7,
+        -0.6,
+        0.3
+      ]
+    },
+    {
+      "effector": "rightGrip",
+      "target": {
+        "item": "bell",
+        "socket": "rightGrip"
+      },
+      "pole": [
+        -0.7,
+        -0.6,
+        0.3
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "id": "descend",
+      "seconds": 1.7,
+      "actions": [
+        {
+          "use": "squat-upright",
+          "amount": {
+            "param": "depth"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pause-and-look",
+      "seconds": {
+        "param": "pause"
+      },
+      "actions": [
+        {
+          "use": "squat-upright",
+          "amount": {
+            "param": "depth"
+          }
+        }
+      ],
+      "detail": {
+        "joints": {
+          "head": {
+            "y": {
+              "param": "turn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "stand",
+      "seconds": 1.7,
+      "actions": []
+    }
+  ],
+  "repeat": {
+    "mode": "loop",
+    "count": 5
+  },
+  "muscles": {
+    "primary": [
+      "quadriceps",
+      "glutes"
+    ],
+    "secondary": [
+      "abdominals",
+      "obliques"
+    ]
+  },
+  "camera": [
+    44,
+    10
+  ],
+  "parameters": {
+    "stance-width": {
+      "default": 0.38,
+      "min": 0.24,
+      "max": 0.48
+    },
+    "toe-angle": {
+      "default": 12,
+      "min": 0,
+      "max": 25
+    },
+    "depth": {
+      "default": 0.78,
+      "min": 0.35,
+      "max": 1
+    },
+    "pause": {
+      "default": 1,
+      "min": 0.25,
+      "max": 3
+    },
+    "turn": {
+      "default": 18,
+      "min": 5,
+      "max": 30
+    }
+  }
+}

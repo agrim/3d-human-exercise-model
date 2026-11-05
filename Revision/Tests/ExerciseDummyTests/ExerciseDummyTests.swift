@@ -4,6 +4,12 @@ import simd
 
 @testable import ExerciseDummy
 
+func requireDesktopFixtures() throws {
+  #if !os(macOS)
+    throw XCTSkip("Historical EXM1 authoring fixtures are only used by the desktop batch renderer.")
+  #endif
+}
+
 final class ExerciseDummyTests: XCTestCase {
   func testCommandWireRoundTrip() throws {
     let commands: [ExerciseCommand] = [
@@ -23,6 +29,7 @@ final class ExerciseDummyTests: XCTestCase {
   }
 
   func testEveryBundledTrackMatchesModelAndLoops() throws {
+    try requireDesktopFixtures()
     let model = try Library.load("model.json", as: ModelData.self)
     let catalog = try Library.load("motions.json", as: MotionData.self)
     try Library.validate(model, catalog)
@@ -66,6 +73,7 @@ final class ExerciseDummyTests: XCTestCase {
   }
 
   @MainActor func testUnilateralTintFollowsMirroredWorkingArm() throws {
+    try requireDesktopFixtures()
     guard let device = MTLCreateSystemDefaultDevice() else {
       throw XCTSkip("Metal GPU unavailable.")
     }
@@ -105,6 +113,7 @@ final class ExerciseDummyTests: XCTestCase {
   }
 
   @MainActor func testGPUCommandFlow() throws {
+    try requireDesktopFixtures()
     guard let device = MTLCreateSystemDefaultDevice() else {
       throw XCTSkip("Metal GPU unavailable.")
     }

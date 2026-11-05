@@ -39,7 +39,31 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9DBFCAF214D558CD01AFB79D"
+               BuildableName = "EMLIntegrationTests.xctest"
+               BlueprintName = "EMLIntegrationTests"
+               ReferencedContainer = "container:HumanExerciseModels.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "334674728E97F97985FE4B53"
+               BuildableName = "EMLStudioUITests.xctest"
+               BlueprintName = "EMLStudioUITests"
+               ReferencedContainer = "container:HumanExerciseModels.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

@@ -1,0 +1,40 @@
+{
+  "eml" : "1.0",
+  "id" : "standing-curl-return-c20049",
+  "instructions" : "Stand tall. Bend both elbows, then lower the arms to the starting pose.",
+  "muscles" : {
+    "primary" : [
+      "biceps"
+    ],
+    "secondary" : [
+
+    ]
+  },
+  "phases" : [
+    {
+      "actions" : [
+        {
+          "amount" : 1,
+          "use" : "bend-elbows"
+        }
+      ],
+      "id" : "curl",
+      "seconds" : 1
+    },
+    {
+      "actions" : [
+
+      ],
+      "id" : "return",
+      "seconds" : 1
+    }
+  ],
+  "repeat" : {
+    "count" : 1,
+    "mode" : "loop"
+  },
+  "start" : {
+    "pose" : "standing"
+  },
+  "title" : "Standing Curl and Return"
+}

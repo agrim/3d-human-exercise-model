@@ -1,34 +1,30 @@
-import ExerciseDummy
 import SwiftUI
 
 @main
 struct ExerciseStudioApp: App {
-  var body: some Scene { WindowGroup { StudioRoot().preferredColorScheme(.dark) } }
+  var body: some Scene { WindowGroup { StudioRoot() } }
 }
 
 struct StudioRoot: View {
-  @State private var player: ExercisePlayer?
-  @State private var errorMessage: String?
-
+  @State private var library = RecipeLibrary()
   var body: some View {
     Group {
-      if let player {
-        StudioView(player: player)
-      } else if let errorMessage {
-        ContentUnavailableView(
-          "Couldn’t open the model", systemImage: "figure.strengthtraining.traditional",
-          description: Text(errorMessage))
+      if let player = library.player {
+        StudioView(player: player, library: library)
+      } else if let message = library.problem {
+        ContentUnavailableView {
+          Label("Couldn’t open Exercise Studio", systemImage: "figure.strengthtraining.traditional")
+        } description: {
+          Text(message)
+        } actions: {
+          Button("Retry") {
+            library.problem = nil
+            Task { await library.open() }
+          }
+        }
       } else {
-        ProgressView("Preparing the model")
+        ProgressView("Preparing the anatomy model")
       }
-    }
-    .task {
-      guard player == nil, errorMessage == nil else { return }
-      do {
-        let loaded = try ExercisePlayer(exerciseID: "squat")
-        try loaded.send(.play)
-        player = loaded
-      } catch { errorMessage = error.localizedDescription }
-    }
+    }.task { await library.open() }
   }
 }
