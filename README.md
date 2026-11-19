@@ -1,4 +1,10 @@
-# Exercise Studio for iOS
+# V3 exercise human for Simple Trainer
+
+V3 uses an editable MakeHuman-derived athletic body, a Blender armature fitted to EML’s 51 joint pivots, and 28 highlightable muscle groups. The muscle regions share the skin and move with it. The on-device mesh uses two indexed Metal buffers totaling 1.29 MB. The Blender master is an authoring asset.
+
+[Open the model and authoring guide](V3/README.md) · [View the exercise renders](V3/Review/exercises.jpg)
+
+## Exercise Studio for iOS
 
 Exercise Studio opens on the anatomy model. The caption names the exercise and the primary (red-orange) and secondary (amber) muscle groups. Gray tissue is unhighlighted. Drag to orbit, pinch to zoom, or tap **Pause** to hold a posture. The curved-arrow **Reset view** button restores the exercise’s camera angle and framing without changing its pose or playback.
 
@@ -19,7 +25,7 @@ When EML publishes verified movements for the chosen starting pose, the picker g
 
 **Export EML** checks the recipe with EML’s reference compiler and opens Files with a portable JSON document. It leaves the draft open and does not save to the library. **Save and play** checks the recipe, adds it to **My EML** and starts the anatomy model. Later, open **Inspect → Edit steps** to continue working on a builder-created exercise. **Inspect → Export EML** shares any saved personal recipe. The editable form stays on the device; the exported file contains EML only and can also be loaded in the browser viewer.
 
-[Try an exercise built and exported on the simulator: Standing Curl and Return](Revision/Review/AnatomyViewer/standing-curl-and-return.json). Load it in Exercise Studio or in the [localhost anatomy viewer](http://127.0.0.1:8765/). In Exercise Studio, select **Inspect → Curl** to hold the peak contraction while you rotate or magnify the anatomy.
+[Try an exercise built and exported on the simulator: Standing Curl and Return](Revision/Review/AnatomyViewer/standing-curl-and-return.json). Load it in Exercise Studio or in the [localhost anatomy viewer](http://127.0.0.1:8766/). In Exercise Studio, select **Inspect → Curl** to hold the peak contraction while you rotate or magnify the anatomy.
 
 [Read the manual builder, camera controls and viewport verification](Revision/Review/AnatomyViewer/README.md).
 
@@ -29,18 +35,19 @@ Use Xcode on macOS with an iOS 17 or newer simulator or device. Check out the wr
 
 ```sh
 git clone --branch v1.1.0 https://github.com/agrim/exercise-markup-language.git ../eml
+git lfs pull --include="Revision/Sources/ExerciseDummy/Resources/*.bin"
 bash Revision/Runtime/bootstrap.sh
 open HumanExerciseModels.xcodeproj
 ```
 
-If you already have the EML checkout, use it directly. To build against another location, pass `EML_ROOT=/absolute/path/to/eml` as an Xcode build setting. Build the **HumanExerciseModels** scheme. Each build stages the current EML source and runtime assets into the app. Rebuild after changing EML in the checkout. Installed apps play from their own bundle, including when the Mac or viewer is offline. Only the build machine needs to fetch the compiler dependencies.
+If you already have the EML checkout, use it directly. To build against another location, pass `EML_ROOT=/absolute/path/to/eml` as an Xcode build setting. Build the **HumanExerciseModels** scheme. Each build stages the EML compiler and recipes together with V3’s anatomy buffers. Rebuild after changing EML in the checkout. Installed apps play from their own bundle, including when the Mac or viewer is offline. Only the build machine needs to fetch the compiler dependencies.
 
 ## Compare with the browser
 
-The [localhost anatomy viewer](http://127.0.0.1:8765/?id=suitcase-carry) reads the same EML checkout. Its login service follows the Simple Trainer review setup and restarts if the process exits. See [service setup](Revision/Tools/viewer-service/README.md) and the [written simulator and browser comparison](Revision/Review/EML/README.md).
+From the wrapper root, run `python3 V3/preview.py` with the EML virtual environment prepared. Open the local viewer, choose an exercise, then press **Play**. You can orbit, scrub the timeline, or load a custom EML JSON file. [Open V3 in the browser](http://127.0.0.1:8766/?id=bodyweight-squat)
 
 ## Repository layout
 
 - [Revision/Preview](Revision/Preview) contains the iOS catalog, EML editor and playback UI.
 - [Revision/Runtime](Revision/Runtime) embeds the EML compiler for iOS. [ExerciseDummy](Revision/Sources/ExerciseDummy) interprets the compiled frames and renders the anatomy, equipment and muscle colors.
-- [The EML repository](https://github.com/agrim/exercise-markup-language/tree/v1.1.0) owns the language, authoring guide, catalog, Blender master, runtime anatomy and asset credits. This repository contains the iOS wrapper, renderer and regression fixtures. Model authoring belongs to EML.
+- [The EML repository](https://github.com/agrim/exercise-markup-language/tree/v1.1.0) owns the language, authoring guide, catalog and reference joint profile. This branch owns the [V3 Blender master and build scripts](V3), exercise renderer and iOS wrapper.

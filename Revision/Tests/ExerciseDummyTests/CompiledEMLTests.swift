@@ -13,7 +13,7 @@ import simd
   @testable import ExerciseDummy
 
   /// Compare native forward kinematics against independently calculated world positions from the
-  /// real compiler. Exercise IDs, weights, frames and geometry come from the configured sibling repo.
+  /// real compiler. Its recipes drive the V3 model shipped by this branch.
   final class CompiledEMLTests: XCTestCase {
     struct Reference: Decodable {
       struct Frame: Decodable {
@@ -83,8 +83,7 @@ import simd
       try compile.run()
       compile.waitUntilExit()
       XCTAssertEqual(compile.terminationStatus, 0)
-      let model = try JSONDecoder().decode(
-        ModelData.self, from: Data(contentsOf: root.appendingPathComponent("anatomy/model.json")))
+      let model = try Library.load("model.json", as: ModelData.self)
       let kit = try JSONDecoder().decode(
         [String: EMLProp].self,
         from: Data(contentsOf: root.appendingPathComponent("library/equipment.json")))

@@ -37,13 +37,13 @@ An optional browser review uses `.venv/bin/python -m viewer` in EML, then checks
 
 Use **Blender 5.2.1 LTS** as the authoring environment baseline, matching the local installation checked with `--version` and a headless Python startup on macOS. Full anatomy rebuilds and Linux execution remain separate validation steps. A default operating-system `blender` package may install another release, so select the explicit version and check it before asset work.
 
-Blender is optional for this wrapper's source edits, EML conformance checks and playback of committed buffers. The editable anatomy master and its rebuild pipeline belong to the EML checkout. Follow [EML's anatomy rebuild guide](https://github.com/agrim/exercise-markup-language/blob/v1.1.0/anatomy/rebuild/README.md), together with that checkout's current Cloud guidance. Configure `BLENDER` as the absolute executable path when Blender is outside `PATH`; the macOS app executable is `/Applications/Blender.app/Contents/MacOS/Blender`, while Cloud needs the matching Linux build.
+Blender is optional for this wrapper's source edits, EML conformance checks and playback of committed buffers. The editable V3 master and headless rebuild pipeline live in this branch. Follow the [V3 authoring guide](../../V3/README.md). The sibling EML checkout supplies the rig interface and evaluator. Configure `BLENDER` as the absolute executable path when Blender is outside `PATH`; the macOS app executable is `/Applications/Blender.app/Contents/MacOS/Blender`, while Cloud needs the matching Linux build.
 
-Keep Blender installation and atlas rebuilding out of the default source-only setup. Before changing the Blender version, verify headless startup, load the master with embedded scripts disabled, run the affected rebuild/audit workflow, and review geometry and animation results. Record the exact version used; do not treat a version-string check as a completed rebuild. The historical actions in the master are not the source of the EML recipes played by the wrapper.
+Keep Blender installation and atlas rebuilding out of the default source-only setup. Before changing the Blender version, verify headless startup, load the master with embedded scripts disabled, run the affected rebuild/audit workflow, and review geometry and animation results. Record the exact version used; do not treat a version-string check as a completed rebuild. Exercise motion comes from EML recipes.
 
 ## Native validation boundary
 
-When native work needs the retained mesh fixtures, install Git LFS and hydrate only their paths from the wrapper root:
+To run the V3 renderer, hydrate its two Git LFS buffers. To edit the master, also hydrate `V3/ExerciseHuman.blend`. From the wrapper root:
 
 ```sh
 git lfs install --local
@@ -52,6 +52,6 @@ git lfs pull --include="Revision/Sources/ExerciseDummy/Resources/indices.bin,Rev
 
 Do not fetch the historical asset archives as an environment default.
 
-This repository uses Metal, Apple `simd`, iOS frameworks and an embedded Apple Python runtime. Linux cannot establish a successful Swift/Metal build, native UI behavior, model framing or physical-device performance. For those tasks follow [the build instructions](../../README.md) on macOS with Xcode, including `Revision/Runtime/bootstrap.sh`, and run the applicable package, iOS integration and UI tests there. Keep anatomy authoring and shared EML language changes in the EML repository.
+This repository uses Metal, Apple `simd`, iOS frameworks and an embedded Apple Python runtime. Linux cannot establish a successful Swift/Metal build, native UI behavior, model framing or physical-device performance. For those tasks follow [the build instructions](../../README.md) on macOS with Xcode, including `Revision/Runtime/bootstrap.sh`, and run the applicable package, iOS integration and UI tests there. Keep shared language changes in EML and V3 surface changes in this branch.
 
 The files here are explicit setup entry points, not an automatically loaded Cloud manifest. Commit and push reviewed changes before creating an environment from GitHub; review, test and publish the environment in the Cloud setup UI. See [the official Cloud environment guide](https://learn.chatgpt.com/docs/environments/cloud-environments).

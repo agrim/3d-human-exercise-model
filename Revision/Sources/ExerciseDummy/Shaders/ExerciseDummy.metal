@@ -20,6 +20,7 @@ struct Surface {
     float3 world, normal;
     float4 material;
     float visibility;
+    float2 fiber;
 };
 float3x3 wristCorrection(float4 q, float t) {
     // Replace the chord between the two rotations with a rotation about the bind wrist.
@@ -94,6 +95,8 @@ vertex Surface bodyVertex(uint id [[vertex_id]],
     material.w = abs(material.w);
     out.material = material;
     uint baked = v.reserved & 255u;
+    bool hasFiber = ((v.reserved >> 8) & 255u) == 3u;
+    out.fiber = float2(hasFiber ? float(v.reserved >> 16) / 16384.0f : 0.0f, hasFiber ? 1.0f : 0.0f);
     out.visibility = baked == 0u ? 1.0 : float(baked-1u)/254.0;
     return out;
 }
@@ -107,7 +110,11 @@ fragment float4 bodyFragment(Surface in [[stage_in]], constant Scene &s [[buffer
     float ambient = (0.25 + 0.14*sky + 0.12*wrap) * mix(0.48,1.0,in.visibility);
     float direct = 0.76*lambert * mix(0.78,1.0,in.visibility);
     direct *= mix(0.60,1.0,lightVisibility(in.world,s,shadow));
-    float3 color = in.material.rgb * (ambient + direct);
+    // Fade subpixel fascicles in a small embedded viewport. The pattern follows the posed surface.
+    float phase = in.fiber.x * 136.0f;
+    float resolved = 1.0f - smoothstep(0.15f, 0.48f, fwidth(phase));
+    float fiber = 1.0f + in.fiber.y * resolved * (0.050f*cos(phase*6.283185f) + 0.022f*cos(phase*12.56637f));
+    float3 color = in.material.rgb * (ambient + direct) * fiber;
     float spec = pow(max(dot(n,normalize(key+v)),0.0),36.0);
     color += in.material.w*(0.13*spec + 0.045*pow(1.0-abs(dot(n,v)),3.0));
     return float4(color,1);

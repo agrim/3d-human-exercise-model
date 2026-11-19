@@ -166,7 +166,7 @@ enum Library {
     guard !name.hasPrefix("/"), !name.split(separator: "/").contains("..") else {
       throw ExerciseDummyError.invalidAsset("Invalid resource name.")
     }
-    // EXM1 is a desktop authoring fixture. The iOS app ships the EML checkout's data.
+    // The desktop fixture reads V3 from the checkout. On iOS the compiler and model share a bundled EML root.
     #if os(macOS)
       let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent()
         .appendingPathComponent("Resources", isDirectory: true)

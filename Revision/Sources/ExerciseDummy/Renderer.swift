@@ -209,7 +209,7 @@ final class Renderer {
       switch g {
       case "bone": return [0.57, 0.58, 0.54, 0.64]
       case "tendon": return [0.46, 0.49, 0.49, 0.64]
-      case "shell": return [0.42, 0.45, 0.46, 0.75]
+      case "shell": return [0.36, 0.395, 0.415, 0.68]
       default: return [0.27, 0.34, 0.39, 0.7]
       }
     }
