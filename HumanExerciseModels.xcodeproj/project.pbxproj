@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB0E7FBB8A1102FDAE105CF /* squat-and-curl.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C901666B33888E7D75EF5D3 /* squat-and-curl.json */; };
 		2951DD9480FF894EC5756A76 /* CameraGestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F061FAFD0101AF19488C0D /* CameraGestureTests.swift */; };
 		2BCA249E7AD8DB797D581C6A /* ExerciseDummy in Frameworks */ = {isa = PBXBuildFile; productRef = FD2F9E92B6A2F75F6690E82B /* ExerciseDummy */; };
 		34D170874BD469A0C258C456 /* BuilderAuthoringFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC928E9519CFF390DFAEDA5 /* BuilderAuthoringFlowTests.swift */; };
@@ -62,6 +63,7 @@
 		0036291F8A18AD365FF3E26D /* Revision */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Revision; path = Revision; sourceTree = SOURCE_ROOT; };
 		060724A634C992AF0C32103A /* EMLBridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EMLBridge.c; sourceTree = "<group>"; };
 		1506D8705CD18E0A342D4192 /* EMLEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLEditor.swift; sourceTree = "<group>"; };
+		1C901666B33888E7D75EF5D3 /* squat-and-curl.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "squat-and-curl.json"; sourceTree = "<group>"; };
 		1F5D15BAF090DCA2FF6BF1DC /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Python.xcframework; path = Revision/Runtime/.cache/Python.xcframework; sourceTree = "<group>"; };
 		20CACDF8D7414C9754098833 /* EMLBuilderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLBuilderFields.swift; sourceTree = "<group>"; };
 		2C2601D1B61BB7033F198E4D /* EMLAuthoringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLAuthoringTests.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E3EFD14CEC514C0148964DE6 /* Bridge */,
+				910DAAA0ABAABE0F7106413B /* Examples */,
 				684956E815D74B2980BC03E2 /* iOSTests */,
 				6592ACE7E3EF39FE56CE7940 /* Packages */,
 				438FB2F370E9BB00C844C9F2 /* Preview */,
@@ -149,6 +152,15 @@
 				078D8F49E293C05998C5D160 /* Frameworks */,
 				AEC1D1BFA77A5614A8F3862D /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		910DAAA0ABAABE0F7106413B /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				1C901666B33888E7D75EF5D3 /* squat-and-curl.json */,
+			);
+			name = Examples;
+			path = V3/Examples;
 			sourceTree = "<group>";
 		};
 		A64D704C8494A064DCED85B5 /* UITests */ = {
@@ -227,6 +239,7 @@
 			buildConfigurationList = FFD94B506BF8BC85296FB7C3 /* Build configuration list for PBXNativeTarget "HumanExerciseModels" */;
 			buildPhases = (
 				5AFB0E212250BB2F2F086FF1 /* Sources */,
+				31D562425D6A3627CAEF1D4D /* Resources */,
 				B3B62E75D4AFFA8B56BC50B1 /* Frameworks */,
 				867FA58A88E71A697DFEC68A /* Embed Frameworks */,
 				BCF4E6FD599B08DB1F91B42F /* Bundle Python and EML from the source checkout */,
@@ -287,6 +300,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED20F943B75D8C43B23B7598 /* viewer-reference.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31D562425D6A3627CAEF1D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB0E7FBB8A1102FDAE105CF /* squat-and-curl.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

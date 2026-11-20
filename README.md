@@ -37,7 +37,7 @@ Use Xcode on macOS with an iOS 17 or newer simulator or device. Check out the wr
 
 ```sh
 git clone https://github.com/agrim/exercise-markup-language.git ../eml
-git -C ../eml checkout 2d157ff9273159676803fe86d638af2821a3ad85
+git -C ../eml checkout 2e3a9fb276da5f2b5c1c088365059aee83bee2c0
 git lfs pull --include="Revision/Sources/ExerciseDummy/Resources/*.bin"
 bash Revision/Runtime/bootstrap.sh
 open HumanExerciseModels.xcodeproj
@@ -53,4 +53,4 @@ From the wrapper root, run `python3 V3/preview.py` with the EML virtual environm
 
 - [Revision/Preview](Revision/Preview) contains the iOS catalog, EML editor and playback UI.
 - [Revision/Runtime](Revision/Runtime) embeds the EML compiler for iOS. [ExerciseDummy](Revision/Sources/ExerciseDummy) interprets the compiled frames and renders the anatomy, equipment and muscle colors.
-- The EML repository owns the language, fluent authoring API, catalog and reference joint profile. V3 owns the Blender master, exercise renderer and iOS wrapper. [EML at the tested authoring revision](https://github.com/agrim/exercise-markup-language/tree/2d157ff9273159676803fe86d638af2821a3ad85) · [V3 Blender master and build scripts](V3)
+- The EML repository owns the language, fluent authoring API, catalog and reference joint profile. V3 owns the Blender master, exercise renderer and iOS wrapper. [EML at the tested authoring revision](https://github.com/agrim/exercise-markup-language/tree/2e3a9fb276da5f2b5c1c088365059aee83bee2c0) · [V3 Blender master and build scripts](V3)

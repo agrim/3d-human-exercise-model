@@ -1,5 +1,6 @@
 """Exercise the local authoring CLI with the selected EML checkout and the V3 rig."""
 
+import filecmp
 import json
 import os
 import subprocess
@@ -21,6 +22,13 @@ def export(source, destination):
 
 
 class FluentRecipes(unittest.TestCase):
+    def test_opengym_and_native_assets_match_the_blender_export(self):
+        runtime = V3.parent / "Revision/Sources/ExerciseDummy/Resources"
+        for name in ("model.json", "vertices.bin", "indices.bin", "ATTRIBUTION.md"):
+            with self.subTest(name=name):
+                self.assertTrue(filecmp.cmp(EML / "anatomy" / name, runtime / name, shallow=False),
+                                f"EML's distributed {name} differs from the V3 export")
+
     def test_native_example_matches_the_authored_chain(self):
         with tempfile.TemporaryDirectory() as folder:
             output = Path(folder) / "recipe.json"

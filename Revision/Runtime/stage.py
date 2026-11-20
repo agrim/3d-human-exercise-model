@@ -43,17 +43,14 @@ def stage_eml():
             expected[path.relative_to(source)] = path
     for name in ["interface.json", "LICENSE"]:
         expected[Path(name)] = source / name
-    expected[Path("examples/v3/squat-and-curl.json")] = here.parents[1] / "V3/Examples/squat-and-curl.json"
-    anatomy = here.parent / "Sources/ExerciseDummy/Resources"
-    profile = json.loads((source / "anatomy/model.json").read_text())
+    anatomy = source / "anatomy"
     model = json.loads((anatomy / "model.json").read_text())
-    for field in ("joints", "landmarks", "handBindings", "groups"):
-        if model[field] != profile[field]:
-            raise SystemExit(f"error: V3 anatomy and EML_ROOT differ in {field}")
+    if model.get("modelID") != "simple-trainer-v3":
+        raise SystemExit("error: EML_ROOT must contain the V3 anatomy distribution.")
     for name, count, stride in [("vertices.bin", "vertexCount", 40), ("indices.bin", "indexCount", 4)]:
         path = anatomy / name
         if not path.is_file() or path.stat().st_size != model[count] * stride:
-            raise SystemExit(f"error: Missing or incomplete V3 {name}. Hydrate the mesh with Git LFS.")
+            raise SystemExit(f"error: Missing or incomplete V3 {name} in EML_ROOT/anatomy.")
     for name in ("model.json", "vertices.bin", "indices.bin", "ATTRIBUTION.md"):
         expected[Path("anatomy") / name] = anatomy / name
     guidance = json.loads((source / "interface.json").read_text()).get("compatibleSetups")

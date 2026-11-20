@@ -234,7 +234,7 @@ final class RecipeLibrary {
   }
 
   func squatAndCurlExample() throws -> String {
-    let file = root.appending(path: "examples/v3/squat-and-curl.json")
+    let file = Bundle.main.bundleURL.appending(path: "squat-and-curl.json")
     return String(decoding: try Self.read(file), as: UTF8.self)
   }
 }

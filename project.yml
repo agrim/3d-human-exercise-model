@@ -13,6 +13,8 @@ targets:
       - path: Revision/Preview
         excludes: ["StudioInfo.plist"]
       - Revision/Runtime/Bridge
+      - path: V3/Examples/squat-and-curl.json
+        buildPhase: resources
     dependencies:
       - package: ExerciseDummy
         product: ExerciseDummy

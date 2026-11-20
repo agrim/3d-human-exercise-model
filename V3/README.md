@@ -8,11 +8,11 @@
 
 Run `python3 V3/preview.py` from the repository root, with the sibling EML checkout and its Python environment prepared. The launcher serves the V3 buffers and EML's browser viewer on port 8766. Pass `--eml /path/to/eml` or `--port 8767` to choose another checkout or port. Select an exercise and press **Play**. Drag to orbit or use the timeline to inspect the motion.
 
-For iOS, build the **HumanExerciseModels** scheme. The Xcode staging phase places this branch’s four anatomy files in the embedded EML tree and checks the joint profile, muscle vocabulary and buffer sizes. Use **Exercises → Create custom EML** to build a movement or **Load EML** to play an existing recipe. [Native build instructions](../README.md#build-and-run)
+For iOS, build the **HumanExerciseModels** scheme. Xcode stages the V3 runtime from EML alongside its compiler. It checks the model ID and buffer sizes; the portable V3 tests compare the full geometry and credits with the Blender export. Use **Exercises → Create custom EML** to build a movement or **Load EML** to play an existing recipe. [Native build instructions](../README.md#build-and-run)
 
 ## Author a chained exercise
 
-Use EML’s `codex/eml-fluent-recipe` branch. The tested revision is `2d157ff9273159676803fe86d638af2821a3ad85`. With the sibling checkout at that revision, prepare its Python environment once from this repository root. [Checkout instructions](../README.md#build-and-run) · [Upstream Python API](https://github.com/agrim/exercise-markup-language/blob/2d157ff9273159676803fe86d638af2821a3ad85/docs/python-api.md)
+Use EML’s `main` branch, which includes fluent authoring and the OpenGym exporter. The tested revision is `2e3a9fb276da5f2b5c1c088365059aee83bee2c0`. With the sibling checkout at that revision, prepare its Python environment once from this repository root. [Checkout instructions](../README.md#build-and-run) · [Upstream Python API](https://github.com/agrim/exercise-markup-language/blob/2e3a9fb276da5f2b5c1c088365059aee83bee2c0/docs/python-api.md)
 
 ```sh
 python3 -m venv ../eml/.venv
@@ -66,9 +66,15 @@ The contour definitions and shape controls can be edited independently. The expo
 
 ## Simple Trainer integration
 
-Simple Trainer already constructs an `ExercisePlayer` from a compiled EML clip and embeds its Metal view in **About Exercise**. V3 uses the same API. In a vendor update, take the four anatomy files from `Revision/Sources/ExerciseDummy/Resources` into the host’s `Vendor/EML/Standard/anatomy`. Use this branch’s Metal shader for muscle fiber shading and the V3 shell color in `Renderer.swift`. Retain the app’s camera, gesture and diagnostic patches when updating its vendor pin. [Runtime files](../Revision/Sources/ExerciseDummy/Resources) · [Metal shader](../Revision/Sources/ExerciseDummy/Shaders/ExerciseDummy.metal)
+Simple Trainer already constructs an `ExercisePlayer` from a compiled EML clip and embeds its Metal view in **About Exercise**. V3 uses the same API. Vendor the pinned EML distribution, including its four `anatomy/` files and compiler. Vendor the model renderer from this repository, including its Metal shader and V3 palette. Keep the app’s camera, gesture and diagnostic behavior when updating the pins. Exercise Studio bundles its sample recipe separately so the shared staging script can run from the app’s vendor directory. [Runtime files](../Revision/Sources/ExerciseDummy/Resources) · [Metal shader](../Revision/Sources/ExerciseDummy/Shaders/ExerciseDummy.metal)
 
 An isolated copy of Simple Trainer at `0ef7ee9` was used for the integration check. Its existing exercise screen rendered V3 inside the native form. The camera test selected the Roll Out pose, orbited, pinched to zoom, reset the view, toggled playback and opened muscle details and model credits. [Simulator capture](Review/simple-trainer.jpg)
+
+## OpenGym compatibility
+
+The EML exporter bundles this same V3 skin with the reviewed OpenGym pilot for exercise ID `"0463"`, a five-second forearm plank. Keep that ID as a string. The payload contains the portable recipe, compiled clip, version-matched equipment, geometry hashes and the V3 credit notice. The browser renderer reads the same wrist and muscle-fiber vertex data as Metal. [OpenGym integration guide](https://github.com/agrim/exercise-markup-language/blob/2e3a9fb276da5f2b5c1c088365059aee83bee2c0/integrations/web/OPENGYM.md)
+
+The fitted back surface passed the finite bench-pad and frame-clearance checks across nine supported exercises. At nine samples per phase across the full 108-exercise catalog, the deepest floor intersection was 2.4 mm in the ab-wheel rollout. The OpenGym plank measured 1.9 mm. [Surface measurements by exercise](https://github.com/agrim/exercise-markup-language/blob/2e3a9fb276da5f2b5c1c088365059aee83bee2c0/docs/evidence/v3/floor.json)
 
 ## Measurements
 

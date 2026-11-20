@@ -162,6 +162,27 @@ def skeleton(contract):
     return obj
 
 
+def fit_support_surfaces(mesh):
+    """Fit the posterior trunk to EML bench planes and the distal thigh to kneeling contacts."""
+    coords = np.array([tuple(v.co) for v in mesh.vertices])
+    x, depth, height = coords[:, 0], -coords[:, 1], coords[:, 2]
+    # The paraspinal and lateral rib contours meet different portions of an inclined pad.
+    # Blend them across the scapula and taper toward the flank and front of the body.
+    heights = [1.06, 1.24, 1.30, 1.36, 1.42, 1.60, 1.66]
+    central = np.interp(height, heights, [0, .0158, .0079, 0, 0, .0056, 0])
+    lateral = np.interp(height, heights, [0, .0201, .0046, 0, 0, 0, 0])
+    blend = np.clip((abs(x) - .025) / .065, 0, 1)
+    posterior = np.clip((-depth - .035) / .055, 0, 1) * np.clip((.20 - abs(x)) / .09, 0, 1)
+    coords[:, 1] += ((1 - blend) * central + blend * lateral) * posterior
+
+    # Retain the patellar contact while giving the anterior thigh clearance in a deep knee push-up.
+    knee = np.interp(height, [.37, .40, .43, .47, .54, .60, .69, .74], [0, .003, .006, .004, .011, .013, .007, 0])
+    anterior = np.clip((depth - .006) / .030, 0, 1) * np.clip((.195 - abs(x)) / .050, 0, 1)
+    coords[:, 1] += knee * anterior
+    mesh.vertices.foreach_set("co", coords.astype(np.float32).ravel())
+    mesh.update()
+
+
 def build(inputs, eml_root, master, runtime):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     reference = json.loads((eml_root / "anatomy/model.json").read_text())
@@ -229,6 +250,7 @@ def build(inputs, eml_root, master, runtime):
     bpy.ops.object.modifier_apply(modifier=lod.name)
     obj.vertex_groups.remove(obj.vertex_groups["Mobile LOD interior"])
     refine_mobile_shoulders(obj, joints)
+    fit_support_surfaces(obj.data)
     rig = skeleton(contract)
     arm = obj.modifiers.new("Exercise skeleton", "ARMATURE")
     arm.object = rig
