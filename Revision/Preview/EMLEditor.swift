@@ -51,6 +51,9 @@ struct EMLEditor: View {
             Menu("Open", systemImage: "folder") {
               Button("Choose file", systemImage: "folder") { importer = true }
               Button("Use example", systemImage: "doc.text") { replace { try library.starter() } }
+              Button("Squat and curl", systemImage: "figure.strengthtraining.traditional") {
+                replace { try library.squatAndCurlExample() }
+              }
             }
             .labelStyle(.titleAndIcon)
             .accessibilityIdentifier("eml.open")

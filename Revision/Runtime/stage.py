@@ -43,6 +43,7 @@ def stage_eml():
             expected[path.relative_to(source)] = path
     for name in ["interface.json", "LICENSE"]:
         expected[Path(name)] = source / name
+    expected[Path("examples/v3/squat-and-curl.json")] = here.parents[1] / "V3/Examples/squat-and-curl.json"
     anatomy = here.parent / "Sources/ExerciseDummy/Resources"
     profile = json.loads((source / "anatomy/model.json").read_text())
     model = json.loads((anatomy / "model.json").read_text())

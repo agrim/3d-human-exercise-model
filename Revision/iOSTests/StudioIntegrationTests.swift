@@ -32,6 +32,35 @@ final class StudioIntegrationTests: XCTestCase {
 
   private var emlRoot: URL { Bundle.main.bundleURL.appendingPathComponent("EML") }
 
+  @MainActor func testChainedSquatAndCurlPlaysWithAuthoredMuscleRoles() async throws {
+    let suite = UUID().uuidString
+    let storage = URL.temporaryDirectory.appending(path: suite)
+    let prefs = try XCTUnwrap(UserDefaults(suiteName: suite))
+    defer {
+      prefs.removePersistentDomain(forName: suite)
+      try? FileManager.default.removeItem(at: storage)
+    }
+    let library = RecipeLibrary(personalDirectory: storage, preferences: prefs)
+    await library.open()
+    let source = try library.squatAndCurlExample()
+    try await library.previewCustom(source)
+    let player = try XCTUnwrap(library.player)
+    XCTAssertEqual(player.inspectablePositions, ["squat", "curl", "lower-arms", "stand"])
+    XCTAssertTrue(player.movementIssues.isEmpty)
+    try player.inspectPosition("squat")
+    XCTAssertEqual(player.primary, ["quadriceps", "glutes"])
+    let squat = try player.snapshot(width: 200, height: 260)
+    try player.inspectPosition("curl")
+    XCTAssertEqual(player.primary, ["biceps"])
+    XCTAssertEqual(player.secondary, ["forearms", "quadriceps", "glutes"])
+    let curl = try player.snapshot(width: 200, height: 260)
+    XCTAssertNotEqual(try XCTUnwrap(squat.dataProvider?.data) as Data,
+                      try XCTUnwrap(curl.dataProvider?.data) as Data)
+    try await library.playCustom(source)
+    XCTAssertEqual(library.selected?.header.id, "squat-and-curl")
+    XCTAssertEqual(try RecipeLibrary.read(XCTUnwrap(library.selected).url), Data(source.utf8))
+  }
+
   @MainActor func testInvalidCustomWristShowsTheMeasuredPoseAndBlocksStrictExport() async throws {
     let source = Data(
       """

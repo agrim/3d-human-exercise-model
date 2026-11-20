@@ -230,7 +230,11 @@ final class RecipeLibrary {
   func starter() throws -> String {
     struct Interface: Decodable { let example: String }
     let manifest = try JSONDecoder().decode(Interface.self, from: Self.read(root.appending(path: "interface.json")))
-    let url = root.appending(path: manifest.example)
-    return String(decoding: try Self.read(url), as: UTF8.self)
+    return String(decoding: try Self.read(root.appending(path: manifest.example)), as: UTF8.self)
+  }
+
+  func squatAndCurlExample() throws -> String {
+    let file = root.appending(path: "examples/v3/squat-and-curl.json")
+    return String(decoding: try Self.read(file), as: UTF8.self)
   }
 }

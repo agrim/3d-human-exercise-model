@@ -10,6 +10,28 @@ Run `python3 V3/preview.py` from the repository root, with the sibling EML check
 
 For iOS, build the **HumanExerciseModels** scheme. The Xcode staging phase places this branch’s four anatomy files in the embedded EML tree and checks the joint profile, muscle vocabulary and buffer sizes. Use **Exercises → Create custom EML** to build a movement or **Load EML** to play an existing recipe. [Native build instructions](../README.md#build-and-run)
 
+## Author a chained exercise
+
+Use EML’s `codex/eml-fluent-recipe` branch. The tested revision is `2d157ff9273159676803fe86d638af2821a3ad85`. With the sibling checkout at that revision, prepare its Python environment once from this repository root. [Checkout instructions](../README.md#build-and-run) · [Upstream Python API](https://github.com/agrim/exercise-markup-language/blob/2d157ff9273159676803fe86d638af2821a3ad85/docs/python-api.md)
+
+```sh
+python3 -m venv ../eml/.venv
+../eml/.venv/bin/python -m pip install -r ../eml/requirements.txt
+python3 V3/preview.py --recipe V3/Examples/squat_and_curl.py
+```
+
+Open the URL printed by the launcher. Scrub from **Squat** to **Curl** to see the elbows flex while the legs hold their depth. The highlight moves from the quadriceps and glutes to the biceps. The **Depth** control changes the squat depth across the whole sequence. [Playable example](http://127.0.0.1:8766/?id=squat-and-curl) · [Recipe source](Examples/squat_and_curl.py) · [Curl phase with muscle highlights](Review/chained-squat-and-curl.jpg)
+
+To author your own, copy the Python example and have `recipe()` return an `eml.Recipe`. Each `.move()` adds a timed endpoint. Chain `.action()` calls on one phase for simultaneous movements, and use `.muscles(..., phase=True)` to change the primary and secondary groups during that phase. Rerun the launcher after editing. The local launcher runs the selected Python file and validates its movement against the V3 rig before serving or exporting it.
+
+```sh
+python3 V3/preview.py --recipe V3/Examples/squat_and_curl.py --export my-exercise.json
+```
+
+The export is an EML 1.1 recipe that carries the movements, parameters, repetitions and muscle roles. In Exercise Studio, use **Exercises → Load EML → Open → Choose file**, then **Preview** or **Save and play**. The **Squat and curl** entry in the same menu opens the bundled export. Simple Trainer’s custom exercise player accepts the same JSON. [Portable example](Examples/squat-and-curl.json)
+
+For a supported movement with equipment, pass `--recipe ../eml/examples/fluent_incline_push_up.py` to the same launcher. The upstream chain specifies palm and toe contacts, raised pads and four timed phases. A local recipe that reuses a catalog ID takes its place for that preview session.
+
 ## Surface and rig
 
 The source body uses MakeHuman’s MPFB base, bilateral arm and leg muscle targets, and torso shape controls. It includes individual fingers and toes. The upstream game-engine weights and joint helpers provide the initial correspondence. V3 registers the body to EML, constructs a Blender armature and transfers the weights into that armature’s 51-joint hierarchy. The final shoulder weights are smoothed along connected mesh edges, including the underarm and upper rib cage. [Pinned MPFB art](https://github.com/makehumancommunity/mpfb2/tree/9de0707fdc88438d7c53a1a2ac7937d9221e2431/src/mpfb/data) · [Asset credits](../Revision/Sources/ExerciseDummy/Resources/ATTRIBUTION.md)
@@ -69,5 +91,3 @@ The existing offscreen Metal benchmark rendered 21 poses per exercise at 960 × 
 Both a clean rebuild from the pinned assets and a headless export from the saved Blender file reproduced all three runtime files byte for byte. In the rest pose, the heel and forefoot landmarks lie within 3.3 mm of the mesh, and both palm landmarks within 2.3 mm. The Mac package compared native motion transforms with EML across 108 catalog exercises and three custom exercises. Exercise Studio’s iOS tests exercised the offline compiler, rendering and editable custom EML.
 
 A sampled deformation check tracked triangle edges longer than 4 mm through five exercises. The most pronounced local stretching was at the underarm in the overhead press and the toe joint in the push-up. These areas merit physical-device visual review at close zoom.
-
-The published EML branches checked for this build expose 1.0 and 1.1 JSON recipes, including composed motion macros. Compatibility with a jQuery-style authoring interface needs its source revision or an exported sample. [EML interface at the checked revision](https://github.com/agrim/exercise-markup-language/blob/20e2d1db698a10babadf20fb8c92ae05ba540425/interface.json)

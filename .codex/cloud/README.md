@@ -1,6 +1,6 @@
 # Codex Cloud setup
 
-Select both `agrim/3d-human-exercise-model` and `agrim/exercise-markup-language` when creating the environment. This wrapper embeds EML from a separate source checkout; it is not a package-manager dependency or a submodule. Use compatible revisions: the current wrapper expects EML 1.1 (`v1.1.0` is the documented baseline). Keep the source checkouts separate.
+Select both `agrim/3d-human-exercise-model` and `agrim/exercise-markup-language` when creating the environment. This wrapper embeds EML from a separate source checkout; it is not a package-manager dependency or a submodule. V3 fluent authoring uses EML 1.1 with the Python Recipe builder. Select EML branch `codex/eml-fluent-recipe` at tested revision `2d157ff9273159676803fe86d638af2821a3ad85` or a revision that includes it. [Chained recipe workflow](../../V3/README.md#author-a-chained-exercise)
 
 ## Installation
 
@@ -29,6 +29,7 @@ For wrapper-authored recipes, use the same interpreter from the wrapper root:
 
 ```sh
 PYTHONPATH="$EML_ROOT" "$EML_ROOT/.venv/bin/python" -m eml validate Revision/Review/AnatomyViewer/standing-curl-and-return.json
+python3 -m unittest discover -s V3/Tests
 ```
 
 An optional browser review uses `.venv/bin/python -m viewer` in EML, then checks `http://127.0.0.1:8765/api/catalog` and opens the forwarded viewer in the cloud workspace. Stop any existing instance before starting another. Do not install the macOS login service in Cloud.

@@ -1,0 +1,100 @@
+{
+  "eml": "1.1",
+  "id": "squat-and-curl",
+  "title": "Squat and curl",
+  "start": {
+    "pose": "standing"
+  },
+  "phases": [
+    {
+      "id": "squat",
+      "seconds": 1.4,
+      "actions": [
+        {
+          "use": "squat-down",
+          "amount": {
+            "param": "depth"
+          }
+        }
+      ]
+    },
+    {
+      "id": "curl",
+      "seconds": 1.0,
+      "actions": [
+        {
+          "use": "squat-down",
+          "amount": {
+            "param": "depth"
+          }
+        },
+        {
+          "use": "bend-elbows",
+          "amount": 0.8
+        }
+      ],
+      "muscles": {
+        "primary": [
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "quadriceps",
+          "glutes"
+        ]
+      }
+    },
+    {
+      "id": "lower-arms",
+      "seconds": 1.0,
+      "actions": [
+        {
+          "use": "squat-down",
+          "amount": {
+            "param": "depth"
+          }
+        }
+      ],
+      "muscles": {
+        "primary": [
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "quadriceps",
+          "glutes"
+        ]
+      }
+    },
+    {
+      "id": "stand",
+      "seconds": 1.4,
+      "actions": []
+    }
+  ],
+  "repeat": {
+    "mode": "loop",
+    "count": 2
+  },
+  "muscles": {
+    "primary": [
+      "quadriceps",
+      "glutes"
+    ],
+    "secondary": [
+      "abdominals"
+    ]
+  },
+  "instructions": "Lower into a squat. Hold that depth as you curl and lower both arms, then stand.",
+  "parameters": {
+    "depth": {
+      "default": 0.6,
+      "min": 0.4,
+      "max": 0.8
+    }
+  },
+  "camera": [
+    38,
+    10
+  ]
+}

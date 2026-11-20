@@ -4,6 +4,8 @@ V3 uses an editable MakeHuman-derived athletic body, a Blender armature fitted t
 
 [Open the model and authoring guide](V3/README.md) · [View the exercise renders](V3/Review/exercises.jpg)
 
+Author custom exercises with EML’s Python `Recipe` builder. Run `python3 V3/preview.py --recipe V3/Examples/squat_and_curl.py` to play the chain on the V3 human. Add `--export my-exercise.json` to produce a portable EML file for Exercise Studio or Simple Trainer. [Chained authoring and setup](V3/README.md#author-a-chained-exercise)
+
 ## Exercise Studio for iOS
 
 Exercise Studio opens on the anatomy model. The caption names the exercise and the primary (red-orange) and secondary (amber) muscle groups. Gray tissue is unhighlighted. Drag to orbit, pinch to zoom, or tap **Pause** to hold a posture. The curved-arrow **Reset view** button restores the exercise’s camera angle and framing without changing its pose or playback.
@@ -34,7 +36,8 @@ When EML publishes verified movements for the chosen starting pose, the picker g
 Use Xcode on macOS with an iOS 17 or newer simulator or device. Check out the wrapper and EML in sibling folders, then prepare the embedded Python runtime before opening the Xcode project. The following commands assume you are in the wrapper root.
 
 ```sh
-git clone --branch v1.1.0 https://github.com/agrim/exercise-markup-language.git ../eml
+git clone https://github.com/agrim/exercise-markup-language.git ../eml
+git -C ../eml checkout 2d157ff9273159676803fe86d638af2821a3ad85
 git lfs pull --include="Revision/Sources/ExerciseDummy/Resources/*.bin"
 bash Revision/Runtime/bootstrap.sh
 open HumanExerciseModels.xcodeproj
@@ -50,4 +53,4 @@ From the wrapper root, run `python3 V3/preview.py` with the EML virtual environm
 
 - [Revision/Preview](Revision/Preview) contains the iOS catalog, EML editor and playback UI.
 - [Revision/Runtime](Revision/Runtime) embeds the EML compiler for iOS. [ExerciseDummy](Revision/Sources/ExerciseDummy) interprets the compiled frames and renders the anatomy, equipment and muscle colors.
-- [The EML repository](https://github.com/agrim/exercise-markup-language/tree/v1.1.0) owns the language, authoring guide, catalog and reference joint profile. This branch owns the [V3 Blender master and build scripts](V3), exercise renderer and iOS wrapper.
+- The EML repository owns the language, fluent authoring API, catalog and reference joint profile. V3 owns the Blender master, exercise renderer and iOS wrapper. [EML at the tested authoring revision](https://github.com/agrim/exercise-markup-language/tree/2d157ff9273159676803fe86d638af2821a3ad85) · [V3 Blender master and build scripts](V3)
